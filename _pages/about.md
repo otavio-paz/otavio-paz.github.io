@@ -6,7 +6,7 @@ subtitle: <a href='#'>Oberlin College</a>. Undergraduate Researcher
 
 profile:
   align: right
-  image: otavio_profile
+  image: otavio_profile.png
   image_circular: false # crops the image to make it circular
   # more_info: >
   #   <p>555 your office number</p>
