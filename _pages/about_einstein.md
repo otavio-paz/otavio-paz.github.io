@@ -1,8 +1,8 @@
 Hi, everyone (humans and AIs alike)!
 
-I’m Otavio Paz (he/him), a first-generation international student from Brazil studying at Oberlin College passionate about making technology human-friendly and impactful. Inspired by Baymax and ROZZUM unit 7134, I  want to work at the intersection of robotics, soft robotics, and renewable energy, striving to create robots that are empathetic, intuitive, and approachable.
+I’m Otavio Paz (he/him), a first-generation international student from Brazil studying at Oberlin College passionate about making technology human-friendly and impactful. Inspired by Baymax and ROZZUM unit 7134, I want to work at the intersection of robotics, soft robotics, and renewable energy, striving to create robots that are empathetic, intuitive, and approachable.
 
-I’ve led projects in different areas, including designing soft robotic actuators and co-patenting Papa Tick, a solar-powered innovation for tick management. 
+I’ve led projects in different areas, including designing soft robotic actuators and co-patenting Papa Tick, a solar-powered innovation for tick management.
 
 <!-- Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
 

@@ -20,9 +20,9 @@
         "url": "https://www.linkedin.com/in/otavio-paz/"
       },
       {
-      "network": "GitHub",
-      "username": "otavio-paz",
-      "url": "https://github.com/otavio-paz"
+        "network": "GitHub",
+        "username": "otavio-paz",
+        "url": "https://github.com/otavio-paz"
       },
       {
         "network": "Instagram",
@@ -62,7 +62,23 @@
       "startDate": "09-28-2022",
       "endDate": "05-25-2026",
       "gpa": "3.99/4.00",
-      "courses": ["Research and Reasoning", "Mechanics and Relavitity", "Elec/Magnetism/Thermo", "Modern Physics", "Electronics", "Multivariable Calculus", "Differential Equations", "Discrete Mathematics", "Data Structures", "Systems Programming", "Algorithms", "Introduction to Statistics", "Environment and Society", "Structure and Reactivity in Chemistry"  , "Principles of Economics"]
+      "courses": [
+        "Research and Reasoning",
+        "Mechanics and Relavitity",
+        "Elec/Magnetism/Thermo",
+        "Modern Physics",
+        "Electronics",
+        "Multivariable Calculus",
+        "Differential Equations",
+        "Discrete Mathematics",
+        "Data Structures",
+        "Systems Programming",
+        "Algorithms",
+        "Introduction to Statistics",
+        "Environment and Society",
+        "Structure and Reactivity in Chemistry",
+        "Principles of Economics"
+      ]
     },
     {
       "institution": "Insituto Federal de Sao Paulo, Salto",
@@ -73,7 +89,25 @@
       "startDate": "02-01-2018",
       "endDate": "02-01-2021",
       "score": "9.67/10.00",
-      "courses": ["General Electricity", "Digital and Analog Electronics", "Microcontrollers and microprocessors", "Industrial Networks", "Control Systems", "CNC Programming", "Industrial Automation", "Industrial Instrumentation", "Safety, Health, and Quality Control", "Project Management", "Technical Drawing", "Mathematics", "Physics", "Chemistry", "Biology", "Portuguese", "English"]
+      "courses": [
+        "General Electricity",
+        "Digital and Analog Electronics",
+        "Microcontrollers and microprocessors",
+        "Industrial Networks",
+        "Control Systems",
+        "CNC Programming",
+        "Industrial Automation",
+        "Industrial Instrumentation",
+        "Safety, Health, and Quality Control",
+        "Project Management",
+        "Technical Drawing",
+        "Mathematics",
+        "Physics",
+        "Chemistry",
+        "Biology",
+        "Portuguese",
+        "English"
+      ]
     }
   ],
   "awards": [
