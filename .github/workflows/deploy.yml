@@ -84,6 +84,9 @@ jobs:
           valueFile: "_config.yml"
           propertyPath: "giscus.repo"
           value: ${{ github.repository }}
+      - name: Install ImageMagick
+        run: sudo apt-get install imagemagick
+
       - name: Install and Build 🔧
         run: |
           pip3 install --upgrade nbconvert
@@ -98,5 +101,3 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: _site
-      - name: Install ImageMagick
-        run: sudo apt-get install imagemagick
