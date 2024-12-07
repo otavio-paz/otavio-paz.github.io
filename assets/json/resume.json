@@ -1,61 +1,79 @@
 {
   "basics": {
-    "name": "Albert Einstein",
-    "label": "Scientist",
+    "name": "Otavio Paz",
+    "label": "Undergraduate Researcher",
     "image": "",
-    "email": "albert@einstein.de",
-    "phone": "(912) 123-4567",
-    "url": "https://alshedivat.github.io/al-folio/",
-    "summary": "A German-born theoretical physicist, widely ranked among the greatest and most influential scientists of all time",
+    "email": "onascime@oberlin.edu",
+    "url": "https://otavio-paz.github.io/",
+    "summary": "Brazian int'l student, future inventor, constantly combining robotics, renewable energy, and human-centered technologies.",
     "location": {
-      "address": "2712 Broadway St",
-      "postalCode": "CA 94115",
-      "city": "San Francisco",
+      "address": "135 W Lorain St",
+      "postalCode": "OH 44047",
+      "city": "Oberlin",
       "countryCode": "US",
-      "region": "California"
+      "region": "Ohio"
     },
     "profiles": [
       {
-        "network": "Twitter",
-        "username": "AlbertEinstein",
-        "url": "https://twitter.com/AlbertEinstein"
+        "network": "LinkedIn",
+        "username": "otavio-paz",
+        "url": "https://www.linkedin.com/in/otavio-paz/"
+      },
+      {
+      "network": "GitHub",
+      "username": "otavio-paz",
+      "url": "https://github.com/otavio-paz"
+      },
+      {
+        "network": "Instagram",
+        "username": "otavio.paz",
+        "url": "https://www.instagram.com/otavio.paz/"
       }
     ]
   },
   "work": [
     {
-      "name": "Institute for Advanced Study, Princeton University",
-      "position": "Professor of Theoretical Physics",
-      "url": "https://example.com",
-      "startDate": "1933-01-01",
-      "endDate": "1955-01-01",
-      "summary": "Teaching at Palmer Physical Laboratory (now 302 Frist Campus Center). While not a professor at Princeton, I associated with the physics professors and continued to give lectures on campus.",
+      "name": "Computer Science Department, Oberlin College",
+      "position": "Robotics Research Assistant",
+      "startDate": "09-2023",
+      "endDate": "Present",
+      "summary": "Working with Prof. Michael McCarrin on ",
       "highlights": ["Relativity"]
     }
   ],
   "volunteer": [
     {
-      "organization": "People's Climate March",
-      "location": "Zurich, Switzerland",
-      "position": "Lead Organizer",
+      "organization": "NGO LGBT+ do Brasil",
+      "location": "Sao Paulo, Brazil",
+      "position": "Video editor",
       "url": "https://example.com",
-      "startDate": "2014-04-01",
-      "endDate": "2015-07-01",
-      "summary": "Lead organizer for the New York City branch of the People's Climate March, the largest climate march in history.",
-      "highlights": ["Awarded 'Climate Hero' award by Greenpeace for my efforts organizing the march.", "Men of the year 2014 by Time magazine"]
+      "startDate": "04-2022",
+      "endDate": "04-2021",
+      "summary": "Created motion graphics for the segments of an LGBT+ NGO in Brazil (TV/Radio/Podcast/Store), added subtitles, and made videos and live stream edits for Instagram and IGTV. Developed 2 filters for donation information using Spark AR."
     }
   ],
   "education": [
     {
-      "institution": "University of Zurich, Zurich, Switzerland",
-      "location": "Zurich, Switzerland",
-      "url": "https://www.uzh.ch/",
-      "area": "Software Development",
-      "studyType": "PhD",
-      "startDate": "1905-01-01",
-      "endDate": "1905-01-01",
-      "score": "10",
-      "courses": ["Theory of Relativity"]
+      "institution": "Oberlin College, United States",
+      "location": "Oberlin, Ohio",
+      "url": "https://www.oberlin.edu//",
+      "area": "3-2 Engineering and Computer Science major, Physics minor",
+      "studyType": "Bachelor of Science",
+      "startDate": "09-28-2022",
+      "endDate": "05-25-2026",
+      "gpa": "3.99/4.00",
+      "courses": ["Research and Reasoning", "Mechanics and Relavitity", "Elec/Magnetism/Thermo", "Modern Physics", "Electronics", "Multivariable Calculus", "Differential Equations", "Discrete Mathematics", "Data Structures", "Systems Programming", "Algorithms", "Introduction to Statistics", "Environment and Society", "Structure and Reactivity in Chemistry"  , "Principles of Economics"]
+    },
+    {
+      "institution": "Insituto Federal de Sao Paulo, Salto",
+      "location": "Salto, Brazil",
+      "url": "https://slt.ifsp.edu.br/",
+      "area": "High School and Technical School",
+      "studyType": "Technician in Industrial Automation",
+      "startDate": "02-01-2018",
+      "endDate": "02-01-2021",
+      "score": "9.67/10.00",
+      "courses": ["General Electricity", "Digital and Analog Electronics", "Microcontrollers and microprocessors", "Industrial Networks", "Control Systems", "CNC Programming", "Industrial Automation", "Industrial Instrumentation", "Safety, Health, and Quality Control", "Project Management", "Technical Drawing", "Mathematics", "Physics", "Chemistry", "Biology", "Portuguese", "English"]
     }
   ],
   "awards": [
