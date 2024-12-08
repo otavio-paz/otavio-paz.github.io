@@ -2,7 +2,7 @@
 layout: page
 title: Papa Tick - Tick Erradication Device
 description: A solar-powered tick eradication system to address the Brazilian Spotted Fever issues.
-img:
+img: assets/img/papa_tick_tick.jpg
 importance: 1
 category: work
 related_publications: true
@@ -10,14 +10,14 @@ related_publications: true
 
 ## **The Problem: Combating Brazilian Spotted Fever**
 
-Brazilian spotted fever, a deadly tick-borne disease, saw a concerning rise in cases during my high school years in Salto, SP. Recognizing the urgent need for action, the Biological Institute of São Paulo hosted a seminar highlighting the dangers of tick infestations and best practices for mitigation. Inspired by this knowledge, I sought to design a practical tool that could address this issue effectively, blending innovation with science.
+Brazilian spotted fever, a deadly tick-borne disease, saw a concerning rise in cases during my high school years in Salto, SP. Recognizing the urgent need for action, the Biological Institute of São Paulo hosted a seminar highlighting the dangers of tick infestations and best practices for mitigation. Inspired by this knowledge, I sought to design a practical tool that could address this issue effectively.
 
 ---
 
-## **Our Methods: A Collaborative and Scientific Approach**
+## **Our Methods: **
 
 ### **Fieldwork with Experts**
-To develop a comprehensive solution, I collaborated with biologists during field trips to learn how ticks are captured. These real-world insights formed the foundation for designing an effective trapping tool.
+To develop a comprehensive solution, we collaborated with biologists from Biological Institute of São Paulo. During field trips to learn how ticks are captured. These real-world insights formed the foundation for designing the Papa Tick.
 
 ### **Attraction Mechanisms**
 Through experiments, we compared the tick-attraction efficacy of:
@@ -25,16 +25,16 @@ Through experiments, we compared the tick-attraction efficacy of:
 - CO₂ cylinders
 - A chemical reaction using calcium carbonate and lactic acid.
 
-The chemical reaction proved both efficient and practical, serving as the core of our system.
+The dry ice and CO₂ cylinders proved to be the best options for attracting ticks. Specially the dry ice, due to its low-cost.
 
 ### **Engineering the Solution**
-- **Electrocuting Mechanism**: Reverse-engineered an electric fly swatter to increase voltage output and designed it to operate independently of batteries.
+- **Electrocuting Mechanism**: Reverse-engineered an electric fly swatter to increase voltage output and designed it to operate with a constant voltage.
 - **Designing the Trap**: Proposed a metallic mesh structure that separated ticks by life stages for targeted control.
-- **Prototyping**: Using SolidWorks, I designed the model in 3D CAD and fabricated the prototype from acrylic, ensuring durability and functionality.
+- **Prototyping**: Using SolidWorks, I designed the model in 3D CAD and fabricated the prototype from acrylic, ensuring durability.
 
 ---
 
-## **Results: From Prototype to Real-World Impact**
+## **Results: **
 
 Our system demonstrated remarkable success:
 - **Eradication**: Achieved 100% tick eradication in controlled lab settings.
@@ -55,7 +55,7 @@ With promising results in hand, we aim to:
 
 ## **Conclusion**
 
-Papa Tick represents the intersection of biology, engineering, and innovation, offering a sustainable solution to a critical public health problem. With a commitment to refinement and scaling, we strive to make this device a global standard in tick infestation management.
+Papa Tick represents the intersection of biology, engineering, and innovation, offering a sustainable solution to a critical public health problem. With a commitment to refinement and scaling, we hope to make this device an effective tool in tick infestation management.
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-8 mt-3 mt-md-0">
