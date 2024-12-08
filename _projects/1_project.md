@@ -1,81 +1,70 @@
 ---
 layout: page
-title: project 1
-description: with background image
+title: Papa Tick - Tick Erradication Device
+description: A solar-powered tick eradication system to address the Brazilian Spotted Fever issues.
 img:
 importance: 1
 category: work
 related_publications: true
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+## **The Problem: Combating Brazilian Spotted Fever**
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+Brazilian spotted fever, a deadly tick-borne disease, saw a concerning rise in cases during my high school years in Salto, SP. Recognizing the urgent need for action, the Biological Institute of São Paulo hosted a seminar highlighting the dangers of tick infestations and best practices for mitigation. Inspired by this knowledge, I sought to design a practical tool that could address this issue effectively, blending innovation with science.
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+---
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
+## **Our Methods: A Collaborative and Scientific Approach**
 
-You can also put regular text between your rows of images, even citations {% cite einstein1950meaning %}.
-Say you wanted to write a bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
+### **Fieldwork with Experts**
+To develop a comprehensive solution, I collaborated with biologists during field trips to learn how ticks are captured. These real-world insights formed the foundation for designing an effective trapping tool.
+
+### **Attraction Mechanisms**
+Through experiments, we compared the tick-attraction efficacy of:
+- Dry ice
+- CO₂ cylinders
+- A chemical reaction using calcium carbonate and lactic acid.
+
+The chemical reaction proved both efficient and practical, serving as the core of our system.
+
+### **Engineering the Solution**
+- **Electrocuting Mechanism**: Reverse-engineered an electric fly swatter to increase voltage output and designed it to operate independently of batteries.
+- **Designing the Trap**: Proposed a metallic mesh structure that separated ticks by life stages for targeted control.
+- **Prototyping**: Using SolidWorks, I designed the model in 3D CAD and fabricated the prototype from acrylic, ensuring durability and functionality.
+
+---
+
+## **Results: From Prototype to Real-World Impact**
+
+Our system demonstrated remarkable success:
+- **Eradication**: Achieved 100% tick eradication in controlled lab settings.
+- **Sustainability**: Designed a solar-powered circuit using a 115W panel, making the device energy-efficient.
+- **Innovation Recognition**: Submitted a patent application, securing our position as a pioneer in sustainable tick control solutions.
+
+---
+
+## **Future Goals: Scaling and Innovating**
+
+With promising results in hand, we aim to:
+1. **Miniaturize the Device**: Make it more portable and user-friendly.
+2. **Integrate IoT Features**: Enable remote monitoring and control for improved usability.
+3. **Test in Open Areas**: Validate its effectiveness in larger, real-world environments.
+4. **Secure Funding**: Apply for grants to accelerate development and deployment.
+
+---
+
+## **Conclusion**
+
+Papa Tick represents the intersection of biology, engineering, and innovation, offering a sustainable solution to a critical public health problem. With a commitment to refinement and scaling, we strive to make this device a global standard in tick infestation management.
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid path="assets/img/papa_tick_prototype.jpg" title="Papa Tick 3D" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid path="assets/img/papa_tick_fieldwork.jpg" title="Fieldwork with Biologists" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
+    Left: The Papa Tick 3D CAD. Right: Fieldwork sessions with biologists in Salto, SP.
 </div>
-
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
-
-{% raw %}
-
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-```
-
-{% endraw %}
