@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Oberlin College</a>. Undergraduate Researcher
+subtitle: <a href='#'>Oberlin College</a>. Undergraduate Researcher.
 
 profile:
   align: right
