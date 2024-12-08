@@ -14,13 +14,16 @@ Brazilian spotted fever, a deadly tick-borne disease, saw a concerning rise in c
 
 ---
 
-## **Our Methods: **
+## **Our Methods:**
 
 ### **Fieldwork with Experts**
+
 To develop a comprehensive solution, we collaborated with biologists from Biological Institute of São Paulo. During field trips to learn how ticks are captured. These real-world insights formed the foundation for designing the Papa Tick.
 
 ### **Attraction Mechanisms**
+
 Through experiments, we compared the tick-attraction efficacy of:
+
 - Dry ice
 - CO₂ cylinders
 - A chemical reaction using calcium carbonate and lactic acid.
@@ -28,15 +31,17 @@ Through experiments, we compared the tick-attraction efficacy of:
 The dry ice and CO₂ cylinders proved to be the best options for attracting ticks. Specially the dry ice, due to its low-cost.
 
 ### **Engineering the Solution**
+
 - **Electrocuting Mechanism**: Reverse-engineered an electric fly swatter to increase voltage output and designed it to operate with a constant voltage.
 - **Designing the Trap**: Proposed a metallic mesh structure that separated ticks by life stages for targeted control.
 - **Prototyping**: Using SolidWorks, I designed the model in 3D CAD and fabricated the prototype from acrylic, ensuring durability.
 
 ---
 
-## **Results: **
+## **Results:**
 
 Our system demonstrated remarkable success:
+
 - **Eradication**: Achieved 100% tick eradication in controlled lab settings.
 - **Sustainability**: Designed a solar-powered circuit using a 115W panel, making the device energy-efficient.
 - **Innovation Recognition**: Submitted a patent application, securing our position as a pioneer in sustainable tick control solutions.
@@ -46,6 +51,7 @@ Our system demonstrated remarkable success:
 ## **Future Goals: Scaling and Innovating**
 
 With promising results in hand, we aim to:
+
 1. **Miniaturize the Device**: Make it more portable and user-friendly.
 2. **Integrate IoT Features**: Enable remote monitoring and control for improved usability.
 3. **Test in Open Areas**: Validate its effectiveness in larger, real-world environments.
