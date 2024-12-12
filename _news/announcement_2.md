@@ -1,7 +1,7 @@
 ---
 layout: post
 title: I’ve been accepted to Oberlin College with a full-ride scholarship! 🌟
-date: 2022-19-03
+date: 2022-19-03 15:59:00-0400
 inline: false
 related_posts: false
 ---
