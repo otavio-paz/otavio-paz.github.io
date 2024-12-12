@@ -24,7 +24,7 @@ I’ve led projects in different areas, from 2019 to 2022, I co-invented and pat
 
 During a summer fellowship in 2023 at Oberlin College, I explored a new method to designed low-cost **soft robotic actuators** inspired by muscle movements.
 
-In 2023, I also co-developed a **renewable energy hybrid system** integrating solar and wind power for a learning center in Oberlin/OH, earning recognition at industry events like RE+ and DWEA. 
+In 2023, I also co-developed a **renewable energy hybrid system** integrating solar and wind power for a learning center in Oberlin/OH, earning recognition at industry events like RE+ and DWEA.
 
 Currently, I'm working with [Prof. Michael McCarrin](https://www.oberlin.edu/michael-mccarrin) on **autonomous robots** using TurtleBot3, we're building on a DRL framework for navigation and obstacle avoidance (leveraging DDPG, TD3, and DQN) while exploring the possibility of enabling the robot to follow another robot.
 
