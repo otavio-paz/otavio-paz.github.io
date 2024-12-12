@@ -123,7 +123,7 @@
     {
       "name": "Industrial Automation Technician",
       "date": "2021-02-01",
-      "issuer": "Instituto Federal De São Paulo - Salto",
+      "issuer": "Instituto Federal De São Paulo (IFSP) - Salto",
       "url": "https://slt.ifsp.edu.br/",
       "icon": "fa-solid fa-location-dot"
     }
@@ -181,38 +181,65 @@
   ],
   "interests": [
     {
-      "name": "Physics",
+      "name": "Robotics",
       "icon": "fa-solid fa-tag",
       "keywords": [
-        "Quantum Mechanics",
-        "Quantum Computing",
-        "Quantum Information",
-        "Quantum Cryptography",
-        "Quantum Communication",
+        "Soft robotics",
+        "Multi-agent systems",
+        "Autonomous drones",
+        "Reinforcement learning",
+        "Innovation",
         "Quantum Teleportation"
+      ]
+    },
+    {
+      "name": "Hiking",
+      "icon": "fa-solid fa-tag",
+      "keywords": [
+        "Nature",
+        "Trilha"
+      ]
+    },
+    {
+      "name": "F1",
+      "icon": "fa-solid fa-tag",
+      "keywords": [
+        "Mercedes",
+        "McLaren",
+        "Electronics",
+        "Senna"
+      ]
+    },
+    {
+      "name": "Cooking",
+      "icon": "fa-solid fa-tag",
+      "keywords": [
+        "Baking",
+        "Deserts",
+        "Brazilian cuisine"
       ]
     }
   ],
   "references": [
     {
-      "name": "Professor John Doe",
+      "name": "Professor Michael McCarrin",
       "icon": "fa-solid fa-laptop",
-      "reference": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit. D"
+      "reference": "Prof. McCarrin (mmccarri@oberlin.edu) is a dedicated mentor and has in robotics simulations and computer science at Oberlin College. I'm working with him on reinforcement learning techniques for navigation and obstacle avoidance in a TurtleBot3 platform."
     },
     {
-      "name": "Professor John Doe",
+      "name": "Professor Patrick Simen",
       "icon": "fa-solid fa-thumbtack",
-      "reference": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit. D"
+      "reference": "Prof. Simen (pat.simen@oberlin.edu), a distinguished neuroscience professor at Oberlin College, played a pivotal role in guiding my research on soft robotics."
     }
   ],
   "projects": [
     {
-      "name": "Quantum Computing",
-      "summary": "Quantum computing is the use of quantum-mechanical phenomena such as superposition and entanglement to perform computation. Computers that perform quantum computations are known as quantum computers.",
-      "highlights": ["Quantum Teleportation", "Quantum Cryptography"],
-      "startDate": "2018-01-01",
-      "endDate": "2018-01-01",
-      "url": "https://example.com"
+      "name": "Papa Tick",
+      "summary": "Papa Tick is a solar-powered tick control device developed at IFSP to combat Brazilian Spotted Fever. It uses CO₂ attraction and enhanced voltage to effectively lure and eliminate ticks, featuring a patented design to sort tick life stages. The project has a submitted patent and is awaiting further development",
+      "highlights": ["Innovation", "Device Development"],
+      "startDate": "2019-10-01",
+      "endDate": "2022-01-01",
+      "url": "https://otavio-paz.github.io/projects/1_project/"
     }
   ]
 }
