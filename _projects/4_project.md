@@ -23,22 +23,23 @@ This project, completed for PHYS 242 - Electronics under Prof. Jason Stalnaker, 
 
 ### Materials
 
-- Arduino Nano  
-- 12x SG90 Servo Motors  
-- PLA 3D Filament for mechanical parts  
-- Protoboard / PCB Board Zero  
-- 2S LiPo Battery (7.4V, 900mAh)  
-- IC7805 Voltage Regulator with Capacitors  
-- OLED Screen (AOM12864A0-0.96WW-ANO)  
-- Male and Female Header Strips  
-- Optional: HC-06 Bluetooth Module  
+- Arduino Nano
+- 12x SG90 Servo Motors
+- PLA 3D Filament for mechanical parts
+- Protoboard / PCB Board Zero
+- 2S LiPo Battery (7.4V, 900mAh)
+- IC7805 Voltage Regulator with Capacitors
+- OLED Screen (AOM12864A0-0.96WW-ANO)
+- Male and Female Header Strips
+- Optional: HC-06 Bluetooth Module
 
 ---
 
 ### Circuit Design
 
 #### Power Regulation
-The voltage regulator circuit steps down the 7.4V from the LiPo battery to a stable 5V for the Arduino Nano and servos. Using the IC7805 with a 0.1µF ceramic capacitor ensures smooth power delivery while eliminating noise.  
+
+The voltage regulator circuit steps down the 7.4V from the LiPo battery to a stable 5V for the Arduino Nano and servos. Using the IC7805 with a 0.1µF ceramic capacitor ensures smooth power delivery while eliminating noise.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -47,27 +48,29 @@ The voltage regulator circuit steps down the 7.4V from the LiPo battery to a sta
 </div>
 
 #### Servo Motor Integration
+
 Each SG90 servo motor operates on PWM signals for precise positioning. Servos are labeled and connected as follows:
 
-| Label   | Arduino Pin | Label   | Arduino Pin |
-|---------|-------------|---------|-------------|
-| FLF     | D4          | BLF     | D10         |
-| FLK     | D3          | BLK     | D9          |
-| FLH     | D2          | BLH     | D8          |
-| FRF     | D7          | BRF     | A3          |
-| FRK     | D6          | BRK     | A2          |
-| FRH     | D5          | BRH     | A1          |
+| Label | Arduino Pin | Label | Arduino Pin |
+| ----- | ----------- | ----- | ----------- |
+| FLF   | D4          | BLF   | D10         |
+| FLK   | D3          | BLK   | D9          |
+| FLH   | D2          | BLH   | D8          |
+| FRF   | D7          | BRF   | A3          |
+| FRK   | D6          | BRK   | A2          |
+| FRH   | D5          | BRH   | A1          |
 
 #### OLED Screen
+
 The OLED uses SPI communication, requiring specific connections for clock (SCL), data (SDA), chip select (CS), and data/command (DC). This setup enables dynamic facial expressions to be displayed.
 
 ---
 
 ### Testing and Assembly
 
-- **Mechanical Parts**: All feet, knees, hips, and the main body were 3D printed using PLA. Assembly required careful alignment to ensure proper motion.  
-- **Calibration**: Each servo was tested and adjusted to avoid strain or overheating. Replacement servos were used for those that failed during testing.  
-- **Prototyping**: Breadboard connections were used to synchronize servos, and soldering was performed for essential components like the voltage regulator and OLED headers.  
+- **Mechanical Parts**: All feet, knees, hips, and the main body were 3D printed using PLA. Assembly required careful alignment to ensure proper motion.
+- **Calibration**: Each servo was tested and adjusted to avoid strain or overheating. Replacement servos were used for those that failed during testing.
+- **Prototyping**: Breadboard connections were used to synchronize servos, and soldering was performed for essential components like the voltage regulator and OLED headers.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -79,12 +82,13 @@ The OLED uses SPI communication, requiring specific connections for clock (SCL),
 
 ### Results and Future Goals
 
-**Results**: The robot successfully demonstrated multi-joint movement and OLED customization, providing valuable lessons in servo control, circuit design, and mechanical assembly.  
+**Results**: The robot successfully demonstrated multi-joint movement and OLED customization, providing valuable lessons in servo control, circuit design, and mechanical assembly.
 
-**Future Goals**:  
-1. Complete the PCB soldering for a more durable circuit.  
-2. Integrate an HC-06 Bluetooth module for remote control.  
-3. Enhance servo motion sequences for smoother operation.  
+**Future Goals**:
+
+1. Complete the PCB soldering for a more durable circuit.
+2. Integrate an HC-06 Bluetooth module for remote control.
+3. Enhance servo motion sequences for smoother operation.
 
 <div class="row">
     <div class="col-sm-6 col-md-3 mt-3 mt-md-0">

@@ -2,7 +2,7 @@
 layout: page
 title: Hybrid Renewable Energy System
 description: An off-grid power solution for remote learning center in Oberlin/OH.
-img: assets/img/hybrid-system.jpg
+img: assets/img/hybrid-system.png
 importance: 2
 category: work
 giscus_comments: false
@@ -18,7 +18,7 @@ In 2024, we have sucessfully installed the solar array and we expect to install 
 
 ### Key Features
 
-- **Primary Power Source**: Four Q CELLS 365W solar panels arranged in a 1.46kW array on the cabin roof, optimized for maximum sunlight capture.
+- **Primary Power Source**: Four Silvantis F Series (SunEdison) 325W solar panels arranged in a 1.3kW array on the cabin roof, optimized for maximum sunlight capture.
 - **Wind Energy Supplement**: A 400W Air X Marine Wind Turbine, primarily educational, adds resilience and serves as an awareness tool for sustainable practices.
 - **Energy Storage**: A 2400Wh battery pack ensures consistent power, even during overcast or low-wind conditions.
 - **Off-Grid Flexibility**: The system supports lighting, charging devices, and other critical needs across all buildings.
@@ -27,10 +27,23 @@ In 2024, we have sucessfully installed the solar array and we expect to install 
 
 ### Wind and Solar Resources
 
-The Shagbark Learning Center is located in a woodland clearing in North Central Ohio, where renewable energy potential is limited but sufficient for small-scale needs:
+The Shagbark Learning Center is located in a woodland clearing in North Central Ohio, where renewable energy potential is limited in terms of wind resources but sufficient for small-scale project. In terms of solar availability, the region has good solar radiation for most of the months:
 
-- **Solar Resources**: The site receives an average of 3.9 fixed-tilt sunlight hours per day, as estimated using the NREL PVWatts tool. The panels are mounted on a south-facing roof to maximize exposure and minimize shading.
+- **Solar Resources**: The site receives an average of 1.710 kWh/Year fixed-tilt sunlight hours per day, as estimated using the NREL PVWatts tool. The panels are mounted on a south-facing roof to maximize exposure and minimize shading.
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/solar-resource-report.png" title="Solar Resource Report" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+
 - **Wind Resources**: Using WINDExchange data, we found average wind speeds in the area to be suboptimal (5 m/s at 30m). As a result, the wind turbine is primarily ornamental and educational, contributing marginally to power generation.
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/wind-resource-report.png" title="Wind Resource Report" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
 
 ---
 
@@ -55,7 +68,7 @@ This sizing ensures reliable operation during extended cloudy periods or increas
 
 ### Results and Future Goals
 
-The system design meets the energy needs of the Shagbark Learning Center while promoting renewable energy education. Future plans include adding IoT-based monitoring, testing in broader scenarios, and scaling for more extensive applications.
+The system design meets the energy needs of the Shagbark Learning Center while promoting renewable energy education. Future plans include adding daily tracking energy consumption and generation.
 
 ---
 
@@ -65,20 +78,20 @@ The system design meets the energy needs of the Shagbark Learning Center while p
 <
 <div class="row">
   <div class="col-sm-6 col-md-3 mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/hybrid-system-panel.jpg" title="Solar Panels" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/hybrid-system-shagbark.png" title="Property" class="img-fluid rounded z-depth-1" %}
   </div>
   <div class="col-sm-6 col-md-3 mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/hybrid-system-turbine.jpg" title="Wind Turbine" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/hybrid-system-panel.png" title="Solar Panels" class="img-fluid rounded z-depth-1" %}
   </div>
   <div class="col-sm-6 col-md-3 mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/hybrid-system-battery.jpg" title="Battery Storage" class="img-fluid rounded z-depth-1"
-    %}
+    {% include figure.liquid loading="eager" path="assets/img/hybrid-system-electrical.png" title="Electrical System" class="img-fluid rounded
+    z-depth-1" %}
   </div>
   <div class="col-sm-6 col-md-3 mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/hybrid-system-setup.jpg" title="System Setup" class="img-fluid rounded z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/hybrid-system.jpg" title="System" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
-<div class="caption">Key components of the hybrid renewable energy system at Shagbark Learning Center.</div>
+<div class="caption">Key parts of the hybrid renewable energy system development at Shagbark Learning Center.</div>
 ```
 
 {% endraw %}
