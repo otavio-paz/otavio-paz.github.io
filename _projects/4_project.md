@@ -2,7 +2,7 @@
 layout: page
 title: Spider-Like Robot with OLED Display
 description: A 4-leg robot for PHYS 242 (Electronics) class.
-img:
+img: assets/img/spider-robot-complete.png
 importance: 3
 category: work
 ---
@@ -43,7 +43,7 @@ The voltage regulator circuit steps down the 7.4V from the LiPo battery to a sta
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/voltage-regulator.png" title="Voltage Regulator Circuit" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/voltage-regulator.png" title="Voltage Regulator Circuit" class="img-fluid rounded z-depth-1" style="width: 50%;" %}
     </div>
 </div>
 
@@ -74,7 +74,7 @@ The OLED uses SPI communication, requiring specific connections for clock (SCL),
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/spider-robot-assembly.png" title="Robot Assembly" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/spider-robot-assembly.png" title="Robot Assembly" class="img-fluid rounded z-depth-1" style="width: 50%;" %}
     </div>
 </div>
 

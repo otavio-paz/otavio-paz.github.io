@@ -72,10 +72,6 @@ The system design meets the energy needs of the Shagbark Learning Center while p
 
 ---
 
-{% raw %}
-
-```html
-<
 <div class="row">
   <div class="col-sm-6 col-md-3 mt-3 mt-md-0">
     {% include figure.liquid loading="eager" path="assets/img/hybrid-system-shagbark.png" title="Property" class="img-fluid rounded z-depth-1" %}
@@ -92,6 +88,3 @@ The system design meets the energy needs of the Shagbark Learning Center while p
   </div>
 </div>
 <div class="caption">Key parts of the hybrid renewable energy system development at Shagbark Learning Center.</div>
-```
-
-{% endraw %}
