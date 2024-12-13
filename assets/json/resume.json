@@ -183,41 +183,22 @@
     {
       "name": "Robotics",
       "icon": "fa-solid fa-tag",
-      "keywords": [
-        "Soft robotics",
-        "Multi-agent systems",
-        "Autonomous drones",
-        "Reinforcement learning",
-        "Innovation",
-        "Quantum Teleportation"
-      ]
+      "keywords": ["Soft robotics", "Multi-agent systems", "Autonomous drones", "Reinforcement learning", "Innovation", "Quantum Teleportation"]
     },
     {
       "name": "Hiking",
       "icon": "fa-solid fa-tag",
-      "keywords": [
-        "Nature",
-        "Trilha"
-      ]
+      "keywords": ["Nature", "Trilha"]
     },
     {
       "name": "F1",
       "icon": "fa-solid fa-tag",
-      "keywords": [
-        "Mercedes",
-        "McLaren",
-        "Electronics",
-        "Senna"
-      ]
+      "keywords": ["Mercedes", "McLaren", "Electronics", "Senna"]
     },
     {
       "name": "Cooking",
       "icon": "fa-solid fa-tag",
-      "keywords": [
-        "Baking",
-        "Deserts",
-        "Brazilian cuisine"
-      ]
+      "keywords": ["Baking", "Deserts", "Brazilian cuisine"]
     }
   ],
   "references": [

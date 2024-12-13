@@ -1,80 +1,102 @@
 ---
 layout: page
-title: project 4
-description: another without an image
+title: Spider-Like Robot with OLED Display
+description: A 4-leg robot for PHYS 242 (Electronics) class.
 img:
 importance: 3
-category: fun
+category: work
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+### Project Overview
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+This project, completed for PHYS 242 - Electronics under Prof. Jason Stalnaker, involved creating a 4-leg spider-like robot capable of intricate movements using 12 SG90 servo motors. Equipped with an Arduino Nano microcontroller and an OLED screen displaying a customizable face, the robot combines mechanical precision and visual appeal. The project emphasizes control, design, and circuit layout.
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+---
+
+### Design Goals
+
+1. **Enhanced Motion Control**: Unlike simpler, wheel-based robots, this project challenges balance and movement by individually controlling 12 joints for a wide range of motion.
+2. **Customization**: Programmed a personalized bitmap face on the OLED screen, inspired by prior experiments with LCD displays.
+3. **Circuit Prototyping**: Built a circuit on a zero PCB board to understand layout and soldering, ensuring efficient accommodation of all components.
+
+---
+
+### Materials
+
+- Arduino Nano  
+- 12x SG90 Servo Motors  
+- PLA 3D Filament for mechanical parts  
+- Protoboard / PCB Board Zero  
+- 2S LiPo Battery (7.4V, 900mAh)  
+- IC7805 Voltage Regulator with Capacitors  
+- OLED Screen (AOM12864A0-0.96WW-ANO)  
+- Male and Female Header Strips  
+- Optional: HC-06 Bluetooth Module  
+
+---
+
+### Circuit Design
+
+#### Power Regulation
+The voltage regulator circuit steps down the 7.4V from the LiPo battery to a stable 5V for the Arduino Nano and servos. Using the IC7805 with a 0.1µF ceramic capacitor ensures smooth power delivery while eliminating noise.  
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/voltage-regulator.png" title="Voltage Regulator Circuit" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
+
+#### Servo Motor Integration
+Each SG90 servo motor operates on PWM signals for precise positioning. Servos are labeled and connected as follows:
+
+| Label   | Arduino Pin | Label   | Arduino Pin |
+|---------|-------------|---------|-------------|
+| FLF     | D4          | BLF     | D10         |
+| FLK     | D3          | BLK     | D9          |
+| FLH     | D2          | BLH     | D8          |
+| FRF     | D7          | BRF     | A3          |
+| FRK     | D6          | BRK     | A2          |
+| FRH     | D5          | BRH     | A1          |
+
+#### OLED Screen
+The OLED uses SPI communication, requiring specific connections for clock (SCL), data (SDA), chip select (CS), and data/command (DC). This setup enables dynamic facial expressions to be displayed.
+
+---
+
+### Testing and Assembly
+
+- **Mechanical Parts**: All feet, knees, hips, and the main body were 3D printed using PLA. Assembly required careful alignment to ensure proper motion.  
+- **Calibration**: Each servo was tested and adjusted to avoid strain or overheating. Replacement servos were used for those that failed during testing.  
+- **Prototyping**: Breadboard connections were used to synchronize servos, and soldering was performed for essential components like the voltage regulator and OLED headers.  
+
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/spider-robot-assembly.png" title="Robot Assembly" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+
+---
+
+### Results and Future Goals
+
+**Results**: The robot successfully demonstrated multi-joint movement and OLED customization, providing valuable lessons in servo control, circuit design, and mechanical assembly.  
+
+**Future Goals**:  
+1. Complete the PCB soldering for a more durable circuit.  
+2. Integrate an HC-06 Bluetooth module for remote control.  
+3. Enhance servo motion sequences for smoother operation.  
+
+<div class="row">
+    <div class="col-sm-6 col-md-3 mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/spider-robot-complete.png" title="Completed Robot" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm-6 col-md-3 mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/spider-robot-testing.png" title="Robot Testing" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm-6 col-md-3 mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/spider-robot-circuit.png" title="Circuit" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    This image can also have a caption. It's like magic.
+    Highlights of the spider-like robot project: assembly, testing, motion, and OLED customization.
 </div>
-
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
-
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
-
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
-
-{% raw %}
-
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-```
-
-{% endraw %}

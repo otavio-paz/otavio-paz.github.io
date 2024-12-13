@@ -1,81 +1,84 @@
 ---
 layout: page
-title: project 2
-description: a project with a background image and giscus comments
-img: assets/img/3.jpg
+title: Hybrid Renewable Energy System
+description: An off-grid power solution for remote learning center in Oberlin/OH.
+img: assets/img/hybrid-system.jpg
 importance: 2
 category: work
-giscus_comments: true
+giscus_comments: false
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+### Project Overview
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+This hybrid renewable energy system was designed to power Shagbark Learning Center, a multi-purpose retreat in Oberlin/OH. Designed as an off-grid solution, the system provides sustainable energy to three buildings—a cabin, a sugar shed, and an outhouse—using a photovoltaic (PV) array and a micro wind turbine.
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+In 2024, we have sucessfully installed the solar array and we expect to install the micro wind turbine in the first semester of 2025.
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
+---
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
+### Key Features
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
+- **Primary Power Source**: Four Q CELLS 365W solar panels arranged in a 1.46kW array on the cabin roof, optimized for maximum sunlight capture.
+- **Wind Energy Supplement**: A 400W Air X Marine Wind Turbine, primarily educational, adds resilience and serves as an awareness tool for sustainable practices.
+- **Energy Storage**: A 2400Wh battery pack ensures consistent power, even during overcast or low-wind conditions.
+- **Off-Grid Flexibility**: The system supports lighting, charging devices, and other critical needs across all buildings.
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
+---
+
+### Wind and Solar Resources
+
+The Shagbark Learning Center is located in a woodland clearing in North Central Ohio, where renewable energy potential is limited but sufficient for small-scale needs:
+
+- **Solar Resources**: The site receives an average of 3.9 fixed-tilt sunlight hours per day, as estimated using the NREL PVWatts tool. The panels are mounted on a south-facing roof to maximize exposure and minimize shading.
+- **Wind Resources**: Using WINDExchange data, we found average wind speeds in the area to be suboptimal (5 m/s at 30m). As a result, the wind turbine is primarily ornamental and educational, contributing marginally to power generation.
+
+---
+
+### Sizing Consumption and System Autonomy
+
+We calculated energy consumption based on a worst-case scenario: continuous use during winter with lights, device charging, and other essential loads. Our estimates include:
+
+- **Daily Energy Needs**: The combined loads of the cabin, sugar shed, and outhouse total approximately 650Wh per day under peak usage conditions.
+- **Battery Autonomy**: With a 2400Wh battery pack, the system can provide power for up to **4.4 days** without additional sunlight or wind. It takes approximately **2.1 days** to fully recharge the batteries in ideal solar conditions.
+
+This sizing ensures reliable operation during extended cloudy periods or increased usage, maintaining power for critical needs.
+
+---
+
+### Design and Implementation
+
+- **Solar and Wind Integration**: The system combines solar and wind energy sources with two MPPT charge controllers for efficient energy management.
+- **Storage and Conversion**: A PROwatt 1000W inverter and deep-cycle batteries ensure reliable AC power distribution.
+- **Aesthetic Consideration**: All components are mounted with minimal environmental impact, preserving the natural appeal of the learning center.
+
+---
+
+### Results and Future Goals
+
+The system design meets the energy needs of the Shagbark Learning Center while promoting renewable energy education. Future plans include adding IoT-based monitoring, testing in broader scenarios, and scaling for more extensive applications.
+
+---
 
 {% raw %}
 
 ```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+<
+<div class="row">
+  <div class="col-sm-6 col-md-3 mt-3 mt-md-0">
+    {% include figure.liquid loading="eager" path="assets/img/hybrid-system-panel.jpg" title="Solar Panels" class="img-fluid rounded z-depth-1" %}
   </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+  <div class="col-sm-6 col-md-3 mt-3 mt-md-0">
+    {% include figure.liquid loading="eager" path="assets/img/hybrid-system-turbine.jpg" title="Wind Turbine" class="img-fluid rounded z-depth-1" %}
+  </div>
+  <div class="col-sm-6 col-md-3 mt-3 mt-md-0">
+    {% include figure.liquid loading="eager" path="assets/img/hybrid-system-battery.jpg" title="Battery Storage" class="img-fluid rounded z-depth-1"
+    %}
+  </div>
+  <div class="col-sm-6 col-md-3 mt-3 mt-md-0">
+    {% include figure.liquid loading="eager" path="assets/img/hybrid-system-setup.jpg" title="System Setup" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
+<div class="caption">Key components of the hybrid renewable energy system at Shagbark Learning Center.</div>
 ```
 
 {% endraw %}
