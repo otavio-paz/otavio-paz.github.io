@@ -34,7 +34,7 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y imagemagick
           pip3 install --upgrade jupyter
-      
+
       - name: Convert PNG to WEBP
         run: |
           find . -name "*.png" -exec sh -c 'cwebp -q 80 "$0" -o "${0%.png}.webp"' {} \;

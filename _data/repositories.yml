@@ -1,0 +1,10 @@
+github_users:
+  - otavio-paz
+
+repo_description_lines_max: 2
+
+github_repos:
+  - otavio-paz/otavio-paz.github.io
+  - otavio-paz/OESOptimizationTool
+  - otavio-paz/SpiderBot
+  - otavio-paz/Wall-e-Robo
