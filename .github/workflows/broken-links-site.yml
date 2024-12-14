@@ -29,6 +29,15 @@ jobs:
               "giscus.repo": "${{ github.repository }}",
               "baseurl": ""
             }
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y imagemagick
+          pip3 install --upgrade jupyter
+      
+      - name: Convert PNG to WEBP
+        run: |
+          find . -name "*.png" -exec sh -c 'cwebp -q 80 "$0" -o "${0%.png}.webp"' {} \;
       - name: Install and Build 🔧
         run: |
           pip3 install --upgrade jupyter
