@@ -1,7 +1,7 @@
 {
   "basics": {
     "name": "Otavio Paz Nascimento",
-    "label": "Undergraduate Researcher",
+    "label": "Computer Science & 3-2 Engineering. Undergraduate Researcher.",
     "image": "",
     "email": "onascime@oberlin.edu",
     "url": "https://otavio-paz.github.io/",
@@ -117,6 +117,13 @@
       "awarder": "HackHolyoke",
       "url": "https://hackholyoke-2022.devpost.com/",
       "summary": "HackHolyoke is a 24-hour hackathon hosted every year by students at Mount Holyoke College.'"
+    },
+    {
+      "title": "Kyle Lam Hacker Scholarship ($6,575)",
+      "date": "2024-12-15",
+      "awarder": "Infillion",
+      "url": "https://bold.org/scholarships/kyle-lam-hacker-scholarship/?utm_campaign=Scholarship-Awarded%20%28RV97FW%29&utm_medium=email&utm_source=Student%20-%20Scholarship%20Awarded&_kx=4YClUmKKzbIU6TaNvhnaAZOlXpy7wc6ztzwSCcQ6WEs.MHP6u6#winners",
+      "summary": "This scholarship seeks to honor the memory of Kyle Lam by supporting students at his alma mater who exemplify the curiosity, experimentation, and execution that Kyle lived by."
     }
   ],
   "certificates": [
