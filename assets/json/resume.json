@@ -149,26 +149,13 @@
       "name": "Robotics",
       "level": "Master",
       "icon": "fa-solid fa-hashtag",
-      "keywords": [
-        "Soldering",
-        "ROS2",
-        "Gazebo",
-        "Digital electronics",
-        "Soft robotics",
-        "Circuit design (PCB)",
-        "Python",
-        "C/C++",
-        "Arduino"
-      ]
+      "keywords": ["Soldering", "ROS2", "Gazebo", "Digital electronics", "Soft robotics", "Circuit design (PCB)", "Python", "C/C++", "Arduino"]
     },
     {
       "name": "Design",
       "level": "Intermediate",
       "icon": "fa-solid fa-hashtag",
-      "keywords": [
-        "SolidWorks",
-        "AutoCAD"
-      ]
+      "keywords": ["SolidWorks", "AutoCAD"]
     }
   ],
   "languages": [
