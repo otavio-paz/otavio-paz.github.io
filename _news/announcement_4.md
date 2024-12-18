@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-I’ve been awarded the $6,575 scholarship Kyle Lam Hacker Scholarship!
+I’ve been awarded the $6,575 Kyle Lam Hacker Scholarship!
