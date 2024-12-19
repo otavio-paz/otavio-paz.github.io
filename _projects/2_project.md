@@ -79,9 +79,10 @@ The system design meets the energy needs of the Shagbark Learning Center while p
   <div class="col-sm-6 col-md-3 mt-3 mt-md-0">
     {% include figure.liquid loading="eager" path="assets/img/hybrid-system-panel.png" title="Solar Panels" class="img-fluid rounded z-depth-1" %}
   </div>
+</div>
+<div class="row">
   <div class="col-sm-6 col-md-3 mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/hybrid-system-electrical.png" title="Electrical System" class="img-fluid rounded
-    z-depth-1" %}
+    {% include figure.liquid loading="eager" path="assets/img/hybrid-system-electrical.png" title="Electrical System" class="img-fluid rounded z-depth-1" %}
   </div>
   <div class="col-sm-6 col-md-3 mt-3 mt-md-0">
     {% include figure.liquid loading="eager" path="assets/img/hybrid-system.jpg" title="System" class="img-fluid rounded z-depth-1" %}
