@@ -42,8 +42,8 @@ This project, completed for PHYS 242 - Electronics under Prof. Jason Stalnaker, 
 The voltage regulator circuit steps down the 7.4V from the LiPo battery to a stable 5V for the Arduino Nano and servos. Using the IC7805 with a 0.1µF ceramic capacitor ensures smooth power delivery while eliminating noise.
 
 <div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/voltage-regulator.png" title="Voltage Regulator Circuit" class="img-fluid rounded z-depth-1" style="width: 50%;" %}
+    <div class="col-sm-6 col-md-4 mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/voltage-regulator.png" title="Voltage Regulator Circuit" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 
@@ -73,7 +73,7 @@ The OLED uses SPI communication, requiring specific connections for clock (SCL),
 - **Prototyping**: Breadboard connections were used to synchronize servos, and soldering was performed for essential components like the voltage regulator and OLED headers.
 
 <div class="row">
-    <div class="col-sm mt-3 mt-md-0">
+    <div class="col-sm-6 col-md-4 mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/spider-robot-assembly.png" title="Robot Assembly" class="img-fluid rounded z-depth-1" style="width: 50%;" %}
     </div>
 </div>
@@ -91,13 +91,13 @@ The OLED uses SPI communication, requiring specific connections for clock (SCL),
 3. Enhance servo motion sequences for smoother operation.
 
 <div class="row">
-    <div class="col-sm-6 col-md-3 mt-3 mt-md-0">
+    <div class="col-sm-6 col-md-4 mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/spider-robot-complete.png" title="Completed Robot" class="img-fluid rounded z-depth-1" %}
     </div>
-    <div class="col-sm-6 col-md-3 mt-3 mt-md-0">
+    <div class="col-sm-6 col-md-4 mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/spider-robot-testing.png" title="Robot Testing" class="img-fluid rounded z-depth-1" %}
     </div>
-    <div class="col-sm-6 col-md-3 mt-3 mt-md-0">
+    <div class="col-sm-6 col-md-4 mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/spider-robot-circuit.png" title="Circuit" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>

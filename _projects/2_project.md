@@ -32,15 +32,15 @@ The Shagbark Learning Center is located in a woodland clearing in North Central 
 - **Solar Resources**: The site receives an average of 1.710 kWh/Year fixed-tilt sunlight hours per day, as estimated using the NREL PVWatts tool. The panels are mounted on a south-facing roof to maximize exposure and minimize shading.
 
 <div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/solar-resource-report.png" title="Solar Resource Report" class="img-fluid rounded z-depth-1" %}
-    </div>
+  <div class="col-sm-12 col-md-6 mt-3 mt-md-0">
+    {% include figure.liquid loading="eager" path="assets/img/solar-resource-report.png" title="Solar Resource Report" class="img-fluid rounded z-depth-1" %}
+  </div>
 </div>
 
 - **Wind Resources**: Using WINDExchange data, we found average wind speeds in the area to be suboptimal (5 m/s at 30m). As a result, the wind turbine is primarily ornamental and educational, contributing marginally to power generation.
 
 <div class="row">
-    <div class="col-sm mt-3 mt-md-0">
+    <div class="col-sm-12 col-md-6 mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/wind-resource-report.png" title="Wind Resource Report" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
