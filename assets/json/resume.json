@@ -239,6 +239,22 @@
       "startDate": "2019-10-01",
       "endDate": "2022-01-01",
       "url": "https://otavio-paz.github.io/projects/1_project/"
+    },
+    {
+      "name": "Hybrid Renewable Energy System",
+      "summary": "This off-grid hybrid renewable energy system was designed to power Shagbark Learning Center, a multi-purpose retreat in Oberlin/OH.",
+      "highlights": ["Sustainability", "Community-driven"],
+      "startDate": "2023-90-01",
+      "endDate": "Present",
+      "url": "https://otavio-paz.github.io/projects/2_project/"
+    },
+    {
+      "name": "Autonomous Navigation with Deep Reinforcement Learning on TurtleBot3",
+      "summary": "This project aims to develop a reinforcement learning-based navigation system for the TurtleBot3 platform. We are currently researching DDPG, TD3, and DQN algorithms to improve navigation and obstacle avoidance.",
+      "highlights": ["Robotics", "Machine learning"],
+      "startDate": "2023-08-01",
+      "endDate": "Present",
+      "url": "https://otavio-paz.github.io/projects/3_project/"
     }
   ]
 }
