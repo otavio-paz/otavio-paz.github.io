@@ -31,7 +31,7 @@ Our work has two key objectives: **obstacle avoidance** and **dynamic target fol
 Navigating dynamic and cluttered environments autonomously remains a challenging problem for robots.
 
 ### Objectives
-- Implement **DRL** for real-time **obstacle avoidance**.  
+- Implement **DRL** for real-time **obstacle avoidance** by [van Rietbergen T.L](https://github.com/tomasvr/turtlebot3_drlnav) for LD08 sensor.  
 - Enable **dynamic target following** while maintaining the first feature.  
 
 ### Motivation
@@ -81,7 +81,7 @@ Stay updated on our journey!
 ### Codebase
 - [Our GitHub Repository](https://github.com/otavio-paz/turtlebot3_drlnav): Our modifications and models.
 
-- [Original GitHub Repository](https://github.com/otavio-paz/turtlebot3_drlnav): van Rietbergen T.L, Master Thesis. UT Delft.
+- [Original GitHub Repository](https://github.com/tomasvr/turtlebot3_drlnav): van Rietbergen T.L, Master Thesis at UT Delft.
 
 ### Datasets
 - Details about simulation data and real-world test results.
