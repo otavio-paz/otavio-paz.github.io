@@ -61,8 +61,11 @@ This research addresses critical challenges in robotics and contributes to pract
 
 ## Results
 
+In progress.
+
 ### Demonstrations
--  
+
+In progress.
 
 ### Metrics
 - Success rates for navigation tasks.  
