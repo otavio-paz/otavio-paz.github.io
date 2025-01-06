@@ -70,7 +70,7 @@
         - John F. Oberlin Scholarship ($20,000/year)
     - year: 2024
       items:
-       - Kyle Lam Hacker Scholarship ($6,575)
+        - Kyle Lam Hacker Scholarship ($6,575)
 
 - title: Academic Interests
   type: nested_list
