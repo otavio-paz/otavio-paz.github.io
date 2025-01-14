@@ -1,7 +1,7 @@
 ---
 layout: post
 title: lucid dreaming, the exploration, the unknown, the pseudoscience (?)
-date: 2015-03-15 16:55:16
+date: 2024-12-14 16:55:16
 description: a brief post about my views on lucid dreaming
 tags: LD
 categories: journal
