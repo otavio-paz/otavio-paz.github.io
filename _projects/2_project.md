@@ -18,10 +18,10 @@ In 2024, we have sucessfully installed the solar array and we expect to install 
 
 ### Key Features
 
-- **Primary Power Source**: Four Silvantis F Series (SunEdison) 325W solar panels arranged in a 1.3kW array on the cabin roof, optimized for maximum sunlight capture.
-- **Wind Energy Supplement**: A 400W Air X Marine Wind Turbine, primarily educational, adds resilience and serves as an awareness tool for sustainable practices.
-- **Energy Storage**: A 2400Wh battery pack ensures consistent power, even during overcast or low-wind conditions.
-- **Off-Grid Flexibility**: The system supports lighting, charging devices, and other critical needs across all buildings.
+- **Primary Power Source**: Four Silvantis F Series (SunEdison) 325W solar panels arranged in a 1.3kW array on the cabin roof, optimized for maximum sunlight capture and discrete implementation.
+- **Wind Energy Supplement**: A 400W Air X Marine Wind Turbine, primarily educational due to limited wind resources, adds resilience and serves as an awareness tool for sustainable practices (in progress).
+- **Energy Storage**: A 2400Wh battery pack ensures consistent power and storage, even during overcast or low-wind conditions.
+- **Off-Grid Flexibility**: The system is expected to support lighting, charging devices, and other critical needs across all buildings.
 
 ---
 
