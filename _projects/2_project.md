@@ -49,7 +49,7 @@ The Shagbark Learning Center is located in a woodland clearing in North Central 
 
 ### Sizing Consumption and System Autonomy
 
-We calculated energy consumption based on a worst-case scenario: continuous use during winter with lights, device charging, and other essential loads. Our estimates include:
+We calculated energy consumption based on a worst-case scenario: continuous use during winter with lights, devices charging, and other essential loads. Our estimates include:
 
 - **Daily Energy Needs**: The combined loads of the cabin, sugar shed, and outhouse total approximately 650Wh per day under peak usage conditions.
 - **Battery Autonomy**: With a 2400Wh battery pack, the system can provide power for up to **4.4 days** without additional sunlight or wind. It takes approximately **2.1 days** to fully recharge the batteries in ideal solar conditions.
@@ -62,7 +62,7 @@ This sizing ensures reliable operation during extended cloudy periods or increas
 
 - **Solar and Wind Integration**: The system combines solar and wind energy sources with two MPPT charge controllers for efficient energy management.
 - **Storage and Conversion**: A PROwatt 1000W inverter and deep-cycle batteries ensure reliable AC power distribution.
-- **Aesthetic Consideration**: All components are mounted with minimal environmental impact, preserving the natural appeal of the learning center.
+- **Aesthetic Consideration**: All components are mounted with minimal environmental and aesthetic impact, preserving the natural appeal of the learning center.
 
 ---
 
