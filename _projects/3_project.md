@@ -11,7 +11,15 @@ category: work
 
 Welcome to the project hub for our exploration of **Deep Reinforcement Learning (DRL)** in autonomous navigation using the **TurtleBot3 Burger**.
 
-## Our work has two key objectives: **obstacle avoidance** and **dynamic target following**. By integrating DRL with robust frameworks like PyTorch, we aim to improve the robot’s decision-making in real-time scenarios.
+
+This research has evolved over the semesters as we explored new possibilities that aligned with the team's growing interests and desires:
+
+- **Fall 2023**: Focused on surface-level autonomous vehicles, introduced to ROS and Gazebo
+- **Spring 2024**: Acquired TurtleBot 3 Burger, learned about SLAM and the possibility of fiducial markers
+- **Fall 2024**: Shifted focus to deep reinforcement learning for obstacle avoidance, primarily based on Tomas van Rietbergen's work
+- **Spring 2025**: Acquired TurtleBot 4, considering continuing work on DRL and sensor fusion
+
+Our work has two key objectives: **obstacle avoidance** and **dynamic target following**. By integrating DRL with robust frameworks like PyTorch, we aim to improve the robot’s decision-making in real-time scenarios.
 
 ## Navigation
 
@@ -96,17 +104,17 @@ Stay updated on our journey!
 
 ### Datasets
 
-- Details about simulation data and real-world test results.
+- Details about simulation data and real-world test results (in progress).
 
 ### Documentation
 
-- Tutorials for setting up the TurtleBot3 and replicating our experiments.
+- Tutorials for setting up the TurtleBot3 and replicating our experiments (in progress).
 
 ---
 
 ## Team
 
-- Otavio Paz Nascimento (Student Researcher - 2023-24)
 - Prof. Michael R. McCarrin (Advisor)
+- Otavio Paz Nascimento (Student Researcher - 2023-25)
 - Rosie McKusick (Student Researcher - 2023)
 - Eliza Bomfim Guimaraes (Student Researcher - 2023)
