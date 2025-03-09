@@ -49,7 +49,7 @@ This research focused on designing and fabricating soft robotic actuators using 
 ### Results and Findings
 
 <div class="row justify-content-center">
-  <div class="col-sm-12 col-md-4 mt-3 mt-md-0">
+  <div class="col-sm-12 col-md-8 mt-3 mt-md-0">
     {% include figure.liquid loading="eager" path="assets/img/graph-results.jpg" title="Graph Results" class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
