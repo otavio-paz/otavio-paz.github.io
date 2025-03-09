@@ -33,12 +33,36 @@
   },
   "work": [
     {
+      "name": "Office of Energy and Sustainability, Oberlin College",
+      "position": "Lead Energy Detective",
+      "startDate": "10-2022",
+      "endDate": "Present",
+      "summary": "Analyzed campus-wide energy and water usage using BuildingOS, managing 10+ tracking spreadsheets for 80+ buildings to identify inefficiencies. Successfully identified 20+ malfunctioning meters, uncovering a loss of $30,000+ for the city. Developing software to validate utility billing data and School’s system using PyQt.",
+      "highlights": ["Leadership", "Data Analytics", "Sustainability", "Community-driven"]
+    },
+    {
+      "name": "Computer Science Department, Oberlin College",
+      "position": "Lab Grader",
+      "startDate": "02-2023",
+      "endDate": "11-2024",
+      "summary": "Graded 250+ Python labs on Repl.it and GitHub Classroom for CSCI 150 (Introduction to Computer Science) sections, providing detailed feedback and guidance to students. ",
+      "highlights": ["Grading", "Student Feedback"]
+    },
+    {
       "name": "Computer Science Department, Oberlin College",
       "position": "Robotics Research Assistant",
       "startDate": "09-2023",
       "endDate": "Present",
       "summary": "Acquired foundational skills in ROS and Gazebo for robotic simulations. Improved the product’s documentation for a better user experience with the guidance of Prof. McCarrin. Currently, researching on reinforcement learning techniques, such as DDPG, TD3, and DQN, for navigation and obstacle avoidance in a TurtleBot3 platform, where we are adding to the work of Tomas van Rietbergen from TU Delft.",
-      "highlights": ["Robotics", "ML"]
+      "highlights": ["Leadership", "Robotics", "ML"]
+    },
+    {
+      "name": "Academic Advising Resource Center, Oberlin College",
+      "position": "Peer Tutor",
+      "startDate": "02-2024",
+      "endDate": "Present",
+      "summary": "Supported 20+ students in mastering Computer Science, Physics, and Mathematics concepts.",
+      "highlights": ["Tutoring", "Student Support"]
     }
   ],
   "volunteer": [
@@ -260,6 +284,14 @@
       "startDate": "2023-08-01",
       "endDate": "Present",
       "url": "https://otavio-paz.github.io/projects/3_project/"
+    },
+    {
+      "name": "Design and Fabrication of Soft Robotic Actuators using Dragon Skin™ and Iron Powder",
+      "summary": "Prototyped muscle-like actuators using DragonSkin™ infused with iron powder, evaluating 5+ designs through 25+ iterations. Enhanced skills in prototyping, FDM 3D printing, silicone molding, data analysis, and collaboration within a research environment.",
+      "highlights": ["Prototyping", "3D Printing", "Silicone Molding", "Data Analysis"],
+      "startDate": "2023-06-02",
+      "endDate": "2023-07-24",
+      "url": "https://otavio-paz.github.io/projects/4_project/"
     }
   ]
 }
