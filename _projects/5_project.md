@@ -38,8 +38,9 @@ This research focused on designing and fabricating soft robotic actuators using 
   </div>
   <div class="col-sm-12 col-md-4 mt-3 mt-md-0">
     {% include figure.liquid loading="eager" path="assets/img/mold-curing.JPG" title="Mold Curing" class="img-fluid rounded z-depth-1" %}
+  <div class="col-sm-12 col-md-4 mt-3 mt-md-0">
+    {% include figure.liquid loading="eager" path="assets/img/prototype-result.JPG" title="Prototype Result" class="img-fluid rounded z-depth-1" %}
   </div>
-</div>
 ---
 
 ### Results and Findings
