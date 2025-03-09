@@ -7,8 +7,6 @@ importance: 3
 category: work
 ---
 
-# Autonomous Navigation with Deep Reinforcement Learning on TurtleBot3
-
 Welcome to the project hub for our exploration of **Deep Reinforcement Learning (DRL)** in autonomous navigation using the **TurtleBot3 Burger**.
 
 
