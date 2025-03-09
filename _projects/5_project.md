@@ -16,18 +16,18 @@ giscus_comments: false
 
 ### Project Overview
 
-This research focused on designing and fabricating soft robotic actuators using DragonSkin™ silicone infused with iron powder. Conducted as part of the Oberlin College Research Fellowship (June–July 2023), the project aimed to create muscle-like structures capable of contraction and expansion via magnetic forces while reducing manufacturing costs by 54%. Through 25+ iterations across 5+ designs, we demonstrated the viability of low-cost, flexible actuators for safe human-robot interaction.
+This research focused on designing and fabricating soft robotic actuators using DragonSkin™ silicone infused with iron powder. Conducted as part of the Oberlin College Research Fellowship (June–July 2023), the project aimed to create muscle-like structures capable of contraction and expansion via magnetic forces. Through 25+ iterations across 5+ designs, we demonstrated the viability of low-cost, and possible use of flexible actuators for safe human-robot interaction.
 
 ---
 
 ### Materials and Methodology
 
-- **Materials**: DragonSkin™ silicone, iron powder (40 mesh), PLA/TPU for 3D-printed molds, magnet wire (30 AWG), and steel ball bearings.
+- **Materials**: DragonSkin™ silicone, iron powder (40 mesh), PLA/TPU for 3D-printed molds, magnet wire (30 AWG).
 - **Process**:
   1. Designed muscle-inspired structures (1"–3" size range) using CAD software.
   2. 3D-printed molds with PLA, then cast silicone-iron mixtures.
   3. Tested magnetic responsiveness under varying current and iron powder concentrations.
-  4. Evaluated performance through force measurements and structural flexibility analysis.
+  4. Evaluated performance through force measurements and structural flexibility.
 
 <div class="row justify-content-center">
   <div class="col-sm-12 col-md-6 mt-3 mt-md-0">
@@ -54,4 +54,4 @@ This research focused on designing and fabricating soft robotic actuators using 
 
 Presented at Oberlin College Research Fellowship (Summer 2023).
 
-[Link to PowerPoint](#https://docs.google.com/presentation/d/1Qtw751AlG6HJE_puJ9hkHq_7S8N8ZrPx/edit?usp=sharing&ouid=115848431762361689971&rtpof=true&sd=true)
+[Link to PowerPoint](https://docs.google.com/presentation/d/1Qtw751AlG6HJE_puJ9hkHq_7S8N8ZrPx/edit?usp=sharing&ouid=115848431762361689971&rtpof=true&sd=true)
