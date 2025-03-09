@@ -30,17 +30,20 @@ This research focused on designing and fabricating soft robotic actuators using 
   4. Evaluated performance through force measurements and structural flexibility.
 
 <div class="row justify-content-center">
-  <div class="col-sm-12 col-md-4 mt-3 mt-md-0">
+  <div class="col-sm-12 col-md-6 mt-3 mt-md-0">
     {% include figure.liquid loading="eager" path="assets/img/actuator-mold.JPG" title="3D-Printed Mold" class="img-fluid rounded z-depth-1" %}
   </div>
-  <div class="col-sm-12 col-md-4 mt-3 mt-md-0">
+  <div class="col-sm-12 col-md-6 mt-3 mt-md-0">
     {% include figure.liquid loading="eager" path="assets/img/silicone-iron-mix.JPG" title="Silicone-Iron Mixture" class="img-fluid rounded z-depth-1" %}
   </div>
-  <div class="col-sm-12 col-md-4 mt-3 mt-md-0">
+  <div class="col-sm-12 col-md-6 mt-3 mt-md-0">
     {% include figure.liquid loading="eager" path="assets/img/mold-curing.JPG" title="Mold Curing" class="img-fluid rounded z-depth-1" %}
-  <div class="col-sm-12 col-md-4 mt-3 mt-md-0">
+  </div>
+  <div class="col-sm-12 col-md-6 mt-3 mt-md-0">
     {% include figure.liquid loading="eager" path="assets/img/prototype-result.JPG" title="Prototype Result" class="img-fluid rounded z-depth-1" %}
   </div>
+</div>
+
 ---
 
 ### Results and Findings
