@@ -10,7 +10,7 @@ related_publications: true
 
 ## **The Problem: Combating Brazilian Spotted Fever**
 
-Brazilian spotted fever, a deadly tick-borne disease, saw a concerning rise in cases during my high school years in Salto, SP. Recognizing the urgent need for action, the Biological Institute of São Paulo hosted a seminar highlighting the dangers of tick infestations and best practices for mitigation. Inspired by this knowledge, I sought to design a practical tool that could address this issue effectively.
+Brazilian spotted fever, a deadly tick-borne disease, saw a concerning rise in cases during my high school years in Salto, SP. Recognizing the urgent need for action, the Biological Institute of São Paulo hosted a seminar highlighting the dangers of tick infestations and best practices for mitigation. Inspired by this knowledge, I sought to design a practical tool that could address this issue with a team of friends at Instituto Federal de São Paulo.
 
 ---
 
@@ -36,6 +36,12 @@ The dry ice and CO₂ cylinders proved to be the best options for attracting tic
 - **Designing the Trap**: Proposed a metallic mesh structure that separated ticks by life stages for targeted control.
 - **Prototyping**: Using SolidWorks, I designed the model in 3D CAD and fabricated the prototype from acrylic, ensuring durability.
 
+<div class="row justify-content-center">
+  <div class="col-sm-12 col-md-6 mt-3 mt-md-0">
+    {% include figure.liquid loading="eager" path="assets/img/tick-elimination-test.jpg" title="Tick Elimination" class="img-fluid rounded z-depth-1" %}
+  </div>
+</div>
+
 ---
 
 ## **Results:**
@@ -50,7 +56,7 @@ Our system demonstrated remarkable success:
 
 ## **Future Goals: Scaling and Innovating**
 
-With promising results in hand, we aim to:
+With promising results in hand, after getting the patent approval, we aim to:
 
 1. **Miniaturize the Device**: Make it more portable and user-friendly.
 2. **Integrate IoT Features**: Enable remote monitoring and control for improved usability.
@@ -63,11 +69,11 @@ With promising results in hand, we aim to:
 
 Papa Tick represents the intersection of biology, engineering, and innovation, offering a sustainable solution to a critical public health problem. With a commitment to refinement and scaling, we hope to make this device an effective tool in tick infestation management.
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
+<div class="row justify-content-center">
+    <div class="col-sm-6 mt-3 mt-md-0">
         {% include figure.liquid path="assets/img/papa_tick_prototype.jpg" title="Papa Tick 3D" class="img-fluid rounded z-depth-1" %}
     </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
+    <div class="col-sm-6 mt-3 mt-md-0">
         {% include figure.liquid path="assets/img/papa_tick_fieldwork.jpg" title="Fieldwork with Biologists" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>

@@ -1,13 +1,13 @@
 ---
 layout: page
-title: Autonomous Navigation with Deep Reinforcement Learning on TurtleBot3
-description: Under the mentorship of Professor McCarrin, this involves developing on navigation and obstacle avoidance for the TurtleBot3.
+title: Autonomous Navigation with DRL on TurtleBot3/4 (under changes)
+description: Under the mentorship of Professor McCarrin, this involves developing on navigation and obstacle avoidance for the TurtleBot3 and TurtleBot4.
 img: assets/img/turtlebot-diagram.png
 importance: 3
 category: work
 ---
 
-Welcome to the project hub for our exploration of **Deep Reinforcement Learning (DRL)** in autonomous navigation using the **TurtleBot3 Burger**.
+Welcome to the project hub for our exploration of **Deep Reinforcement Learning (DRL)** in autonomous navigation using the **TurtleBot**.
 
 This research has evolved over the semesters as we explored new possibilities that aligned with the team's growing interests and desires:
 
@@ -16,7 +16,7 @@ This research has evolved over the semesters as we explored new possibilities th
 - **Fall 2024**: Shifted focus to deep reinforcement learning for obstacle avoidance, primarily based on Tomas van Rietbergen's work
 - **Spring 2025**: Acquired TurtleBot 4, considering continuing work on DRL and sensor fusion
 
-Our work has two key objectives: **obstacle avoidance** and **dynamic target following**. By integrating DRL with robust frameworks like PyTorch, we aim to improve the robot’s decision-making in real-time scenarios.
+Our work has two key objectives: **obstacle avoidance** and **dynamic target following**. By integrating DRL with PyTorch, we aim to improve the robot’s decision-making in real-time scenarios.
 
 ## Navigation
 
@@ -42,7 +42,7 @@ Navigating dynamic and cluttered environments autonomously remains a challenging
 
 ### Motivation
 
-This research addresses critical challenges in robotics and contributes to practical applications in service robots, autonomous vehicles, and other areas.
+This research addresses critical challenges in robotics and contributes to practical applications in service robots, autonomous vehicles in warehouses, and in other areas.
 
 ---
 
@@ -52,20 +52,22 @@ This research addresses critical challenges in robotics and contributes to pract
 
 - **TurtleBot3 Burger**: Compact, ROS-compatible, ideal for research and education.
 
+- **TurtleBo4**: Better documentation, great capabilities in terms of sensoring (RGBD Camera, infrared sensors, etc), and built-in features.
+
 ### Software Stack
 
 - **ROS**: Robot Operating System for communication and control.
 - **PyTorch**: Framework for developing DRL models.
-- **Gazebo**: Simulation environment for testing.
+- **Gazebo**: Simulation environment for testing and training.
 
 ### Approach
 
 1. **Simulations**: Training DRL models in controlled virtual environments.
-2. **Real-world Testing**: Refining models on the physical TurtleBot3.
+2. **Real-world Testing**: Refining models on the physical TurtleBot 3 and 4.
 
 ### Challenges
 
-- Overcoming outdated documentation for the TurtleBot 3.
+- Overcoming outdated documentation for the TurtleBot 3 and driver.
 - Adapting DRL techniques for hardware limitations.
 
 ---
@@ -82,12 +84,6 @@ In progress.
 
 - Success rates for navigation tasks.
 - Training times and resource efficiency.
-
----
-
-## Blog/Updates
-
-Stay updated on our journey!
 
 ---
 
@@ -112,6 +108,6 @@ Stay updated on our journey!
 ## Team
 
 - Prof. Michael R. McCarrin (Advisor)
-- Otavio Paz Nascimento (Student Researcher - 2023-25)
+- Otavio Paz Nascimento (Student Researcher - 2023-Present)
 - Rosie McKusick (Student Researcher - 2023)
 - Eliza Bomfim Guimaraes (Student Researcher - 2023)

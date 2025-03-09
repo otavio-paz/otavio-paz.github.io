@@ -286,12 +286,20 @@
       "url": "https://otavio-paz.github.io/projects/3_project/"
     },
     {
+      "name": "Spider-Like Robot with OLED Display",
+      "summary": "Developed a spider-like robot with an OLED display. The robot has a complex movement system with multiple articulations.",
+      "highlights": ["Robotics", "OLED Display", "Ultrasonic Sensors"],
+      "startDate": "2023-05-01",
+      "endDate": "2023-06-30",
+      "url": "https://otavio-paz.github.io/projects/4_project/"
+    },
+    {
       "name": "Design and Fabrication of Soft Robotic Actuators using Dragon Skin™ and Iron Powder",
       "summary": "Prototyped muscle-like actuators using DragonSkin™ infused with iron powder, evaluating 5+ designs through 25+ iterations. Enhanced skills in prototyping, FDM 3D printing, silicone molding, data analysis, and collaboration within a research environment.",
       "highlights": ["Prototyping", "3D Printing", "Silicone Molding", "Data Analysis"],
       "startDate": "2023-06-02",
       "endDate": "2023-07-24",
-      "url": "https://otavio-paz.github.io/projects/4_project/"
+      "url": "https://otavio-paz.github.io/projects/5_project/"
     }
   ]
 }
