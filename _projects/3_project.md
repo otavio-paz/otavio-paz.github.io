@@ -63,12 +63,32 @@ This research addresses critical challenges in robotics and contributes to pract
 ### Approach
 
 1. **Simulations**: Training DRL models in controlled virtual environments.
+
+<div class="row justify-content-center">
+  <div class="col-sm-12 col-md-6 mt-3 mt-md-0">
+    {% include figure.liquid loading="eager" path="assets/img/robot-simulation.png" title="TurtleBot3 Simulation" class="img-fluid rounded z-depth-1" %}
+  </div>
+</div>
+
 2. **Real-world Testing**: Refining models on the physical TurtleBot 3 and 4.
+
+<div class="row justify-content-center">
+  <div class="col-sm-12 col-md-6 mt-3 mt-md-0">
+    {% include figure.liquid loading="eager" path="assets/img/robot-testing.png" title="TurtleBot3 Testing" class="img-fluid rounded z-depth-1" %}
+  </div>
+</div>
 
 ### Challenges
 
 - Overcoming outdated documentation for the TurtleBot 3 and driver.
 - Adapting DRL techniques for hardware limitations.
+- Integrating multiple robots (TurtleBot 3 and 4).
+
+<div class="row justify-content-center">
+  <div class="col-sm-12 col-md-6 mt-3 mt-md-0">
+    {% include figure.liquid loading="eager" path="assets/img/turtlebot4.png" title="TurtleBot4" class="img-fluid rounded z-depth-1" %}
+  </div>
+</div>
 
 ---
 
