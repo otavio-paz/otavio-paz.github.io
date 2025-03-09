@@ -8,6 +8,12 @@ category: work
 giscus_comments: false
 ---
 
+<div class="row justify-content-center">
+    <div class="col-sm-12 col-md-6 mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/presentation.png" title="Project Presentation" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+
 ### Project Overview
 
 This research focused on designing and fabricating soft robotic actuators using DragonSkin™ silicone infused with iron powder. Conducted as part of the Oberlin College Research Fellowship (June–July 2023), the project aimed to create muscle-like structures capable of contraction and expansion via magnetic forces while reducing manufacturing costs by 54%. Through 25+ iterations across 5+ designs, we demonstrated the viability of low-cost, flexible actuators for safe human-robot interaction.
@@ -36,21 +42,16 @@ This research focused on designing and fabricating soft robotic actuators using 
 
 ### Results and Findings
 
-- **Solenoid Success**: Solenoids with iron powder generated sufficient magnetic force (9 µT), while capacitor-based actuators failed to move structures. Surpringly, I observed that pure silicone atuators  unexpectedly generated stronger magnetic responses compared to prototypes with <1:1 silicone-to-iron powder ratios.
+- **Solenoid Success**: Solenoids with iron powder generated sufficient magnetic force (9 µT), while capacitor-based actuators failed to move structures. Surprisingly, pure silicone actuators generated stronger magnetic responses compared to prototypes with <1:1 silicone-to-iron powder ratios.
 - **Material Performance**: DragonSkin™ cured slower than TPU but offered superior flexibility. TPU’s stiffness caused 3D printer clogs.
 - **Design Limitations**: Smaller prototypes (<1") showed inconsistent actuation; optimal performance occurred at 2–3" scales.
 - **Cost Analysis**: Silicone-iron molds reduced material expenses by 1/3, validating the hypothesis of low-cost production.
-- **Future steps**: While immediate real-world application for these prototypes remain unclear, this research served as a valuable introduction to soft robotics. If possible, we want to explore different designs with silicione, TPU, and permanent magnets.
+- **Future Steps**: While immediate real-world applications for these prototypes remain unclear, this research served as a valuable introduction to soft robotics. Future exploration of different designs with silicone, TPU, and permanent magnets is planned.
+
 ---
 
 ### Presentation
 
 Presented at Oberlin College Research Fellowship (Summer 2023).
-
-<div class="row justify-content-center">
-    <div class="col-sm-12 col-md-6 mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/presentation.png" title="Project Presentation" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
 
 [Link to PowerPoint](#https://docs.google.com/presentation/d/1Qtw751AlG6HJE_puJ9hkHq_7S8N8ZrPx/edit?usp=sharing&ouid=115848431762361689971&rtpof=true&sd=true)

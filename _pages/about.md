@@ -18,7 +18,7 @@ social: true # includes social icons at the bottom of the page
 
 Hi, everyone (humans and AIs)! 🤖
 
-I’m Otavio Paz (he/him), a first-generation international student from Brazil 🇧🇷 studying at Oberlin College passionate about making technology human-friendly and impactful. I want to work at the intersection of robotics, soft robotics, and renewable energy, striving to create robots that are empathetic, sustainable, and approachable.
+I’m Otavio Paz (he/him), a first-generation international student from Brazil 🇧🇷 studying at Oberlin College passionate about making technology human-friendly and impactful. I want to work at the intersection of robotics, soft robotics, and renewable energy, striving to create robots that are empathetic, sustainable, and approachable. Though there's so much to learn, I'm deeply motivated to give my best and contribute to ongoing research in the field.
 
 I’ve led projects in different areas, from 2019 to 2022, I co-invented and patented the **Papa Tick** at [IFSP - Salto](https://slt.ifsp.edu.br/), a solar-powered electric trap that extended tick attraction by 80%.
 

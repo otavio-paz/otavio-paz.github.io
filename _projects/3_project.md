@@ -9,7 +9,6 @@ category: work
 
 Welcome to the project hub for our exploration of **Deep Reinforcement Learning (DRL)** in autonomous navigation using the **TurtleBot3 Burger**.
 
-
 This research has evolved over the semesters as we explored new possibilities that aligned with the team's growing interests and desires:
 
 - **Fall 2023**: Focused on surface-level autonomous vehicles, introduced to ROS and Gazebo
