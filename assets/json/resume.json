@@ -35,7 +35,7 @@
     {
       "name": "Office of Energy and Sustainability, Oberlin College",
       "position": "Lead Energy Detective",
-      "startDate": "10-2022",
+      "startDate": "09-2022",
       "endDate": "Present",
       "summary": "Analyzed campus-wide energy and water usage using BuildingOS, managing 10+ tracking spreadsheets for 80+ buildings to identify inefficiencies. Successfully identified 20+ malfunctioning meters, uncovering a loss of $30,000+ for the city. Developing software to validate utility billing data and School’s system using PyQt.",
       "highlights": ["Leadership", "Data Analytics", "Sustainability", "Community-driven"]
@@ -95,7 +95,7 @@
       "studyType": "Bachelor of Science",
       "startDate": "09-28-2022",
       "endDate": "05-25-2026",
-      "gpa": "3.92/4.00",
+      "gpa": "3.95/4.00",
       "courses": [
         "Research and Reasoning",
         "Mechanics and Relavitity",
