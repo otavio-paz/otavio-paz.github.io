@@ -2,14 +2,14 @@
 layout: about
 title: about
 permalink: /
-subtitle: Computer Science & 3-2 Engineering Undergrad @ <a href='https://www.oberlin.edu/'>Oberlin College</a>
+subtitle: Electrical Engineering Student @ <a href='https://www.engineering.columbia.edu/'>Columbia University</a> | 3-2 Engineering  @ <a href='https://www.oberlin.edu/'>Oberlin College</a>
 
 profile:
   align: right
   image: otavio_profile.png
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>onascime@oberlin.edu</p>
+    <p>op2305@columbia.edu</p>
 
 news: true # includes a list of news items
 selected_papers: false # includes a list of papers marked as "selected={true}"
@@ -26,8 +26,12 @@ During a summer fellowship in 2023 at Oberlin College, I explored a new method t
 
 In 2023, I also co-developed a **renewable energy hybrid system** integrating solar and wind power for a learning center in Oberlin/OH, earning recognition at industry events like RE+ and DWEA.
 
-Currently, I'm working with [Prof. Michael McCarrin](https://www.oberlin.edu/michael-mccarrin) on **autonomous robots** using TurtleBot3/4, we're building on a DRL framework for navigation and obstacle avoidance (leveraging DDPG, TD3, and DQN) while exploring the possibility of enabling the robot to follow another robot.
+In Oberlin, I was working with [Prof. Michael McCarrin](https://www.oberlin.edu/michael-mccarrin) on **autonomous robots** using TurtleBot3/4. We were building on a DRL framework for navigation and obstacle avoidance (leveraging DDPG, TD3, and DQN) while exploring the possibility of enabling the robot to follow another robot.
 
-On campus, I'm the president of Oberlin Robotics, where we provide resources and masterclasses on robotics and drones for students. Additionally, I'm the treasurer for the Oberlin Brazilian Association, a student club that promotes and hosts events about Brazil's culture, music, and food.
+I was the president of Oberlin Robotics and the treasurer for the Oberlin Brazilian Association, a student club that promotes and hosts events about Brazil's culture, music, and food.
+
+During the Summer 2025, I worked on a pipeline to develop and deploy RL policies in Isaac Lab for a Unitree G1 robot at [Kantaros Lab](https://sites.wustl.edu/kantaroslab/) in WashU.
+
+Currently, I'm an Electrical Engineering student at Columbia University.
 
 Besides the academics, I'm passionated about hiking, travelling the world, F1, lucid dreaming, cooking and counting how many Miatas I see in a day.
