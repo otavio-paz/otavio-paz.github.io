@@ -3,97 +3,108 @@
   contents:
     - name: Full Name
       value: Otavio Paz Nascimento
-    - name: Date of Birth
-      value: 29th October 2001
+    - name: Location
+      value: New York, NY
+    - name: Email
+      value: op2305@columbia.edu
+    - name: Phone
+      value: 440-412-9874
     - name: Languages
-      value: Portuguese (native), English (fluent), Spanish (intermediate), Brazilian Sign Language (intermediate)
+      value: Portuguese (native), English (advanced), Spanish (intermediate), Brazilian Sign Language (intermediate), American Sign Language (basic)
+
+- title: Professional Summary
+  type: list
+  contents:
+    - Electrical Engineering student at Columbia University with research experience in reinforcement learning, humanoid robotics, and soft robotic systems. Built and deployed a Sim2Real locomotion pipeline for the Unitree G1 using Isaac Lab and RSL-RL PPO; led independent soft robotics research under a competitive college fellowship. Demonstrated ability to work across the full research cycle from design and prototyping through testing, documentation, and dissemination. Seeking research roles in robotics, embodied AI, or related areas.
 
 - title: Education
   type: time_table
   contents:
-    - title: Bachelor’s Degree in Computer Science & 3-2 Engineering
-      institution: Oberlin College, United States of America
-      year: 2026
+    - title: Bachelor of Science in Electrical Engineering
+      institution: Columbia University, New York, NY
+      year: May 2027
       description:
-        - President of Robotics Club: Founded the club, secured $4,000+ in funding, and organized workshops.
-        - Peer Tutor: Supported students in Computer Science, Physics, and Mathematics.
-        - Renewable Energy Hybrid System Project: Co-designed a solar and wind-powered system presented at RE+ 2023.
-    - title: High School Diploma and Occupational Course in Industrial Automation
-      institution: Federal Institute of São Paulo (IFSP), Brazil
-      year: 2021
+        - "Columbia Robotics: Webmaster and RoboCONN Committee"
+        - Humanoid Robot Team Member
+        - "Brazilian Society: Member"
+    - title: Bachelor of Arts in 3-2 Engineering
+      institution: Oberlin College, Oberlin, OH
+      year: May 2025
       description:
-        - Co-Inventor of *Papa Tick*: Developed and patented a solar-powered tick control device.
-        - President of Skybotz Drone Team: Led development of semi-autonomous drones for competitions.
-        - Robotics Club Member: Participated in robotics innovation and projects.
+        - "Robotics Club: President"
+        - "Brazilian Association: Secretary"
+        - "International Student Organization: Program Coordinator"
 
 - title: Experience
   type: time_table
   contents:
+    - title: Student Researcher (Prof. Dr. Yiannis Kantaros)
+      institution: Kantaros Lab, WashU in St. Louis, St. Louis, MO
+      year: June 2025 - August 2025
+      description:
+        - Built a reinforcement learning pipeline for the Unitree G1 humanoid robot using Isaac Lab 4.5.0.
+        - Trained a Sim2Real locomotion policy via RSL-RL PPO, achieving stable walking in under 20 hours of training.
+        - "Set up a humanoid robotics workstation: dual-boot Linux, dependency management, and deployment safety procedures."
+        - Produced thorough technical documentation covering failures, deployment steps, and debugging procedures.
     - title: Lead Energy Detective
-      institution: Office of Energy and Sustainability, Oberlin College
-      year: 2022 - Present
+      institution: Office of Energy and Sustainability, Oberlin College, Oberlin, OH
+      year: October 2022 - May 2025
       description:
-        - Analyzed energy data for 80+ buildings and identified $30,000+ in losses due to inefficiencies.
-    - title: Student Researcher
-      institution: Computer Science Department, Oberlin College
-      year: 2023 - Present
-      description:
-        - Developed TurtleBot3 autonomous vehicle using ROS and LiDAR systems.
-        - Improved documentation for hardware and software configurations.
-    - title: Peer Tutor
-      institution: Academic Advising Resource Center, Oberlin College
-      year: 2023 - Present
-      description:
-        - Tutored 20+ students in Computer Science, Mathematics, and Physics.
-    - title: Co-Inventor and Product Manager
-      institution: IFSP & Biological Institute of São Paulo
-      year: 2019 - 2022
-      description:
-        - Designed and patented *Papa Tick*, a solar-powered electric tick trap.
-        - Conducted field trips and lab tests to validate its performance.
-    - title: Captain
-      institution: Skybotz Drone Team, IFSP
-      year: 2018 - 2021
-      description:
-        - Led a team to develop semi-autonomous drones, achieving 4th place in the SAE Formula Drone competition.
-- title: Honors and Awards
+        - Analyzed campus energy and water usage via BuildingOS, managing 10+ spreadsheets across 80+ buildings.
+        - Identified 20+ malfunctioning meters, uncovering a loss of $30,000+ for the city.
+        - Built and documented data acquisition validation software in Python Tkinter, finding 130+ inconsistencies from 2022 to 2025.
+
+- title: Projects
   type: time_table
   contents:
-    - year: 2024
-      items:
-        - Invited to Brazil at Silicon Valley Conference (1 of 23 students selected from 1,000+ applicants)
-    - year: 2022
-      items:
-        - Best Beginner’s Hack - HackHolyoke
-    - year: Ongoing
-      items:
-        - John F. Oberlin Scholarship ($20,000/year)
-    - year: 2024
-      items:
-        - Kyle Lam Hacker Scholarship ($6,575)
-    - year: 2024
-      items:
-        - STEAM Generator Scholarship ($1,000)
+    - title: Design and Fabrication of Soft Robotic Actuators using Dragon Skin and Iron Powder
+      institution: Student Researcher, Oberlin College Research Fellowship
+      year: June 2023 - July 2023
+      description:
+        - Prototyped muscle-like actuators using Dragon Skin infused with iron powder, evaluating 5+ designs through 25+ iterations.
+        - Reduced total fabrication cost to under $900 against a $2,000 budget, a 54% reduction through low-cost soft robotics methods.
+        - Applied techniques in FDM 3D printing, silicone molding, and data analysis throughout design and testing.
+    - title: Renewable Energy Hybrid System at Oberlin College
+      institution: Co-Developer
+      year: September 2023 - October 2025
+      description:
+        - Co-designed a 1.7 kW off-grid solar panel and micro wind turbine system for Shagbark Learning Center.
+        - Secured a $3,500 grant from REpowering Schools and $1,600 from Green Edge Fund to support project implementation.
+        - Presented at RE+ 2023 in Las Vegas and DWEA 2024, earning industry recognition.
+    - title: Papa Tick (IFSP/Salto and Biological Institute of Sao Paulo)
+      institution: Co-Inventor and Product Manager
+      year: October 2019 - January 2022
+      description:
+        - Developed and patented a solar-powered electric trap system, extending tick attraction duration by 80%.
+        - Implemented firmware functionality in C, validating system performance through rigorous lab testing.
+        - Designed the enclosure in SolidWorks 3D CAD and produced circuit diagrams for the embedded system.
 
-- title: Academic Interests
+- title: Skills
   type: nested_list
   contents:
-    - title: Robotics and AI
+    - title: Robotics and Simulation
       items:
-        - Soft Robotics
-        - Robot-Human Interaction
+        - Isaac Lab
+        - MuJoCo
+        - ROS
+        - Gazebo
         - Reinforcement Learning
-    - title: Renewable Energy
+        - SolidWorks
+        - Arduino
+    - title: Programming
       items:
-        - Hybrid Systems
-        - Sustainable Technology Design
-    - title: Interdisciplinary Innovation
+        - Python
+        - C/C++
+        - Rust
+        - MATLAB
+        - Docker
+    - title: Fabrication
       items:
-        - Combining Neuroscience and Robotics
-        - Accessible and Assistive Technologies
-
-- title: Other Interests
-  type: list
-  contents:
-    - <u>Hobbies:</u> Hiking, baking, gaming, traveling, and exploring the neuroscience of lucid dreams.
-    - <u>Passions:</u> F1 racing, drone technology, and sci-fi literature.
+        - 3D Printing (FDM)
+        - Silicone Molding
+    - title: Tools
+      items:
+        - Adobe Photoshop
+        - After Effects
+        - Premiere
+        - Microsoft Office
