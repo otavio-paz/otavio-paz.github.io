@@ -23,10 +23,23 @@ giscus_comments: false
   .hybrid-flow { display: grid; grid-template-columns: repeat(7, auto); gap: .45rem; align-items: center; margin: 1.25rem 0 1.75rem; overflow-x: auto; padding-bottom: .4rem; }
   .hybrid-flow-node { border: 1px solid var(--global-divider-color); border-radius: .45rem; padding: .7rem .8rem; text-align: center; min-width: 7rem; background: var(--global-bg-color); }
   .hybrid-flow-arrow { color: var(--global-theme-color); font-size: 1.35rem; }
-  .hybrid-placeholder { min-height: 12rem; border: 2px dashed var(--global-divider-color); border-radius: .5rem; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 1rem; color: var(--global-text-color-light); background: color-mix(in srgb, var(--global-bg-color) 92%, var(--global-theme-color)); }
-  .hybrid-placeholder strong { color: var(--global-text-color); margin-bottom: .2rem; }
+  .hybrid-media-row { align-items: stretch; }
+  .hybrid-media-card { display: flex; }
+  .hybrid-media-card figure { display: flex; flex-direction: column; width: 100%; margin: 0; }
+  .hybrid-media-card picture { display: block; flex: 1; }
+  .hybrid-media-card img { width: 100%; height: 22rem; object-fit: cover; background: var(--global-code-bg-color); }
+  .hybrid-media-card--contain img { object-fit: contain; padding: .35rem; }
+  .hybrid-media-wide { margin: 1.5rem auto 2rem; }
+  .hybrid-media-wide figure { margin: 0; }
+  .hybrid-media-wide img { width: 100%; max-height: 34rem; object-fit: contain; background: var(--global-code-bg-color); }
+  .hybrid-media-wide--hero img { aspect-ratio: 16 / 9; max-height: none; object-fit: cover; }
+  .hybrid-media-card figcaption, .hybrid-media-wide figcaption { margin-top: .65rem; }
+  .hybrid-report-link { margin: .75rem 0 2.25rem; text-align: center; }
   .hybrid-note { font-size: .9rem; color: var(--global-text-color-light); }
-  @media (max-width: 767px) { .hybrid-facts { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (max-width: 767px) {
+    .hybrid-facts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .hybrid-media-card img { height: auto; max-height: 32rem; object-fit: contain; }
+  }
 </style>
 
 <p class="hybrid-lead">
@@ -40,10 +53,18 @@ giscus_comments: false
   <div class="hybrid-fact"><strong>4.4 days</strong><span>modeled autonomy</span></div>
 </div>
 
-<div class="row justify-content-center">
-  <div class="col-sm-12 mt-3 mt-md-0">
-    {% include figure.liquid loading="eager" path="assets/img/hybrid-system.png" title="Installed solar array at the learning center" class="img-fluid rounded z-depth-1" %}
-  </div>
+<div class="hybrid-media-wide hybrid-media-wide--hero">
+  {% include figure.liquid loading="eager" path="assets/img/hybrid-system.png" title="Installed solar array at the learning center" caption="The completed solar installation at the woodland learning center." class="img-fluid rounded z-depth-1" %}
+</div>
+
+<div class="hybrid-media-wide">
+  {% include figure.liquid loading="eager" path="assets/img/hybrid-system-schematic.jpg" title="Hybrid renewable energy system schematic" caption="Original system schematic showing the PV array, wind turbine, charge control, battery storage, inverter, load center, and distribution to the three buildings." class="img-fluid rounded z-depth-1" %}
+</div>
+
+<div class="hybrid-report-link">
+  <a class="btn btn-outline-primary" href="{{ '/assets/pdf/repowering-schools-hybrid-system-design.pdf' | relative_url }}" download>
+    <i class="fa-solid fa-file-arrow-down" aria-hidden="true"></i> Download the final project report (PDF)
+  </a>
 </div>
 
 ## The site and the design brief
@@ -103,12 +124,12 @@ The load model then applied round-trip storage efficiency, inverter efficiency, 
 
 The original procurement plan called for four 365 W Q CELLS modules—about 1.5 kW in total. During implementation, the project received donated 325 W Silvantis panels instead. Accepting the donation reduced the installed nameplate capacity to approximately 1.3 kW, but it also allowed the team to complete the array within the available budget. The electrical design and performance expectations were updated around the panels that were actually available rather than the modules specified in the first report.
 
-<div class="row justify-content-center">
-  <div class="col-sm-12 col-md-7 mt-3 mt-md-0">
-    {% include figure.liquid loading="lazy" path="assets/img/solar-resource-report.png" title="PVWatts monthly solar resource and modeled production" class="img-fluid rounded z-depth-1" %}
+<div class="row justify-content-center hybrid-media-row">
+  <div class="col-sm-12 col-md-7 mt-3 mt-md-0 hybrid-media-card hybrid-media-card--contain">
+    {% include figure.liquid loading="lazy" path="assets/img/solar-resource-report.png" title="PVWatts monthly solar resource and modeled production" caption="PVWatts monthly solar resource and modeled production used during array sizing." class="img-fluid rounded z-depth-1" %}
   </div>
-  <div class="col-sm-12 col-md-5 mt-3 mt-md-0">
-    {% include figure.liquid loading="lazy" path="assets/img/roof-drone.jpg" title="Roof orientation and tree-line shading survey" class="img-fluid rounded z-depth-1" %}
+  <div class="col-sm-12 col-md-5 mt-3 mt-md-0 hybrid-media-card">
+    {% include figure.liquid loading="lazy" path="assets/img/roof-drone.jpg" title="Roof orientation and tree-line shading survey" caption="Drone view used to evaluate the south-facing roof and nearby tree line." class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
 
@@ -131,19 +152,17 @@ The turbine installation used a concrete footing and a detachable pole base so t
 
 Separating the embedded base from the rest of the pole made assembly more manageable and preserves the ability to unbolt the pole for maintenance. The finished turbine completes the visual hybrid system, even though the assessment predicted that its electrical contribution would be small.
 
-<div class="row justify-content-center">
-  <div class="col-sm-12 col-md-4 mt-3 mt-md-0">
-    {% include figure.liquid loading="lazy" path="assets/img/wind-resource-report.png" title="Regional wind-resource screening near Oberlin" class="img-fluid rounded z-depth-1" %}
+<div class="row justify-content-center hybrid-media-row">
+  <div class="col-sm-12 col-md-7 mt-3 mt-md-0 hybrid-media-card hybrid-media-card--contain">
+    {% include figure.liquid loading="lazy" path="assets/img/wind-resource-report.png" title="Regional wind-resource screening near Oberlin" caption="Regional wind-resource map used to screen the site's wind potential before applying hub-height and obstruction corrections." class="img-fluid rounded z-depth-1" %}
   </div>
-  <div class="col-sm-12 col-md-4 mt-3 mt-md-0">
-    {% include figure.liquid loading="lazy" path="assets/img/turbine-hole.JPEG" title="Preparing the turbine foundation before the 2025 installation" class="img-fluid rounded z-depth-1" %}
+  <div class="col-sm-12 col-md-5 mt-3 mt-md-0 hybrid-media-card hybrid-media-card--contain">
+    {% include figure.liquid loading="lazy" path="assets/img/turbine-hole.JPEG" title="Preparing the turbine foundation before the 2025 installation" caption="The approximately 1 m-deep foundation excavation before the concrete footing was poured." class="img-fluid rounded z-depth-1" %}
   </div>
-  <div class="col-sm-12 col-md-4 mt-3 mt-md-0">
-    <div class="hybrid-placeholder" role="img" aria-label="Placeholder for a photograph of the completed wind turbine">
-      <strong>Photo placeholder</strong>
-      Completed 2025 wind-turbine installation
-    </div>
-  </div>
+</div>
+
+<div class="hybrid-media-wide hybrid-media-wide--hero">
+  {% include figure.liquid loading="lazy" path="assets/img/hybrid-final.jpeg" title="Completed hybrid renewable energy system" caption="Completed hybrid system after the wind turbine was installed in 2025." class="img-fluid rounded z-depth-1" %}
 </div>
 
 ## System architecture
@@ -163,20 +182,14 @@ The design separates generation paths before combining them at storage. This let
   <div class="hybrid-flow-node">Three buildings</div>
 </div>
 
-<div class="row justify-content-center">
-  <div class="col-sm-12 mt-3 mt-md-0">
-    {% include figure.liquid loading="lazy" path="assets/img/hybrid-system-schematic.jpg" title="Original project schematic showing generation, storage, conversion, and distribution across the site" class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-
 The installed enclosure brings the solar charge controllers, over-current protection, disconnects, and distribution hardware into one weather-protected location. The batteries and inverter complete the storage and AC-conversion path, while the load center distributes power to the cabin, sugar shed, and outhouse.
 
-<div class="row justify-content-center">
-  <div class="col-sm-12 col-md-6 mt-3 mt-md-0">
-    {% include figure.liquid loading="lazy" path="assets/img/hybrid-system-panel.png" title="Four-panel array installed on the cabin roof" class="img-fluid rounded z-depth-1" %}
+<div class="row justify-content-center hybrid-media-row">
+  <div class="col-sm-12 col-md-6 mt-3 mt-md-0 hybrid-media-card hybrid-media-card--contain">
+    {% include figure.liquid loading="lazy" path="assets/img/hybrid-system-panel.png" title="Four-panel array installed on the cabin roof" caption="The donated four-panel array installed on the cabin's south-facing roof." class="img-fluid rounded z-depth-1" %}
   </div>
-  <div class="col-sm-12 col-md-6 mt-3 mt-md-0">
-    {% include figure.liquid loading="lazy" path="assets/img/hybrid-system-electrical.png" title="Installed control and protection enclosure" class="img-fluid rounded z-depth-1" %}
+  <div class="col-sm-12 col-md-6 mt-3 mt-md-0 hybrid-media-card hybrid-media-card--contain">
+    {% include figure.liquid loading="lazy" path="assets/img/hybrid-system-electrical.png" title="Installed control and protection enclosure" caption="Weather-protected charge control, disconnect, and distribution enclosure." class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
 
@@ -224,15 +237,13 @@ The solar array and electrical enclosure were installed in 2024, and the wind tu
 
 This means the resource, autonomy, recharge, and carbon figures on this page should be read as design-stage models. The completed installation demonstrates the off-grid architecture and provides useful power to the three buildings, but it does not maintain a daily performance record.
 
-<div class="row justify-content-center">
-  <div class="col-sm-12 col-md-6 mt-3 mt-md-0">
-    {% include figure.liquid loading="lazy" path="assets/img/battery-pack.JPG" title="Battery pack installed for the off-grid system" class="img-fluid rounded z-depth-1" %}
+<div class="row justify-content-center hybrid-media-row">
+  <div class="col-sm-12 col-md-7 mt-3 mt-md-0 hybrid-media-card hybrid-media-card--contain">
+    {% include figure.liquid loading="lazy" path="assets/img/battery-pack.JPG" title="Battery pack installed for the off-grid system" caption="The battery pack provides storage for lighting, device charging, and other small loads." class="img-fluid rounded z-depth-1" %}
   </div>
-  <div class="col-sm-12 col-md-6 mt-3 mt-md-0">
-    {% include figure.liquid loading="lazy" path="assets/img/electrical-panel.jpeg" title="Inverter and electrical enclosure" class="img-fluid rounded z-depth-1" %}
+  <div class="col-sm-12 col-md-5 mt-3 mt-md-0 hybrid-media-card hybrid-media-card--contain">
+    {% include figure.liquid loading="lazy" path="assets/img/inverter.png" title="Inverter installed for the off-grid system" caption="The inverter converts stored 12 V DC energy into AC power for the learning center loads." class="img-fluid rounded z-depth-1" %}
   </div>
 </div>
 
-{% include figure.liquid loading="lazy" path="assets/img/hybrid-final.jpeg" title="Completed hybrid system at the learning center" class="img-fluid rounded z-depth-1" %}
-
-<p class="hybrid-note text-center mt-3">Thank you to Charles Newcomb, Ryan Fontanez, David Dorsy and his wife, and REpowering Schools for the opportunity to be part of this project.</p>
+<p class="hybrid-note text-center mt-3">Thank you to Charles Newcomb, Ryan Fontanez, David Dorsey and his wife, and REpowering Schools for the opportunity to be part of this project.</p>
