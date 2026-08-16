@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="plot-title plot-desc">
+<title id="plot-title">Composite response was not monotonic with iron loading</title>
+<desc id="plot-desc">OLS field sensitivity for each current sweep, grouped by sensor position</desc>
+<rect width="1200" height="720" rx="20" fill="#FFFFFF"/>
+<style>text{font-family:Inter,Arial,sans-serif;fill:#15202B}.title{font-size:30px;font-weight:700}.subtitle{font-size:17px;fill:#52606D}.axis{font-size:16px;font-weight:600}.tick{font-size:14px;fill:#52606D}.legend{font-size:14px}.note{font-size:13px;fill:#52606D}.callout{font-size:15px;font-weight:600}</style>
+<text class="title" x="108" y="52">Composite response was not monotonic with iron loading</text>
+<text class="subtitle" x="108" y="82">OLS field sensitivity for each current sweep, grouped by sensor position</text>
+<line x1="108" x2="1152" y1="624.00" y2="624.00" stroke="#D9E2EC" stroke-width="1"/>
+<text class="tick" x="92" y="629.00" text-anchor="end">0</text>
+<line x1="108" x2="1152" y1="556.29" y2="556.29" stroke="#D9E2EC" stroke-width="1"/>
+<text class="tick" x="92" y="561.29" text-anchor="end">2</text>
+<line x1="108" x2="1152" y1="488.57" y2="488.57" stroke="#D9E2EC" stroke-width="1"/>
+<text class="tick" x="92" y="493.57" text-anchor="end">4</text>
+<line x1="108" x2="1152" y1="420.86" y2="420.86" stroke="#D9E2EC" stroke-width="1"/>
+<text class="tick" x="92" y="425.86" text-anchor="end">6</text>
+<line x1="108" x2="1152" y1="353.14" y2="353.14" stroke="#D9E2EC" stroke-width="1"/>
+<text class="tick" x="92" y="358.14" text-anchor="end">8</text>
+<line x1="108" x2="1152" y1="285.43" y2="285.43" stroke="#D9E2EC" stroke-width="1"/>
+<text class="tick" x="92" y="290.43" text-anchor="end">10</text>
+<line x1="108" x2="1152" y1="217.71" y2="217.71" stroke="#D9E2EC" stroke-width="1"/>
+<text class="tick" x="92" y="222.71" text-anchor="end">12</text>
+<line x1="108" x2="1152" y1="150.00" y2="150.00" stroke="#D9E2EC" stroke-width="1"/>
+<text class="tick" x="92" y="155.00" text-anchor="end">14</text>
+<line x1="108.00" x2="108.00" y1="150" y2="624" stroke="#EDF2F7" stroke-width="1"/>
+<text class="tick" x="108.00" y="652" text-anchor="middle">0.00</text>
+<line x1="282.00" x2="282.00" y1="150" y2="624" stroke="#EDF2F7" stroke-width="1"/>
+<text class="tick" x="282.00" y="652" text-anchor="middle">0.25</text>
+<line x1="456.00" x2="456.00" y1="150" y2="624" stroke="#EDF2F7" stroke-width="1"/>
+<text class="tick" x="456.00" y="652" text-anchor="middle">0.50</text>
+<line x1="630.00" x2="630.00" y1="150" y2="624" stroke="#EDF2F7" stroke-width="1"/>
+<text class="tick" x="630.00" y="652" text-anchor="middle">0.75</text>
+<line x1="804.00" x2="804.00" y1="150" y2="624" stroke="#EDF2F7" stroke-width="1"/>
+<text class="tick" x="804.00" y="652" text-anchor="middle">1.00</text>
+<line x1="978.00" x2="978.00" y1="150" y2="624" stroke="#EDF2F7" stroke-width="1"/>
+<text class="tick" x="978.00" y="652" text-anchor="middle">1.25</text>
+<line x1="1152.00" x2="1152.00" y1="150" y2="624" stroke="#EDF2F7" stroke-width="1"/>
+<text class="tick" x="1152.00" y="652" text-anchor="middle">1.50</text>
+<line x1="108" x2="108" y1="150" y2="624" stroke="#334E68" stroke-width="1.5"/>
+<line x1="108" x2="1152" y1="624" y2="624" stroke="#334E68" stroke-width="1.5"/>
+<text class="axis" x="630.0" y="678" text-anchor="middle">Iron powder : silicone mass ratio</text>
+<text class="axis" transform="translate(34 387.0) rotate(-90)" text-anchor="middle">Field sensitivity, dB/dI (mT/A)</text>
+<polyline points="108.00,372.15 268.08,404.12 435.12,375.66 456.00,439.80 706.56,430.02 1103.28,202.37" fill="none" stroke="#0072B2" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<line x1="108.00" x2="108.00" y1="374.38" y2="369.92" stroke="#0072B2" stroke-width="2"/>
+<line x1="102.00" x2="114.00" y1="374.38" y2="374.38" stroke="#0072B2" stroke-width="2"/>
+<line x1="102.00" x2="114.00" y1="369.92" y2="369.92" stroke="#0072B2" stroke-width="2"/>
+<circle cx="108.00" cy="372.15" r="6" fill="#FFFFFF" stroke="#0072B2" stroke-width="2.5"/>
+<line x1="268.08" x2="268.08" y1="406.17" y2="402.08" stroke="#0072B2" stroke-width="2"/>
+<line x1="262.08" x2="274.08" y1="406.17" y2="406.17" stroke="#0072B2" stroke-width="2"/>
+<line x1="262.08" x2="274.08" y1="402.08" y2="402.08" stroke="#0072B2" stroke-width="2"/>
+<circle cx="268.08" cy="404.12" r="6" fill="#FFFFFF" stroke="#0072B2" stroke-width="2.5"/>
+<line x1="435.12" x2="435.12" y1="378.35" y2="372.97" stroke="#0072B2" stroke-width="2"/>
+<line x1="429.12" x2="441.12" y1="378.35" y2="378.35" stroke="#0072B2" stroke-width="2"/>
+<line x1="429.12" x2="441.12" y1="372.97" y2="372.97" stroke="#0072B2" stroke-width="2"/>
+<circle cx="435.12" cy="375.66" r="6" fill="#FFFFFF" stroke="#0072B2" stroke-width="2.5"/>
+<line x1="456.00" x2="456.00" y1="442.98" y2="436.62" stroke="#0072B2" stroke-width="2"/>
+<line x1="450.00" x2="462.00" y1="442.98" y2="442.98" stroke="#0072B2" stroke-width="2"/>
+<line x1="450.00" x2="462.00" y1="436.62" y2="436.62" stroke="#0072B2" stroke-width="2"/>
+<circle cx="456.00" cy="439.80" r="6" fill="#FFFFFF" stroke="#0072B2" stroke-width="2.5"/>
+<line x1="706.56" x2="706.56" y1="431.71" y2="428.34" stroke="#0072B2" stroke-width="2"/>
+<line x1="700.56" x2="712.56" y1="431.71" y2="431.71" stroke="#0072B2" stroke-width="2"/>
+<line x1="700.56" x2="712.56" y1="428.34" y2="428.34" stroke="#0072B2" stroke-width="2"/>
+<circle cx="706.56" cy="430.02" r="6" fill="#FFFFFF" stroke="#0072B2" stroke-width="2.5"/>
+<line x1="1103.28" x2="1103.28" y1="204.85" y2="199.88" stroke="#0072B2" stroke-width="2"/>
+<line x1="1097.28" x2="1109.28" y1="204.85" y2="204.85" stroke="#0072B2" stroke-width="2"/>
+<line x1="1097.28" x2="1109.28" y1="199.88" y2="199.88" stroke="#0072B2" stroke-width="2"/>
+<circle cx="1103.28" cy="202.37" r="6" fill="#FFFFFF" stroke="#0072B2" stroke-width="2.5"/>
+<polyline points="108.00,340.44 268.08,395.11 435.12,377.34 456.00,454.78 706.56,436.43" fill="none" stroke="#D55E00" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<line x1="108.00" x2="108.00" y1="345.25" y2="335.63" stroke="#D55E00" stroke-width="2"/>
+<line x1="102.00" x2="114.00" y1="345.25" y2="345.25" stroke="#D55E00" stroke-width="2"/>
+<line x1="102.00" x2="114.00" y1="335.63" y2="335.63" stroke="#D55E00" stroke-width="2"/>
+<rect x="102.00" y="334.44" width="12.00" height="12.00" rx="1.5" fill="#FFFFFF" stroke="#D55E00" stroke-width="2.5"/>
+<line x1="268.08" x2="268.08" y1="399.02" y2="391.19" stroke="#D55E00" stroke-width="2"/>
+<line x1="262.08" x2="274.08" y1="399.02" y2="399.02" stroke="#D55E00" stroke-width="2"/>
+<line x1="262.08" x2="274.08" y1="391.19" y2="391.19" stroke="#D55E00" stroke-width="2"/>
+<rect x="262.08" y="389.11" width="12.00" height="12.00" rx="1.5" fill="#FFFFFF" stroke="#D55E00" stroke-width="2.5"/>
+<line x1="435.12" x2="435.12" y1="382.90" y2="371.77" stroke="#D55E00" stroke-width="2"/>
+<line x1="429.12" x2="441.12" y1="382.90" y2="382.90" stroke="#D55E00" stroke-width="2"/>
+<line x1="429.12" x2="441.12" y1="371.77" y2="371.77" stroke="#D55E00" stroke-width="2"/>
+<rect x="429.12" y="371.34" width="12.00" height="12.00" rx="1.5" fill="#FFFFFF" stroke="#D55E00" stroke-width="2.5"/>
+<line x1="456.00" x2="456.00" y1="471.57" y2="437.99" stroke="#D55E00" stroke-width="2"/>
+<line x1="450.00" x2="462.00" y1="471.57" y2="471.57" stroke="#D55E00" stroke-width="2"/>
+<line x1="450.00" x2="462.00" y1="437.99" y2="437.99" stroke="#D55E00" stroke-width="2"/>
+<rect x="450.00" y="448.78" width="12.00" height="12.00" rx="1.5" fill="#FFFFFF" stroke="#D55E00" stroke-width="2.5"/>
+<line x1="706.56" x2="706.56" y1="442.49" y2="430.37" stroke="#D55E00" stroke-width="2"/>
+<line x1="700.56" x2="712.56" y1="442.49" y2="442.49" stroke="#D55E00" stroke-width="2"/>
+<line x1="700.56" x2="712.56" y1="430.37" y2="430.37" stroke="#D55E00" stroke-width="2"/>
+<rect x="700.56" y="430.43" width="12.00" height="12.00" rx="1.5" fill="#FFFFFF" stroke="#D55E00" stroke-width="2.5"/>
+<polyline points="108.00,474.21 268.08,374.05 435.12,389.82 456.00,462.21 706.56,448.90" fill="none" stroke="#009E73" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<line x1="108.00" x2="108.00" y1="481.13" y2="467.29" stroke="#009E73" stroke-width="2"/>
+<line x1="102.00" x2="114.00" y1="481.13" y2="481.13" stroke="#009E73" stroke-width="2"/>
+<line x1="102.00" x2="114.00" y1="467.29" y2="467.29" stroke="#009E73" stroke-width="2"/>
+<path d="M 108.00 467.21 L 115.00 474.21 L 108.00 481.21 L 101.00 474.21 Z" fill="#FFFFFF" stroke="#009E73" stroke-width="2.5"/>
+<line x1="268.08" x2="268.08" y1="375.84" y2="372.26" stroke="#009E73" stroke-width="2"/>
+<line x1="262.08" x2="274.08" y1="375.84" y2="375.84" stroke="#009E73" stroke-width="2"/>
+<line x1="262.08" x2="274.08" y1="372.26" y2="372.26" stroke="#009E73" stroke-width="2"/>
+<path d="M 268.08 367.05 L 275.08 374.05 L 268.08 381.05 L 261.08 374.05 Z" fill="#FFFFFF" stroke="#009E73" stroke-width="2.5"/>
+<line x1="435.12" x2="435.12" y1="391.56" y2="388.08" stroke="#009E73" stroke-width="2"/>
+<line x1="429.12" x2="441.12" y1="391.56" y2="391.56" stroke="#009E73" stroke-width="2"/>
+<line x1="429.12" x2="441.12" y1="388.08" y2="388.08" stroke="#009E73" stroke-width="2"/>
+<path d="M 435.12 382.82 L 442.12 389.82 L 435.12 396.82 L 428.12 389.82 Z" fill="#FFFFFF" stroke="#009E73" stroke-width="2.5"/>
+<line x1="456.00" x2="456.00" y1="463.77" y2="460.65" stroke="#009E73" stroke-width="2"/>
+<line x1="450.00" x2="462.00" y1="463.77" y2="463.77" stroke="#009E73" stroke-width="2"/>
+<line x1="450.00" x2="462.00" y1="460.65" y2="460.65" stroke="#009E73" stroke-width="2"/>
+<path d="M 456.00 455.21 L 463.00 462.21 L 456.00 469.21 L 449.00 462.21 Z" fill="#FFFFFF" stroke="#009E73" stroke-width="2.5"/>
+<line x1="706.56" x2="706.56" y1="450.15" y2="447.66" stroke="#009E73" stroke-width="2"/>
+<line x1="700.56" x2="712.56" y1="450.15" y2="450.15" stroke="#009E73" stroke-width="2"/>
+<line x1="700.56" x2="712.56" y1="447.66" y2="447.66" stroke="#009E73" stroke-width="2"/>
+<path d="M 706.56 441.90 L 713.56 448.90 L 706.56 455.90 L 699.56 448.90 Z" fill="#FFFFFF" stroke="#009E73" stroke-width="2.5"/>
+<circle cx="118" cy="114" r="6" fill="#FFFFFF" stroke="#0072B2" stroke-width="2.5"/>
+<text class="legend" x="134" y="119">1 mm, north</text>
+<rect x="405" y="108" width="12" height="12" rx="1.5" fill="#FFFFFF" stroke="#D55E00" stroke-width="2.5"/>
+<text class="legend" x="427" y="119">1 mm, south</text>
+<path d="M 716 106 L 723 113 L 716 120 L 709 113 Z" fill="#FFFFFF" stroke="#009E73" stroke-width="2.5"/>
+<text class="legend" x="732" y="119">8 mm</text>
+<rect x="690" y="178" width="432" height="100" rx="10" fill="#F0F7FF" stroke="#B8D7F0"/>
+<text class="callout" x="706" y="206">The 1.43 ratio is incomplete</text>
+<text class="note" x="706" y="228">Only the 1 mm north-side sweep was recorded;</text>
+<text class="note" x="706" y="250">missing south-side and 8 mm values are not imputed.</text>
+<text class="note" x="108" y="706">Sensitivity is the fitted B-vs-I slope; error bars are 95% CIs for each fit (n=11 per complete sweep).</text>
+</svg>
