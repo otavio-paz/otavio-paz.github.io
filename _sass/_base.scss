@@ -2611,9 +2611,9 @@ html[data-theme="dark"] {
   background: var(--brand-alice);
   border: 1px solid color-mix(in srgb, var(--brand-teal) 20%, var(--global-divider-color));
   border-radius: 1.4rem;
-  margin: 1rem 0 clamp(3rem, 7vw, 5rem);
+  margin: 1rem 0 clamp(2.5rem, 5vw, 3.75rem);
   overflow: hidden;
-  padding: clamp(2.2rem, 6vw, 4.5rem);
+  padding: clamp(1.75rem, 4vw, 3rem);
   position: relative;
 }
 
@@ -2631,15 +2631,15 @@ html[data-theme="dark"] {
 }
 
 .interior-hero--illustrated {
-  min-height: clamp(17rem, 30vw, 21rem);
-  padding-right: clamp(13rem, 30vw, 22rem);
+  min-height: clamp(14rem, 24vw, 17rem);
+  padding-right: clamp(11rem, 25vw, 18rem);
 }
 
 .interior-hero--illustrated::after,
 .interior-hero-art {
-  height: clamp(9rem, 26vw, 17rem);
-  right: clamp(-4rem, -4vw, -3rem);
-  width: clamp(9rem, 26vw, 17rem);
+  height: clamp(8rem, 21vw, 14rem);
+  right: clamp(-3.5rem, -3vw, -2rem);
+  width: clamp(8rem, 21vw, 14rem);
 }
 
 .interior-hero--illustrated::after {
@@ -2689,7 +2689,7 @@ html[data-theme="dark"] {
   font-weight: 700;
   letter-spacing: -0.06em;
   line-height: 0.98;
-  margin: 0 0 1.35rem;
+  margin: 0 0 1rem;
   max-width: 43rem;
   position: relative;
   z-index: 1;
@@ -2699,7 +2699,7 @@ html[data-theme="dark"] {
 .interior-hero > div > p:last-child {
   color: var(--global-text-color-light);
   font-size: clamp(1rem, 2vw, 1.15rem);
-  line-height: 1.65;
+  line-height: 1.55;
   margin: 0;
   max-width: 39rem;
   position: relative;
@@ -2922,6 +2922,7 @@ html[data-theme="dark"] {
 }
 
 .interior-hero--cv h1 {
+  font-size: clamp(2.6rem, 6vw, 4.25rem);
   max-width: none;
   white-space: normal;
 }
@@ -3028,23 +3029,26 @@ html[data-theme="dark"] {
 @media (max-width: 767px) {
   .interior-hero {
     border-radius: 1.1rem;
-    padding: 2rem 1.35rem;
+    padding: 1.6rem 1.2rem;
   }
   .interior-hero::after {
     right: -6rem;
   }
   .interior-hero--illustrated {
-    min-height: 15rem;
-    padding-right: clamp(8rem, 39vw, 10rem);
+    min-height: 13.5rem;
+    padding-right: clamp(7rem, 32vw, 8.5rem);
   }
   .interior-hero--illustrated::after,
   .interior-hero-art {
-    right: -1.75rem;
+    height: clamp(7.5rem, 34vw, 8.75rem);
+    right: -2rem;
+    width: clamp(7.5rem, 34vw, 8.75rem);
   }
   .interior-hero h1 {
-    font-size: clamp(2.7rem, 14vw, 4.2rem);
+    font-size: clamp(2.4rem, 12vw, 3.4rem);
   }
   .interior-hero--cv h1 {
+    font-size: clamp(2.15rem, 10vw, 2.8rem);
     white-space: normal;
   }
   .blog-page .featured-posts .row {
