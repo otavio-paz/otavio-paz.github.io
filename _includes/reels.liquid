@@ -1,0 +1,62 @@
+{% if site.data.reels and site.data.reels != empty %}
+  <button class="memories-trigger" id="memories-trigger" type="button" aria-controls="memories-dialog" aria-expanded="false">
+    <span class="memories-deck" aria-hidden="true">
+      {% for memory in site.data.reels limit: 2 %}
+        <img src="{{ memory.image | relative_url }}" alt="" loading="eager">
+      {% endfor %}
+    </span>
+    <span class="sr-only">Open Memories</span>
+  </button>
+
+  <div class="memories-backdrop" id="memories-dialog" role="dialog" aria-modal="true" aria-label="Memories" hidden>
+    <div class="memories-viewer">
+      <div class="memories-stage" id="memories-stage" tabindex="0" aria-live="polite">
+        {% for memory in site.data.reels %}
+          <article
+            class="memory-slide{% if forloop.first %} is-active{% endif %}"
+            data-memory-index="{{ forloop.index0 }}"
+            data-memory-date="{{ memory.date | escape }}"
+            data-memory-time="{{ memory.date | date: '%s' }}"
+            aria-hidden="{% if forloop.first %}false{% else %}true{% endif %}"
+          >
+            <div class="memory-image-wrap">
+              {% if memory.video %}
+                <video src="{{ memory.video | relative_url }}" muted playsinline preload="metadata"></video>
+              {% else %}
+                <img
+                  src="{{ memory.image | relative_url }}"
+                  alt="{{ memory.alt | escape }}"
+                  loading="{% if forloop.first or memory.image contains 'IMG_5615.JPEG' %}eager{% else %}lazy{% endif %}"
+                >
+              {% endif %}
+              <span class="memory-location"
+                ><i class="ti ti-map-pin" aria-hidden="true"></i><span>{{ memory.location }}</span></span
+              >
+              <p class="memory-caption">{{ memory.text }}</p>
+            </div>
+          </article>
+        {% endfor %}
+      </div>
+
+      <div class="memories-timeline">
+        <p class="memories-date" id="memories-date">{{ site.data.reels.first.date }}</p>
+        <div class="memories-rail">
+          <input
+            id="memories-range"
+            type="range"
+            min="{{ site.data.reels.first.date | date: '%s' }}"
+            max="{{ site.data.reels.last.date | date: '%s' }}"
+            step="86400"
+            value="{{ site.data.reels.first.date | date: '%s' }}"
+            aria-label="Browse memories by date"
+          >
+          <div class="memories-stops" aria-hidden="true">
+            {% for memory in site.data.reels -%}
+              <span data-memory-index="{{ forloop.index0 }}" data-memory-time="{{ memory.date | date: '%s' }}"></span>
+            {%- endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endif %}

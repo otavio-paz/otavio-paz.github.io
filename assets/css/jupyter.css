@@ -3,9 +3,9 @@
 *
 * Created basically from exporting the notebook to HTML for both light and dark
 * modes with
-* jupyter nbconvert --execute --to html blog.ipynb --HTMLExporter.theme=light
+* jupyter nbconvert --execute --to html your-notebook.ipynb --HTMLExporter.theme=light
 * and
-* jupyter nbconvert --execute --to html blog.ipynb --HTMLExporter.theme=dark
+* jupyter nbconvert --execute --to html your-notebook.ipynb --HTMLExporter.theme=dark
 * and diffing the results. Here are only the differences.
 ******************************************************************************/
 :root {

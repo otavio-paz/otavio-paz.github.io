@@ -16,14 +16,24 @@ pagination:
     after: 3 # The number of links after the current page
 ---
 
-<div class="post">
+<div class="post interior-page blog-page">
+
+<header class="interior-hero interior-hero--illustrated reveal-on-scroll">
+  <div class="interior-hero-copy">
+    <h1>blog.</h1>
+    <p>{{ site.blog_description }}</p>
+  </div>
+  <div class="interior-hero-art" aria-hidden="true">
+    <img src="{{ '/assets/img/page-heroes/goose-blog.png' | relative_url | bust_file_cache }}" alt="" loading="eager" decoding="async">
+  </div>
+</header>
 
 {% assign blog_name_size = site.blog_name | size %}
 {% assign blog_description_size = site.blog_description | size %}
 
 {% if blog_name_size > 0 or blog_description_size > 0 %}
 
-  <div class="header-bar">
+  <div class="header-bar sr-only">
     <h1>{{ site.blog_name }}</h1>
     <h2>{{ site.blog_description }}</h2>
   </div>
@@ -119,70 +129,82 @@ pagination:
     {% assign year = post.date | date: "%Y" %}
     {% assign tags = post.tags | join: "" %}
     {% assign categories = post.categories | join: "" %}
+    {% if post.redirect == blank %}
+      {% assign post_link = post.url | relative_url %}
+    {% elsif post.redirect contains '://' %}
+      {% assign post_link = post.redirect %}
+    {% else %}
+      {% assign post_link = post.redirect | relative_url %}
+    {% endif %}
 
-    <li>
-
-{% if post.thumbnail %}
-
-<div class="row">
-          <div class="col-sm-9">
-{% endif %}
-        <h3>
-        {% if post.redirect == blank %}
-          <a class="post-title" href="{{ post.url | relative_url }}">{{ post.title }}</a>
-        {% elsif post.redirect contains '://' %}
-          <a class="post-title" href="{{ post.redirect }}" target="_blank">{{ post.title }}</a>
-          <svg width="2rem" height="2rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-            <path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path>
-          </svg>
-        {% else %}
-          <a class="post-title" href="{{ post.redirect | relative_url }}">{{ post.title }}</a>
+    <li class="reveal-on-scroll">
+      <article class="blog-post-card{% unless post.thumbnail %} blog-post-card--text-only{% endunless %}">
+        {% if post.thumbnail %}
+          <a
+            class="blog-post-card__media"
+            href="{{ post_link }}"
+            {% if post.redirect contains '://' %}
+              target="_blank"
+              rel="noopener noreferrer"
+            {% endif %}
+          >
+            <img
+              src="{{ post.thumbnail | relative_url }}"
+              alt="{{ post.image_alt | default: post.title | escape }}"
+              loading="lazy"
+              decoding="async"
+            >
+          </a>
         {% endif %}
-      </h3>
-      <p>{{ post.description }}</p>
-      <p class="post-meta">
-        {{ read_time }} min read &nbsp; &middot; &nbsp;
-        {{ post.date | date: '%B %d, %Y' }}
-        {% if post.external_source %}
-        &nbsp; &middot; &nbsp; {{ post.external_source }}
-        {% endif %}
-      </p>
-      <p class="post-tags">
-        <a href="{{ year | prepend: '/blog/' | prepend: site.baseurl}}">
-          <i class="fa-solid fa-calendar fa-sm"></i> {{ year }} </a>
 
-          {% if tags != "" %}
-          &nbsp; &middot; &nbsp;
-            {% for tag in post.tags %}
-            <a href="{{ tag | slugify | prepend: '/blog/tag/' | prepend: site.baseurl}}">
-              <i class="fa-solid fa-hashtag fa-sm"></i> {{ tag }}</a>
-              {% unless forloop.last %}
-                &nbsp;
-              {% endunless %}
+        <div class="blog-post-card__body">
+          <h3>
+            <a
+              class="post-title"
+              href="{{ post_link }}"
+              {% if post.redirect contains '://' %}
+                target="_blank"
+                rel="noopener noreferrer"
+              {% endif %}
+            >
+              {{ post.title }}
+            </a>
+          </h3>
+          <p>{{ post.description }}</p>
+          <p class="post-meta">
+            {{ read_time }} min read &nbsp; &middot; &nbsp;
+            {{ post.date | date: '%B %d, %Y' }}
+            {% if post.external_source %}
+              &nbsp; &middot; &nbsp; {{ post.external_source }}
+            {% endif %}
+          </p>
+          <p class="post-tags">
+            <a href="{{ year | prepend: '/blog/' | prepend: site.baseurl}}">
+              <i class="fa-solid fa-calendar fa-sm"></i> {{ year }}
+            </a>
+
+            {% if tags != "" %}
+              &nbsp; &middot; &nbsp;
+              {% for tag in post.tags %}
+                <a href="{{ tag | slugify | prepend: '/blog/tag/' | prepend: site.baseurl}}">
+                  <i class="fa-solid fa-hashtag fa-sm"></i> {{ tag }}
+                </a>
+                {% unless forloop.last %}&nbsp;{% endunless %}
               {% endfor %}
-          {% endif %}
+            {% endif %}
 
-          {% if categories != "" %}
-          &nbsp; &middot; &nbsp;
-            {% for category in post.categories %}
-            <a href="{{ category | slugify | prepend: '/blog/category/' | prepend: site.baseurl}}">
-              <i class="fa-solid fa-tag fa-sm"></i> {{ category }}</a>
-              {% unless forloop.last %}
-                &nbsp;
-              {% endunless %}
+            {% if categories != "" %}
+              &nbsp; &middot; &nbsp;
+              {% for category in post.categories %}
+                <a href="{{ category | slugify | prepend: '/blog/category/' | prepend: site.baseurl}}">
+                  <i class="fa-solid fa-tag fa-sm"></i> {{ category }}
+                </a>
+                {% unless forloop.last %}&nbsp;{% endunless %}
               {% endfor %}
-          {% endif %}
-    </p>
-
-{% if post.thumbnail %}
-
-</div>
-
-  <div class="col-sm-3">
-    <img class="card-img" src="{{ post.thumbnail | relative_url }}" style="object-fit: cover; height: 90%" alt="image">
-  </div>
-</div>
-{% endif %}
+            {% endif %}
+          </p>
+        </div>
+      </article>
     </li>
 
     {% endfor %}

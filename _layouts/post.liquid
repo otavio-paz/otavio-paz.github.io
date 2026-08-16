@@ -14,7 +14,7 @@ layout: default
 
 {% assign url_beginning = page.url | slice: 0, 6 %}
 
-<div class="post">
+<div class="post{% if page.thumbnail %} post--with-image{% endif %}">
   <header class="post-header">
     <h1 class="post-title">{{ page.title }}</h1>
     <p class="post-meta">
@@ -59,6 +59,16 @@ layout: default
         {% endfor %}
       {% endif %}
     </p>
+    {% if page.thumbnail %}
+      <figure class="post-feature-media">
+        <img
+          src="{{ page.thumbnail | relative_url }}"
+          alt="{{ page.image_alt | default: page.title | escape }}"
+          fetchpriority="high"
+          decoding="async"
+        >
+      </figure>
+    {% endif %}
   </header>
 
   <article class="post-content">

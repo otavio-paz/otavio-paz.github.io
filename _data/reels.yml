@@ -1,0 +1,187 @@
+# Memories are displayed in this order. Use `image` for photos or `video` for videos.
+# Keep `date` human-readable; the timeline uses one five-second segment per entry.
+- image: assets/img/memories/IMG-20220607-WA0005_Original.JPEG
+  alt: First electronics presentation for the FSAE Cheetah team
+  location: Itajubá, MG
+  date: April 4, 2022
+  text: First electronics presentation at FSAE Cheetah
+
+- image: assets/img/memories/3b64117e-5ddf-44b6-bab2-4931e56db842.jpg
+  alt: First day after founding the Robotics Club at Oberlin
+  location: Oberlin, OH
+  date: December 5, 2022
+  text: Just founded the Robotics Club at Oberlin College!
+
+- image: assets/img/memories/IMG_1868.JPEG
+  alt: Visiting a museum in Cleveland
+  location: Cleveland, OH
+  date: January 7, 2023
+  text: My first American museum!
+
+- image: assets/img/memories/IMG_2110.JPEG
+  alt: Face-tracking project at Oberlin
+  location: Oberlin, OH
+  date: January 25, 2023
+  text: Small project that tracks a face using OpenCV
+
+- image: assets/img/memories/IMG_2963.JPEG
+  alt: Visiting the PURE Formula SAE club
+  location: Hato Rey, PR
+  date: March 22, 2023
+  text: Visiting the Formula FSAE Club PURE
+
+- image: assets/img/memories/IMG_3671.JPEG
+  alt: Flying from Ceiba to Vieques
+  location: Ceiba, PR
+  date: March 26, 2023
+  text: Crazy morning by flying to Vieques
+
+- image: assets/img/memories/IMG_3684.JPEG
+  alt: Beach scenery in Vieques
+  location: Vieques, PR
+  date: March 26, 2023
+  text: The nicest beaches I’ve visited in my life!
+
+- image: assets/img/memories/IMG_0053.JPEG
+  alt: Inspecting mechanical-room data logging equipment
+  location: Oberlin, OH
+  date: April 20, 2023
+  text: I went to different mechanical rooms and checked the data logging
+
+- image: assets/img/memories/IMG_4638.JPG
+  alt: Visiting the Formula SAE competition in Michigan
+  location: Jackson, MI
+  date: May 19, 2023
+  text: Visited FSAE Formula competition in Michigan!
+
+- image: assets/img/memories/IMG_5248.JPG
+  alt: Developing a soft robotic actuator
+  location: Oberlin, OH
+  date: July 10, 2023
+  text: Attempt n. 15 to develop a soft robotic actuator
+
+- image: assets/img/memories/f5542feb-c41d-47af-bcb6-c6f8a753ed42.jpg
+  alt: Brazilian Club table at the Oberlin clubs fair
+  location: Oberlin, OH
+  date: September 7, 2023
+  text: Club fair with my Brazilian family!
+
+- image: assets/img/memories/IMG_5662.JPG
+  alt: Attending the RE+ conference in Las Vegas
+  location: Las Vegas, NV
+  date: September 12, 2023
+  text: RE+ conference and 1st time in Vegas | walked +30k steps
+
+- image: assets/img/memories/dji_fly_20231026_154750_49_1698349909320_photo_optimized.jpg
+  alt: First site visit for the hybrid renewable energy project
+  location: Oberlin, OH
+  date: October 26, 2023
+  text: First site visit for hybrid project!
+
+- image: assets/img/memories/IMG_6243.JPG
+  alt: Assembling a TurtleBot3 robot for research
+  location: Oberlin, OH
+  date: November 12, 2023
+  text: Assembling TurtleBot3 for research!
+
+- image: assets/img/memories/IMG_6440.JPG
+  alt: Bossa nova concert organized by the Brazilian Club
+  location: Oberlin, OH
+  date: November 29, 2023
+  text: Bossa nova concert I organized with Brazilian club!
+
+- image: assets/img/memories/IMG_6608.JPG
+  alt: First LiDAR map-creation test
+  location: Oberlin, OH
+  date: December 4, 2023
+  text: First test of map creation using LiDAR!
+
+- image: assets/img/memories/IMG_6783.JPG
+  alt: Relative humidity and temperature monitoring project
+  location: Oberlin, OH
+  date: December 19, 2023
+  text: Final project about RH and temperature monitoring with Rust!
+
+- image: assets/img/memories/IMG_8170.JPG
+  alt: Visiting a museum in Washington DC
+  location: Washington, DC
+  date: February 25, 2024
+  text: Bucket list museum + I love DC museums!
+
+- image: assets/img/memories/IMG_8313.JPG
+  alt: Visiting the National Air and Space Museum
+  location: Washington, DC
+  date: February 25, 2024
+  text: I visited the National Air and Space Museum!)
+
+- image: assets/img/memories/IMG_8381.JPG
+  alt: Attending the Distributed Wind Energy Association conference
+  location: Arlington, VA
+  date: February 26, 2024
+  text: DWEA 2024 conference (many hours of wind discussions)
+
+- image: assets/img/memories/IMG_8633.JPG
+  alt: Karting at Circuit of the Americas
+  location: Austin, TX
+  date: March 26, 2024
+  text: First experience karting at COTA!
+
+- image: assets/img/memories/IMG_8859.JPG
+  alt: Silicon Valley trip in Sunnyvale
+  location: Sunnyvale, CA
+  date: April 8, 2024
+  text: Invited to Brazil at Silicon Valley conference!
+
+- image: assets/img/memories/IMG_7997.JPEG
+  alt: Visiting a landmark in Sunnyvale
+  location: Sunnyvale, CA
+  date: April 9, 2024
+  text: I had to take a photo there (thanks staff)!
+
+- image: assets/img/memories/IMG_4596.JPEG
+  alt: First day installing a photovoltaic system
+  location: Oberlin, OH
+  date: May 4, 2024
+  text: Installing PV system by ourselves!
+
+- image: assets/img/memories/IMG_9358.JPG
+  alt: Electronics final project at Oberlin
+  location: Oberlin, OH
+  date: May 14, 2024
+  text: Electronics Final Project (in progress)
+
+- image: assets/img/memories/IMG_9960.JPG
+  alt: A car familiar to many Brazilians
+  location: Los Angeles, CA
+  date: August 13, 2024
+  text: Many Brazilians recognize this car!
+
+- image: assets/img/memories/IMG_0667.JPG
+  alt: Attending Formula 1 at Circuit of the Americas
+  location: Austin, TX
+  date: October 20, 2024
+  text: Formula 1 at COTA!!!! AAAA! (I’m in debt)
+
+- image: assets/img/memories/IMG_9081.jpeg
+  alt: Installing a wind turbine at Oberlin
+  location: Oberlin, OH
+  date: April 24, 2025
+  text: Installing wind turbine (final phase of hybrid project)
+
+- image: assets/img/memories/IMG_4898.JPEG
+  alt: Exploring a robot library in Denver
+  location: Denver, CO
+  date: June 11, 2025
+  text: I loved this robot library!
+
+- image: assets/img/memories/IMG_5615.JPEG
+  alt: Working independently with the Unitree G1 robot
+  location: St. Louis, MO
+  date: August 8, 2025
+  text: Finally able to work by myself on Unitree G1!
+
+- image: assets/img/memories/everyone-roboconn-2026.JPEG
+  alt: RoboCONN 2026 organizers and volunteers posing together
+  location: New York, NY
+  date: April 25, 2026
+  text: I loved working alongside these people at RoboCONN 2026!

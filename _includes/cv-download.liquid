@@ -1,0 +1,16 @@
+{% if page.cv_pdf %}
+  <div class="cv-download-row reveal-on-scroll">
+    <div class="cv-download">
+      <a
+        {% if page.cv_pdf contains '://' %}
+          href="{{ page.cv_pdf }}"
+        {% else %}
+          href="{{ page.cv_pdf | prepend: 'assets/pdf/' | relative_url }}"
+        {% endif %}
+        target="_blank"
+        rel="noopener noreferrer"
+        ><i class="fa-solid fa-file-pdf" aria-hidden="true"></i> Download PDF</a
+      >
+    </div>
+  </div>
+{% endif %}

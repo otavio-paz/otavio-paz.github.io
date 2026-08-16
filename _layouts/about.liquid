@@ -1,80 +1,115 @@
 ---
 layout: default
 ---
-<div class="post">
-  <header class="post-header">
-    <h1 class="post-title">
-      {% if site.title == 'blank' %}
-        <span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }}
-        {{ site.last_name }}
-      {% else %}
-        {{ site.title }}
-      {% endif %}
-    </h1>
-    <p class="desc">{{ page.subtitle }}</p>
-  </header>
+{% include reels.liquid %}
 
+<div class="post home-page">
   <article>
-    {% if page.profile %}
-      <div class="profile float-{% if page.profile.align == 'left' %}left{% else %}right{% endif %}">
-        {% if page.profile.image %}
-          {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
-          {% if page.profile.image_circular %}
-            {% assign profile_image_class = 'img-fluid z-depth-1 rounded-circle' %}
+    <section class="home-hero reveal-on-scroll" aria-labelledby="home-title">
+      <div class="home-hero-copy">
+        <p class="home-kicker">{{ page.hero_kicker | default: 'Electrical engineering · robotics · energy' }}</p>
+        <h1 id="home-title" class="home-title">
+          {% if site.title == 'blank' %}
+            {{ site.first_name }}
+            {{ site.middle_name }}
+            {{ site.last_name }}
           {% else %}
-            {% assign profile_image_class = 'img-fluid z-depth-1
-      rounded' %}
+            {{ site.title }}
           {% endif %}
-          {% capture sizes %}(min-width: {{ site.max_width }}) {{ site.max_width | minus: 30 | times: 0.3}}px, (min-width: 576px)
-      30vw, 95vw"{% endcapture %}
-          {%
-            include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=page.profile.image
-            cache_bust=true
-          %}
+        </h1>
+        <p class="home-subtitle">{{ page.subtitle }}</p>
+        {% if page.intro %}
+          <p class="home-intro">{{ page.intro }}</p>
         {% endif %}
-        {% if page.profile.more_info %}
-          <div class="more-info">{{ page.profile.more_info }}</div>
-        {% endif %}
+        <div class="home-hero-actions">
+          <a class="home-button home-button--primary" href="#home-projects-title">
+            Explore my work
+            <span class="home-button-arrow" aria-hidden="true"></span>
+          </a>
+          <a class="home-button home-button--secondary" href="{{ '/cv/' | relative_url }}">View CV</a>
+        </div>
       </div>
+
+      {% if page.profile and page.profile.image %}
+        <div class="home-portrait-wrap">
+          <div class="home-goose-peeks" aria-hidden="true">
+            <span class="home-goose-peek home-goose-peek--blog">
+              <img src="{{ '/assets/img/page-heroes/goose-blog.png' | relative_url | bust_file_cache }}" alt="">
+            </span>
+            <span class="home-goose-peek home-goose-peek--projects">
+              <img src="{{ '/assets/img/page-heroes/goose-projects.png' | relative_url | bust_file_cache }}" alt="">
+            </span>
+            <span class="home-goose-peek home-goose-peek--cv">
+              <img src="{{ '/assets/img/page-heroes/goose-cv.png' | relative_url | bust_file_cache }}" alt="">
+            </span>
+          </div>
+          <div class="home-portrait">
+            {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
+            {% capture sizes %}(min-width: {{ site.max_width }}) 360px, (min-width: 768px) 36vw, 88vw{% endcapture %}
+            {% include figure.liquid loading="eager" path=profile_image_path class="img-fluid" sizes=sizes alt="Portrait of Otavio Paz" cache_bust=true %}
+          </div>
+          {% if page.profile.more_info %}
+            <div class="home-contact-chip">{{ page.profile.more_info }}</div>
+          {% endif %}
+        </div>
+      {% endif %}
+    </section>
+
+    <section class="home-bio reveal-on-scroll" aria-labelledby="home-bio-title">
+      <div class="home-section-label">
+        <span aria-hidden="true">01</span>
+        <h2 id="home-bio-title">A little about me</h2>
+      </div>
+      <div class="home-bio-copy">{{ content }}</div>
+    </section>
+
+    {% if page.projects %}
+      <section class="home-projects reveal-on-scroll" aria-labelledby="home-projects-title">
+        <div class="home-section-heading">
+          <div>
+            <h2 id="home-projects-title">Featured projects</h2>
+          </div>
+          <div class="home-projects-actions">
+            <a class="home-section-link" href="{{ '/projects/' | relative_url }}">View every project <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+        <div class="projects">
+          {% assign featured_projects = site.projects | where: 'featured', true | sort: 'importance' %}
+          <div class="home-projects-track" id="home-projects-track" role="list" aria-label="Featured projects">
+            {% for project in featured_projects %}
+              {% include projects.liquid home=true %}
+            {% endfor %}
+          </div>
+        </div>
+      </section>
     {% endif %}
 
-    <div class="clearfix">{{ content }}</div>
-
-    <!-- News -->
     {% if page.news and site.announcements.enabled %}
-      <h2>
-        <a href="{{ '/news/' | relative_url }}" style="color: inherit">news</a>
-      </h2>
-      {% include news.liquid limit=true %}
+      <section class="home-news reveal-on-scroll" aria-labelledby="home-news-title">
+        <div class="home-section-heading">
+          <h2 id="home-news-title">Announcements</h2>
+        </div>
+        {% include news.liquid limit=true %}
+      </section>
     {% endif %}
 
-    <!-- Latest posts -->
     {% if site.latest_posts.enabled %}
-      <h2>
-        <a href="{{ '/blog/' | relative_url }}" style="color: inherit">latest posts</a>
-      </h2>
-      {% include latest_posts.liquid %}
+      <section class="home-latest reveal-on-scroll">
+        <h2><a href="{{ '/blog/' | relative_url }}" style="color: inherit">Latest posts</a></h2>
+        {% include latest_posts.liquid %}
+      </section>
     {% endif %}
 
-    <!-- Selected papers -->
-    {% if page.selected_papers %}
-      <h2>
-        <a href="{{ '/publications/' | relative_url }}" style="color: inherit">selected publications</a>
-      </h2>
-      {% include selected_papers.liquid %}
-    {% endif %}
-
-    <!-- Social -->
     {% if page.social %}
-      <div class="social">
-        <div class="contact-icons">{% include social.liquid %}</div>
-
-        <div class="contact-note">{{ site.contact_note }}</div>
-      </div>
-    {% endif %}
-
-    {% if site.newsletter.enabled and site.footer_fixed %}
-      {% include scripts/newsletter.liquid center=true %}
+      <section class="home-connect reveal-on-scroll" aria-label="Contact and social links">
+        <p>Let’s build something thoughtful.</p>
+        <div class="social">
+          <div class="contact-icons">{% include social.liquid %}</div>
+          <div class="contact-note">{{ site.contact_note }}</div>
+        </div>
+      </section>
     {% endif %}
   </article>
 </div>
+
+<script src="{{ '/assets/js/homepage.js' | relative_url | bust_file_cache }}" defer></script>

@@ -2,7 +2,7 @@
 layout: page
 title: projects
 permalink: /projects/
-description: A growing collection of my cool projects.
+description: From Medieval Latin <em>proiectum</em>, “something thrown forth.”
 nav: true
 nav_order: 3
 display_categories: [work, fun]
@@ -10,6 +10,15 @@ horizontal: false
 ---
 
 <!-- pages/projects.md -->
+<header class="interior-hero interior-hero--illustrated reveal-on-scroll">
+  <div class="interior-hero-copy">
+    <h1>projects.</h1>
+    <p>{{ page.description }}</p>
+  </div>
+  <div class="interior-hero-art" aria-hidden="true">
+    <img src="{{ '/assets/img/page-heroes/goose-projects.png' | relative_url | bust_file_cache }}" alt="" loading="eager" decoding="async">
+  </div>
+</header>
 <div class="projects">
 {% if site.enable_project_categories and page.display_categories %}
   <!-- Display categorized projects -->

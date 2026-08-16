@@ -62,11 +62,7 @@
       "studyType": "Bachelor of Science",
       "startDate": "2025-09",
       "endDate": "2027-05",
-      "courses": [
-        "Columbia Robotics: Webmaster and RoboCONN Committee",
-        "Humanoid Robot Team Member",
-        "Brazilian Society: Member"
-      ]
+      "courses": ["Columbia Robotics: Webmaster and RoboCONN Committee", "Humanoid Robot Team Member", "Brazilian Society: Member"]
     },
     {
       "institution": "Oberlin College",
@@ -76,11 +72,7 @@
       "studyType": "Bachelor of Arts",
       "startDate": "2022-09",
       "endDate": "2025-05",
-      "courses": [
-        "Robotics Club: President",
-        "Brazilian Association: Secretary",
-        "International Student Organization: Program Coordinator"
-      ]
+      "courses": ["Robotics Club: President", "Brazilian Association: Secretary", "International Student Organization: Program Coordinator"]
     }
   ],
   "projects": [
@@ -89,7 +81,7 @@
       "summary": "Student Researcher, Oberlin College Research Fellowship",
       "startDate": "2023-06",
       "endDate": "2023-07",
-      "url": "https://otavio-paz.github.io/projects/5_project/",
+      "url": "https://otavio-paz.github.io/projects/soft-robotics/",
       "highlights": [
         "Prototyped muscle-like actuators using Dragon Skin infused with iron powder, evaluating 5+ designs through 25+ iterations.",
         "Reduced total fabrication cost to under $900 against a $2,000 budget, a 54% reduction through low-cost soft robotics methods.",
@@ -101,7 +93,7 @@
       "summary": "Co-Developer",
       "startDate": "2023-09",
       "endDate": "2025-10",
-      "url": "https://otavio-paz.github.io/projects/2_project/",
+      "url": "https://otavio-paz.github.io/projects/hybrid-energy/",
       "highlights": [
         "Co-designed a 1.7 kW off-grid solar panel and micro wind turbine system for Shagbark Learning Center.",
         "Secured a $3,500 grant from REpowering Schools and $1,600 from Green Edge Fund to support project implementation.",
@@ -113,7 +105,7 @@
       "summary": "Co-Inventor and Product Manager",
       "startDate": "2019-10",
       "endDate": "2022-01",
-      "url": "https://otavio-paz.github.io/projects/1_project/",
+      "url": "https://otavio-paz.github.io/projects/papa-tick/",
       "highlights": [
         "Developed and patented a solar-powered electric trap system, extending tick attraction duration by 80%.",
         "Implemented firmware functionality in C, validating system performance through rigorous lab testing.",

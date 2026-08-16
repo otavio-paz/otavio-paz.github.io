@@ -2,30 +2,26 @@
 layout: default
 ---
 {% unless site.data.resume %}
-  <div class="post">
-    <header class="post-header">
-      <h1 class="post-title">
-        {{ page.title }}
-        {% if page.cv_pdf %}
-          <a
-            href="{{ page.cv_pdf | prepend: 'assets/pdf/' | relative_url}}"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="float-right"
-            ><i class="fa-solid fa-file-pdf"></i
-          ></a>
+  <div class="post interior-page cv-page">
+    <header class="interior-hero interior-hero--cv interior-hero--illustrated reveal-on-scroll">
+      <div class="interior-hero-copy">
+        <h1>Curriculum vitae.</h1>
+        {% if page.description %}
+          <p>{{ page.description }}</p>
         {% endif %}
-      </h1>
-      {% if page.description %}
-        <p class="post-description">{{ page.description }}</p>
-      {% endif %}
+      </div>
+      <div class="interior-hero-art" aria-hidden="true">
+        <img src="{{ '/assets/img/page-heroes/goose-cv.png' | relative_url | bust_file_cache }}" alt="" loading="eager" decoding="async">
+      </div>
     </header>
+
+    {% include cv-download.liquid %}
 
     <article>
       <div class="cv">
         {% for entry in site.data.cv %}
           <a class="anchor" id="{{ entry.title }}"></a>
-          <div class="card mt-3 p-3">
+          <div class="card mt-3 p-3 reveal-on-scroll">
             <h3 class="card-title font-weight-medium">{{ entry.title }}</h3>
             <div>
               {% if entry.type == 'list' %}
@@ -48,29 +44,20 @@ layout: default
     </article>
   </div>
 {% else %}
-  <div class="post">
-    <header class="post-header">
-      <h1 class="post-title">
-        {{ page.title }}
-        {% if page.cv_pdf %}
-          <a
-            {% if page.cv_pdf contains '://' %}
-              href="{{ page.cv_pdf }}"
-            {% else %}
-              href="{{ page.cv_pdf | prepend: 'assets/pdf/' | relative_url }}"
-            {% endif %}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="float-right"
-          >
-            <i class="fa-solid fa-file-pdf"></i>
-          </a>
+  <div class="post interior-page cv-page">
+    <header class="interior-hero interior-hero--cv interior-hero--illustrated reveal-on-scroll">
+      <div class="interior-hero-copy">
+        <h1>Curriculum vitae.</h1>
+        {% if page.description %}
+          <p>{{ page.description }}</p>
         {% endif %}
-      </h1>
-      {% if page.description %}
-        <p class="post-description">{{ page.description }}</p>
-      {% endif %}
+      </div>
+      <div class="interior-hero-art" aria-hidden="true">
+        <img src="{{ '/assets/img/page-heroes/goose-cv.png' | relative_url | bust_file_cache }}" alt="" loading="eager" decoding="async">
+      </div>
     </header>
+
+    {% include cv-download.liquid %}
 
     <article>
       <div class="cv">
@@ -82,7 +69,7 @@ layout: default
           {% endif %}
           {% if data[0] == 'meta' or data[1].size == 0 %} {% continue %} {% endif %}
           <a class="anchor" id="{{ data[0] }}"></a>
-          <div class="card mt-3 p-3">
+          <div class="card mt-3 p-3 reveal-on-scroll">
             <h3 class="card-title font-weight-medium">{{ data[0] | capitalize }}</h3>
             <div>
               {% case data[0] %}
