@@ -17,6 +17,9 @@ skills:
 <style>
   :root { --soft-accent: #0b6b69; --soft-accent-dark: #075251; --soft-warm: #d55e00; }
   .soft-lead { max-width: 51rem; font-size: 1.13rem; line-height: 1.75; }
+  .soft-actions { display: flex; flex-wrap: wrap; gap: .7rem; margin: 1.2rem 0 1.8rem; }
+  .soft-actions .btn { color: #fff !important; background: var(--soft-accent) !important; border-color: var(--soft-accent) !important; }
+  .soft-actions .btn:hover, .soft-actions .btn:focus-visible { color: #fff !important; background: var(--soft-accent-dark) !important; border-color: var(--soft-accent-dark) !important; }
   .soft-hero { margin: 1.45rem 0 2rem; }
   .soft-hero figure { margin: 0; }
   .soft-hero picture { display: block; overflow: hidden; }
@@ -90,6 +93,10 @@ skills:
 <p class="soft-lead">
   During the June-July 2023 Oberlin College Research Fellowship, I worked with Prof. Patrick Simen to test whether cast silicone–iron composites could support a low-cost, muscle-inspired soft actuator. Across eight weeks, I moved from literature review and CAD to mold fabrication, material-ratio experiments, and magnetic-field measurements. The result was a repeatable prototyping method and a clearer experimental question—not yet a finished artificial muscle.
 </p>
+
+<div class="soft-actions">
+  <a class="btn btn-outline-primary" href="https://docs.google.com/presentation/d/1Qtw751AlG6HJE_puJ9hkHq_7S8N8ZrPx/edit?usp=sharing&ouid=115848431762361689971&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer">View the fellowship presentation</a>
+</div>
 
 <div class="soft-hero">
   {% include figure.liquid loading="eager" path="assets/projects/soft-robotics/images/measuring-prototype.jpg" alt="Otavio measuring a silicone and iron prototype beside a solenoid and magnetic-field meter" title="Measuring a soft-robotics prototype" caption="Measuring a cast prototype at the Robotics Club workbench. The test setup combined a wound coil, a fixed sensor distance, and a magnetic-field meter." class="img-fluid" %}
@@ -225,7 +232,7 @@ As part of the fellowship, I was responsible to write weekly reflections and it 
 
 ## Paper review
 
-My in-depth review focused on [Cao, Gao, and Conn's magnetically coupled dielectric elastomer actuator](https://doi.org/10.1063/1.5071439). Their device used two parallel conical membranes that could be driven separately by changing the phase difference between electrical inputs. The paper reported **14% compression and 8.3% expansion**, making it directly relevant to my interest in magnetic repulsion and spring biasing even though my prototypes used a different actuation architecture.
+As another delivarable of the fellow, I did a review focused on [Cao, Gao, and Conn's magnetically coupled dielectric elastomer actuator](https://doi.org/10.1063/1.5071439). Their device used two parallel conical membranes that could be driven separately by changing the phase difference between electrical inputs. The paper reported **14% compression and 8.3% expansion**, making it directly relevant to my interest in magnetic repulsion and spring biasing even though my prototypes used a different actuation architecture.
 
 <div class="soft-review">
   <div class="soft-review-intro">
@@ -280,3 +287,7 @@ The project bibliography combined soft-actuator design, magnetically controlled 
     <li>Laschi, C., Rossiter, J., Iida, F., Cianchetti, M., & Margheri, L. (Eds.). (2018). <em>Soft robotics: Trends, applications and challenges</em>. Springer International Publishing.</li>
   </ol>
 </details>
+
+<div class="soft-actions">
+  <a class="btn btn-outline-primary" href="https://docs.google.com/presentation/d/1Qtw751AlG6HJE_puJ9hkHq_7S8N8ZrPx/edit?usp=sharing&ouid=115848431762361689971&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer">Open the original presentation</a>
+</div>

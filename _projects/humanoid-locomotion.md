@@ -201,7 +201,7 @@ Policy inference was somewhat fast for just the walking scenarios. However, for 
 The most effective improvements were therefore operational:
 
 - **Freeze versions:** keep known-good Isaac Lab, MuJoCo, compiler, and SDK versions.
-- **Use an explicit policy path:** store exported policies in one stable location.
+- **An explicit policy path:** store exported policies in one stable location.
 - **Use wired controllers:** verify the joystick index before launch.
 - **Use direct Ethernet:** connect the workstation to the robot for policy control.
 - **Check the robot state:** verify the robot model and low-level state before sending commands.

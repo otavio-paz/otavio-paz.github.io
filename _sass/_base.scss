@@ -2631,15 +2631,15 @@ html[data-theme="dark"] {
 }
 
 .interior-hero--illustrated {
-  min-height: clamp(14rem, 24vw, 17rem);
+  min-height: clamp(10rem, 21vw, 14rem);
+  padding-block: clamp(1rem, 3vw, 2rem);
   padding-right: clamp(11rem, 25vw, 18rem);
 }
 
-.interior-hero--illustrated::after,
-.interior-hero-art {
-  height: clamp(8rem, 21vw, 14rem);
+.interior-hero--illustrated::after {
+  height: clamp(10rem, 21vw, 14rem);
   right: clamp(-3.5rem, -3vw, -2rem);
-  width: clamp(8rem, 21vw, 14rem);
+  width: clamp(10rem, 21vw, 14rem);
 }
 
 .interior-hero--illustrated::after {
@@ -2653,15 +2653,20 @@ html[data-theme="dark"] {
 
 .interior-hero-art {
   align-items: center;
+  aspect-ratio: 1;
   background: color-mix(in srgb, var(--brand-teal) 16%, transparent);
   border-radius: 50%;
+  bottom: 0;
   display: flex;
+  height: auto;
   justify-content: center;
   overflow: hidden;
   pointer-events: none;
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  right: clamp(-3.5rem, -3vw, -2rem);
+  top: 0;
+  transform: none;
+  width: auto;
   z-index: 1;
 }
 
@@ -3035,14 +3040,16 @@ html[data-theme="dark"] {
     right: -6rem;
   }
   .interior-hero--illustrated {
-    min-height: 13.5rem;
-    padding-right: clamp(7rem, 32vw, 8.5rem);
+    min-height: 12.625rem;
+    padding: 1rem 5rem 1rem 1.2rem;
   }
-  .interior-hero--illustrated::after,
+  .interior-hero--illustrated::after {
+    height: 12.625rem;
+    right: -4rem;
+    width: 12.625rem;
+  }
   .interior-hero-art {
-    height: clamp(7.5rem, 34vw, 8.75rem);
-    right: -2rem;
-    width: clamp(7.5rem, 34vw, 8.75rem);
+    right: -4rem;
   }
   .interior-hero h1 {
     font-size: clamp(2.4rem, 12vw, 3.4rem);
