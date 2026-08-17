@@ -2136,12 +2136,12 @@ body {
 .memories-trigger {
   background: transparent;
   border: 0;
-  bottom: 1.25rem;
+  bottom: auto;
   height: 7rem;
   left: 0;
   padding: 0;
   position: fixed;
-  top: auto;
+  top: 4.75rem;
   transform: translateX(-70%);
   transition: transform 0.58s cubic-bezier(0.22, 1, 0.36, 1);
   width: 9.5rem;
@@ -2521,9 +2521,9 @@ html[data-theme="dark"] {
     grid-template-columns: 1fr;
   }
   .memories-trigger {
-    bottom: 1rem;
+    bottom: auto;
     left: 0;
-    top: auto;
+    top: 4.75rem;
     transform: translateX(-70%);
   }
 
