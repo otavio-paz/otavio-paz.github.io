@@ -1726,6 +1726,7 @@ body {
 
 .home-goose-peek {
   animation: home-goose-peek 40.5s cubic-bezier(0.4, 0, 0.2, 1) infinite both;
+  animation-play-state: paused;
   height: 9rem;
   left: 50%;
   overflow: hidden;
@@ -1743,6 +1744,10 @@ body {
     transform: translateX(-50%);
     width: 13.5rem;
   }
+}
+
+.home-goose-peeks.is-ready .home-goose-peek {
+  animation-play-state: running;
 }
 
 .home-goose-peek--blog img {

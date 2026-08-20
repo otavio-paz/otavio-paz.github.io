@@ -3,6 +3,8 @@ layout: page
 title: Sim2Real Unitree G1 Locomotion with RL
 description: Testing and documenting a complete reinforcement-learning pipeline for Unitree G1 locomotion at Washington University in St. Louis.
 img: assets/projects/humanoid-rl/videos/deploying-walking-policy.webm
+mp4: assets/projects/humanoid-rl/videos/deploying-walking-policy.mp4
+poster: assets/projects/humanoid-rl/videos/deploying-walking-policy-poster.jpg
 importance: 1
 featured: true
 category: work
@@ -104,16 +106,16 @@ These recordings show the walking policy moving through **training, validation i
 
 <div class="humanoid-media-grid" aria-label="Recordings from the humanoid locomotion pipeline">
   <div class="humanoid-media-card">
-    {% include video.liquid path="assets/projects/humanoid-rl/videos/training-policy.webm" autoplay=true loop=true muted=true playsinline=true preload="metadata" alt="Parallel Unitree G1 environments training a walking policy in Isaac Lab" caption="<strong>1. Training the policy</strong> Parallel G1 environments running during the Isaac Lab training process." %}
+    {% include video.liquid path="assets/projects/humanoid-rl/videos/training-policy.webm" mp4_path="assets/projects/humanoid-rl/videos/training-policy.mp4" poster="assets/projects/humanoid-rl/videos/training-policy-poster.jpg" autoplay=true loop=true muted=true playsinline=true preload="metadata" alt="Parallel Unitree G1 environments training a walking policy in Isaac Lab" caption="<strong>1. Training the policy</strong> Parallel G1 environments running during the Isaac Lab training process." %}
   </div>
   <div class="humanoid-media-card">
-    {% include video.liquid path="assets/projects/humanoid-rl/videos/testing-policy-isaac.webm" autoplay=true loop=true muted=true playsinline=true preload="metadata" alt="Trained Unitree G1 walking policy being tested in Isaac Lab" caption="<strong>2. Testing in Isaac Lab</strong> Playback of the exported walking policy in its training simulator." %}
+    {% include video.liquid path="assets/projects/humanoid-rl/videos/testing-policy-isaac.webm" mp4_path="assets/projects/humanoid-rl/videos/testing-policy-isaac.mp4" poster="assets/projects/humanoid-rl/videos/testing-policy-isaac-poster.jpg" autoplay=true loop=true muted=true playsinline=true preload="metadata" alt="Trained Unitree G1 walking policy being tested in Isaac Lab" caption="<strong>2. Testing in Isaac Lab</strong> Playback of the exported walking policy in its training simulator." %}
   </div>
   <div class="humanoid-media-card">
-    {% include video.liquid path="assets/projects/humanoid-rl/videos/testing-policy-mujoco.webm" autoplay=true loop=true muted=true playsinline=true preload="metadata" alt="Unitree G1 walking policy being tested in MuJoCo" caption="<strong>3. Testing in MuJoCo</strong> Sim2Sim validation of the policy in a second physics engine." %}
+    {% include video.liquid path="assets/projects/humanoid-rl/videos/testing-policy-mujoco.webm" mp4_path="assets/projects/humanoid-rl/videos/testing-policy-mujoco.mp4" poster="assets/projects/humanoid-rl/videos/testing-policy-mujoco-poster.jpg" autoplay=true loop=true muted=true playsinline=true preload="metadata" alt="Unitree G1 walking policy being tested in MuJoCo" caption="<strong>3. Testing in MuJoCo</strong> Sim2Sim validation of the policy in a second physics engine." %}
   </div>
   <div class="humanoid-media-card">
-    {% include video.liquid path="assets/projects/humanoid-rl/videos/deploying-walking-policy.webm" autoplay=true loop=true muted=true playsinline=true preload="metadata" alt="Walking policy deployed to a Unitree G1 on rough terrain" caption="<strong>4. Deploying the walking policy</strong> The Unitree G1 walking in the lab." %}
+    {% include video.liquid path="assets/projects/humanoid-rl/videos/deploying-walking-policy.webm" mp4_path="assets/projects/humanoid-rl/videos/deploying-walking-policy.mp4" poster="assets/projects/humanoid-rl/videos/deploying-walking-policy-poster.jpg" autoplay=true loop=true muted=true playsinline=true preload="metadata" alt="Walking policy deployed to a Unitree G1 on rough terrain" caption="<strong>4. Deploying the walking policy</strong> The Unitree G1 walking in the lab." %}
   </div>
 </div>
 

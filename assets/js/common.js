@@ -1,4 +1,74 @@
 $(document).ready(function () {
+  const autoplayVideos = document.querySelectorAll("video[data-autoplay-video]");
+
+  if (autoplayVideos.length) {
+    const playMuted = (video) => {
+      video.defaultMuted = true;
+      video.muted = true;
+      const playAttempt = video.play();
+
+      if (playAttempt && typeof playAttempt.catch === "function") {
+        playAttempt.catch(() => {});
+      }
+    };
+
+    if ("IntersectionObserver" in window) {
+      const videoObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              playMuted(entry.target);
+            } else {
+              entry.target.pause();
+            }
+          });
+        },
+        { rootMargin: "120px 0px", threshold: 0.05 }
+      );
+
+      autoplayVideos.forEach((video) => {
+        videoObserver.observe(video);
+        video.addEventListener("canplay", () => {
+          const bounds = video.getBoundingClientRect();
+          if (bounds.bottom >= 0 && bounds.top <= window.innerHeight) playMuted(video);
+        });
+      });
+    } else {
+      autoplayVideos.forEach(playMuted);
+    }
+
+    document.addEventListener("visibilitychange", () => {
+      if (!document.hidden) {
+        autoplayVideos.forEach((video) => {
+          const bounds = video.getBoundingClientRect();
+          if (bounds.bottom >= 0 && bounds.top <= window.innerHeight) playMuted(video);
+        });
+      }
+    });
+  }
+
+  const goosePeeks = document.querySelector(".home-goose-peeks");
+
+  if (goosePeeks) {
+    const gooseImages = Array.from(goosePeeks.querySelectorAll("img"));
+    const waitForImage = (image) =>
+      new Promise((resolve) => {
+        const finish = () => {
+          if (!image.naturalWidth) image.closest(".home-goose-peek").hidden = true;
+          resolve();
+        };
+
+        if (image.complete) {
+          finish();
+        } else {
+          image.addEventListener("load", finish, { once: true });
+          image.addEventListener("error", finish, { once: true });
+        }
+      });
+
+    Promise.all(gooseImages.map(waitForImage)).then(() => goosePeeks.classList.add("is-ready"));
+  }
+
   // add toggle functionality to abstract, award and bibtex buttons
   $("a.abstract").click(function () {
     $(this).parent().parent().find(".abstract.hidden").toggleClass("open");

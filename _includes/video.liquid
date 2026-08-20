@@ -3,7 +3,6 @@
 <figure>
   {% if extension == 'mp4' or extension == 'webm' or extension == 'ogg' %}
     <video
-      src="{% if include.cache_bust %}{{ include.path | relative_url | bust_file_cache }}{% else %}{{ include.path | relative_url }}{% endif %}"
       {% if include.class %}
         class="{{ include.class }}"
       {% endif %}
@@ -34,6 +33,7 @@
       preload="{% if include.preload %}{{ include.preload }}{% else %}metadata{% endif %}"
       {% if include.autoplay %}
         autoplay
+        data-autoplay-video
       {% endif %}
       {% if include.controls %}
         controls
@@ -46,11 +46,24 @@
       {% endif %}
       {% if include.playsinline %}
         playsinline
+        webkit-playsinline
       {% endif %}
       {% if include.poster %}
-        poster="{{ include.poster }}"
+        poster="{% if include.cache_bust %}{{ include.poster | relative_url | bust_file_cache }}{% else %}{{ include.poster | relative_url }}{% endif %}"
       {% endif %}
-    ></video>
+    >
+      {% if include.mp4_path %}
+        <source
+          src="{% if include.cache_bust %}{{ include.mp4_path | relative_url | bust_file_cache }}{% else %}{{ include.mp4_path | relative_url }}{% endif %}"
+          type="video/mp4"
+        >
+      {% endif %}
+      <source
+        src="{% if include.cache_bust %}{{ include.path | relative_url | bust_file_cache }}{% else %}{{ include.path | relative_url }}{% endif %}"
+        type="video/{{ extension }}"
+      >
+      <a href="{{ include.path | relative_url }}">View the video</a>
+    </video>
 
   {% else %}
     <iframe
