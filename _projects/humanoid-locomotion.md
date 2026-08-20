@@ -2,7 +2,7 @@
 layout: page
 title: Sim2Real Unitree G1 Locomotion with RL
 description: Testing and documenting a complete reinforcement-learning pipeline for Unitree G1 locomotion at Washington University in St. Louis.
-img: assets/projects/humanoid-rl/videos/deploying-walking-policy.gif
+img: assets/projects/humanoid-rl/videos/deploying-walking-policy.webm
 importance: 1
 featured: true
 category: work
@@ -29,7 +29,7 @@ skills:
   .humanoid-media-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; margin: 1.25rem 0 2rem; }
   .humanoid-media-card { background: var(--global-code-bg-color); border: 1px solid var(--global-divider-color); border-radius: .55rem; margin: 0; overflow: hidden; }
   .humanoid-media-card figure { margin: 0; }
-  .humanoid-media-card img { aspect-ratio: 16 / 9; display: block; object-fit: cover; width: 100%; }
+  .humanoid-media-card img, .humanoid-media-card video { aspect-ratio: 16 / 9; display: block; object-fit: cover; width: 100%; }
   .humanoid-media-card figcaption { color: var(--global-text-color-light); font-size: .9rem; margin: 0; padding: .8rem 1rem .9rem; text-align: left; }
   .humanoid-media-card figcaption strong { color: var(--global-text-color); display: block; font-size: 1rem; margin-bottom: .2rem; }
   .humanoid-table-wrap { overflow-x: auto; margin: 1.2rem 0 2rem; }
@@ -104,16 +104,16 @@ These recordings show the walking policy moving through **training, validation i
 
 <div class="humanoid-media-grid" aria-label="Recordings from the humanoid locomotion pipeline">
   <div class="humanoid-media-card">
-    {% include figure.liquid loading="lazy" path="assets/projects/humanoid-rl/videos/training-policy.gif" alt="Parallel Unitree G1 environments training a walking policy in Isaac Lab" caption="<strong>1. Training the policy</strong> Parallel G1 environments running during the Isaac Lab training process." %}
+    {% include video.liquid path="assets/projects/humanoid-rl/videos/training-policy.webm" autoplay=true loop=true muted=true playsinline=true preload="metadata" alt="Parallel Unitree G1 environments training a walking policy in Isaac Lab" caption="<strong>1. Training the policy</strong> Parallel G1 environments running during the Isaac Lab training process." %}
   </div>
   <div class="humanoid-media-card">
-    {% include figure.liquid loading="lazy" path="assets/projects/humanoid-rl/videos/testing-policy-isaac.gif" alt="Trained Unitree G1 walking policy being tested in Isaac Lab" caption="<strong>2. Testing in Isaac Lab</strong> Playback of the exported walking policy in its training simulator." %}
+    {% include video.liquid path="assets/projects/humanoid-rl/videos/testing-policy-isaac.webm" autoplay=true loop=true muted=true playsinline=true preload="metadata" alt="Trained Unitree G1 walking policy being tested in Isaac Lab" caption="<strong>2. Testing in Isaac Lab</strong> Playback of the exported walking policy in its training simulator." %}
   </div>
   <div class="humanoid-media-card">
-    {% include figure.liquid loading="lazy" path="assets/projects/humanoid-rl/videos/testing-policy-mujoco.gif" alt="Unitree G1 walking policy being tested in MuJoCo" caption="<strong>3. Testing in MuJoCo</strong> Sim2Sim validation of the policy in a second physics engine." %}
+    {% include video.liquid path="assets/projects/humanoid-rl/videos/testing-policy-mujoco.webm" autoplay=true loop=true muted=true playsinline=true preload="metadata" alt="Unitree G1 walking policy being tested in MuJoCo" caption="<strong>3. Testing in MuJoCo</strong> Sim2Sim validation of the policy in a second physics engine." %}
   </div>
   <div class="humanoid-media-card">
-    {% include figure.liquid loading="lazy" path="assets/projects/humanoid-rl/videos/deploying-walking-policy.gif" alt="Walking policy deployed to a Unitree G1 on rough terrain" caption="<strong>4. Deploying the walking policy</strong> The Unitree G1 walking in the lab." %}
+    {% include video.liquid path="assets/projects/humanoid-rl/videos/deploying-walking-policy.webm" autoplay=true loop=true muted=true playsinline=true preload="metadata" alt="Walking policy deployed to a Unitree G1 on rough terrain" caption="<strong>4. Deploying the walking policy</strong> The Unitree G1 walking in the lab." %}
   </div>
 </div>
 

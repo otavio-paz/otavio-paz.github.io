@@ -1,4 +1,4 @@
-{% assign extension = include.path | split: '.' | last %}
+{% assign extension = include.path | split: '.' | last | downcase %}
 
 <figure>
   {% if extension == 'mp4' or extension == 'webm' or extension == 'ogg' %}
@@ -9,13 +9,9 @@
       {% endif %}
       {% if include.width %}
         width="{{ include.width }}"
-      {% else %}
-        width="auto"
       {% endif %}
       {% if include.height %}
         height="{{ include.height }}"
-      {% else %}
-        height="auto"
       {% endif %}
       {% if include['min-width'] %}
         min-width="{{ include.min-width }}"
@@ -33,8 +29,9 @@
         title="{{ include.title }}"
       {% endif %}
       {% if include.alt %}
-        alt="{{ include.alt }}"
+        aria-label="{{ include.alt | escape }}"
       {% endif %}
+      preload="{% if include.preload %}{{ include.preload }}{% else %}metadata{% endif %}"
       {% if include.autoplay %}
         autoplay
       {% endif %}
@@ -47,10 +44,13 @@
       {% if include.muted %}
         muted
       {% endif %}
+      {% if include.playsinline %}
+        playsinline
+      {% endif %}
       {% if include.poster %}
         poster="{{ include.poster }}"
       {% endif %}
-    />
+    ></video>
 
   {% else %}
     <iframe
@@ -89,7 +89,7 @@
       {% if include.title %}
         title="{{ include.title }}"
       {% endif %}
-    />
+    ></iframe>
   {% endif %}
   {% if include.caption %}
     <figcaption class="caption">{{ include.caption }}</figcaption>
