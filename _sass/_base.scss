@@ -2154,8 +2154,6 @@ body {
   z-index: 1035;
 }
 
-.memories-trigger:hover,
-.memories-trigger:focus-visible,
 .memories-trigger.is-expanded {
   transform: translateX(0.6rem);
 }
@@ -2191,8 +2189,6 @@ body {
   }
 }
 
-.memories-trigger:hover .memories-deck,
-.memories-trigger:focus-visible .memories-deck,
 .memories-trigger.is-expanded .memories-deck {
   animation: none;
 }
@@ -2220,16 +2216,34 @@ body {
   }
 }
 
-.memories-trigger:hover .memories-deck img:first-child,
-.memories-trigger:focus-visible .memories-deck img:first-child,
 .memories-trigger.is-expanded .memories-deck img:first-child {
   transform: rotate(-10deg) translate(-1.15rem, 0.55rem);
 }
 
-.memories-trigger:hover .memories-deck img:nth-child(2),
-.memories-trigger:focus-visible .memories-deck img:nth-child(2),
 .memories-trigger.is-expanded .memories-deck img:nth-child(2) {
   transform: rotate(8deg) translate(1.75rem, -0.3rem);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .memories-trigger:hover,
+  .memories-trigger:focus-visible {
+    transform: translateX(0.6rem);
+  }
+
+  .memories-trigger:hover .memories-deck,
+  .memories-trigger:focus-visible .memories-deck {
+    animation: none;
+  }
+
+  .memories-trigger:hover .memories-deck img:first-child,
+  .memories-trigger:focus-visible .memories-deck img:first-child {
+    transform: rotate(-10deg) translate(-1.15rem, 0.55rem);
+  }
+
+  .memories-trigger:hover .memories-deck img:nth-child(2),
+  .memories-trigger:focus-visible .memories-deck img:nth-child(2) {
+    transform: rotate(8deg) translate(1.75rem, -0.3rem);
+  }
 }
 
 .emoji {
@@ -2264,11 +2278,64 @@ body {
 }
 
 .memories-viewer {
+  --memory-control-bg: rgba(23, 108, 109, 0.9);
   max-height: calc(100vh - clamp(1.5rem, 6vw, 4rem));
   max-width: min(50rem, calc(100vw - clamp(1.5rem, 6vw, 4rem)));
+  position: relative;
   transform: translateY(1.1rem) scale(0.985);
   transition: transform 0.22s ease;
   width: 100%;
+}
+
+.memories-close {
+  align-items: center;
+  background: var(--memory-control-bg);
+  border: 0;
+  border-radius: 50%;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  height: 2.75rem;
+  justify-content: center;
+  padding: 0;
+  position: absolute;
+  right: var(--memory-close-right, 0.65rem);
+  top: var(--memory-close-top, 0.65rem);
+  width: 2.75rem;
+  z-index: 8;
+}
+
+.memories-close span {
+  display: block;
+  font-size: 0;
+  height: 1.05rem;
+  position: relative;
+  width: 1.05rem;
+}
+
+.memories-close span::before,
+.memories-close span::after {
+  background: #fff;
+  border-radius: 1px;
+  content: "";
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  width: 1.05rem;
+}
+
+.memories-close span::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.memories-close span::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.memories-close:focus-visible {
+  background: var(--memory-control-bg);
+  outline: none;
 }
 
 .memories-backdrop.is-open .memories-viewer {
@@ -2276,6 +2343,7 @@ body {
 }
 
 .memories-stage {
+  --memory-transition-duration: 480ms;
   aspect-ratio: var(--memory-ratio, 1.6);
   border-radius: 1.1rem;
   box-shadow: 0 1.75rem 5rem rgba(6, 28, 29, 0.34);
@@ -2290,37 +2358,52 @@ body {
 
 .memories-stage.is-sizing {
   transition:
-    aspect-ratio 0.76s cubic-bezier(0.16, 1, 0.3, 1),
-    width 0.76s cubic-bezier(0.16, 1, 0.3, 1);
+    aspect-ratio var(--memory-transition-duration) cubic-bezier(0.16, 1, 0.3, 1),
+    width var(--memory-transition-duration) cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.memories-stage.is-animating .memory-slide {
+  transition: none;
 }
 
 .memory-slide {
+  backface-visibility: hidden;
   inset: 0;
   pointer-events: none;
   position: absolute;
-  transform: translateX(100%);
-  transition: transform 0.76s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translate3d(100%, 0, 0);
+  transition: transform var(--memory-transition-duration) cubic-bezier(0.22, 1, 0.36, 1);
+  visibility: hidden;
   width: 100%;
+}
+
+.memory-slide.is-active,
+.memory-slide.is-entering-next,
+.memory-slide.is-leaving-next,
+.memory-slide.is-entering-previous,
+.memory-slide.is-leaving-previous {
+  visibility: visible;
+  will-change: transform;
 }
 
 .memory-slide.is-active {
   pointer-events: auto;
-  transform: translateX(0);
+  transform: translate3d(0, 0, 0);
   z-index: 2;
 }
 
 .memory-slide.is-entering-next {
-  transform: translateX(100%);
+  transform: translate3d(100%, 0, 0);
 }
 .memory-slide.is-leaving-next {
-  transform: translateX(-100%);
+  transform: translate3d(-100%, 0, 0);
   z-index: 1;
 }
 .memory-slide.is-entering-previous {
-  transform: translateX(-100%);
+  transform: translate3d(-100%, 0, 0);
 }
 .memory-slide.is-leaving-previous {
-  transform: translateX(100%);
+  transform: translate3d(100%, 0, 0);
   z-index: 1;
 }
 
@@ -2340,7 +2423,7 @@ body {
 
 .memory-location {
   align-items: center;
-  background: rgba(23, 108, 109, 0.9);
+  background: var(--memory-control-bg);
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 999px;
   color: #fff !important;
@@ -2532,7 +2615,6 @@ html[data-theme="dark"] {
     transform: translateX(-70%);
   }
 
-  .memories-trigger:focus-visible,
   .memories-trigger.is-expanded {
     transform: translateX(0.6rem);
   }
@@ -2550,8 +2632,21 @@ html[data-theme="dark"] {
     max-width: calc(100vw - 1.3rem);
   }
   .memories-stage {
+    --memory-transition-duration: 300ms;
+    aspect-ratio: auto;
+    height: min(67vh, calc(100vh - 9.5rem));
+    height: min(67dvh, calc(100dvh - 9.5rem));
     max-height: calc(100vh - 8.7rem);
-    width: min(100%, calc((100vh - 8.7rem) * var(--memory-ratio, 0.8)));
+    width: 100%;
+  }
+  .memories-stage.is-sizing {
+    transition: none;
+  }
+  .memory-image-wrap {
+    img,
+    video {
+      object-fit: cover;
+    }
   }
   .memory-caption {
     bottom: 0.75rem;
@@ -2600,9 +2695,13 @@ html[data-theme="dark"] {
   }
   .home-projects .home-projects-track .card,
   .memories-backdrop,
-  .memories-viewer {
+  .memories-viewer,
+  .memories-stage.is-sizing {
     animation: none;
     transition: none;
+  }
+  .memories-stage {
+    --memory-transition-duration: 240ms;
   }
 }
 

@@ -11,6 +11,9 @@
   <div class="memories-backdrop" id="memories-dialog" role="dialog" aria-modal="true" aria-label="Memories" hidden>
     <div class="memories-viewer">
       <div class="memories-stage" id="memories-stage" tabindex="0" aria-live="polite">
+        <button class="memories-close" id="memories-close" type="button" aria-label="Close memories">
+          <span aria-hidden="true">&times;</span>
+        </button>
         {% for memory in site.data.reels %}
           <article
             class="memory-slide{% if forloop.first %} is-active{% endif %}"

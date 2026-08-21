@@ -7,10 +7,12 @@
     var stage = document.getElementById("memories-stage");
     var range = document.getElementById("memories-range");
     var date = document.getElementById("memories-date");
-    if (!trigger || !dialog || !stage || !range || !date) return;
+    var closeButton = document.getElementById("memories-close");
+    if (!trigger || !dialog || !stage || !range || !date || !closeButton) return;
 
     var slideDuration = 5000;
-    var transitionDuration = 760;
+    var phoneLayout = window.matchMedia("(max-width: 575px)");
+    var transitionDuration = reducedMotion ? 240 : phoneLayout.matches ? 300 : 480;
     var slides = Array.prototype.slice.call(stage.querySelectorAll(".memory-slide"));
     var stops = Array.prototype.slice.call(dialog.querySelectorAll(".memories-stops span"));
     var startTime = Number(range.min);
@@ -25,10 +27,14 @@
     var currentIndex = 0;
     var intervalTimer = null;
     var transitionTimer = null;
+    var closeTimer = null;
+    var triggerCollapseTimer = null;
+    var slideAnimations = [];
     var isTransitioning = false;
-    var queuedIndex = null;
+    var queuedTransition = null;
     var touchStartX = null;
     var lastFocus = null;
+    var lastRangeDirection = "next";
     var canHover = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
 
     function updateMedia() {
@@ -52,14 +58,76 @@
       return width / height;
     }
 
+    function prepareSlide(index) {
+      var normalizedIndex = (Number(index) + slides.length) % slides.length;
+      var media = slides[normalizedIndex].querySelector("img, video");
+      if (!media) return;
+
+      if (media.tagName === "IMG") {
+        media.loading = "eager";
+        if (typeof media.decode === "function") media.decode().catch(function () {});
+      } else {
+        media.preload = "auto";
+      }
+    }
+
+    function positionCloseButtonFor(slide) {
+      var media = slide && slide.querySelector("img, video");
+      if (!media) return;
+
+      function updatePosition() {
+        var stageWidth = stage.clientWidth;
+        var stageHeight = stage.clientHeight;
+        var mediaWidth = media.naturalWidth || media.videoWidth;
+        var mediaHeight = media.naturalHeight || media.videoHeight;
+        if (!stageWidth || !stageHeight || !mediaWidth || !mediaHeight) return;
+
+        if (window.getComputedStyle(media).objectFit === "cover") {
+          stage.style.setProperty("--memory-close-right", "8px");
+          stage.style.setProperty("--memory-close-top", "8px");
+          return;
+        }
+
+        var scale = Math.min(stageWidth / mediaWidth, stageHeight / mediaHeight);
+        var renderedWidth = mediaWidth * scale;
+        var renderedHeight = mediaHeight * scale;
+        stage.style.setProperty("--memory-close-right", Math.max(8, (stageWidth - renderedWidth) / 2 + 8) + "px");
+        stage.style.setProperty("--memory-close-top", Math.max(8, (stageHeight - renderedHeight) / 2 + 8) + "px");
+      }
+
+      window.requestAnimationFrame(updatePosition);
+      var waitingForImage = media.tagName === "IMG" && !media.complete;
+      var waitingForVideo = media.tagName === "VIDEO" && !media.videoWidth;
+      if ((waitingForImage || waitingForVideo) && !media._memoryPositionHooked) {
+        media._memoryPositionHooked = true;
+        media.addEventListener(media.tagName === "IMG" ? "load" : "loadedmetadata", updatePosition, { once: true });
+      }
+    }
+
     function sizeStageFor(slide, immediate) {
       var ratio = getSlideRatio(slide);
       stage.style.setProperty("--memory-ratio", String(ratio));
+      positionCloseButtonFor(slide);
       stage.classList.toggle("is-sizing", !immediate);
       window.clearTimeout(stage._sizeTimer);
+      window.clearTimeout(stage._positionTimer);
       stage._sizeTimer = window.setTimeout(function () {
         stage.classList.remove("is-sizing");
       }, transitionDuration);
+      stage._positionTimer = window.setTimeout(
+        function () {
+          positionCloseButtonFor(slide);
+        },
+        immediate ? 0 : transitionDuration
+      );
+    }
+
+    function cancelSlideAnimations() {
+      slideAnimations.forEach(function (animation) {
+        animation.cancel();
+      });
+      slideAnimations = [];
+      stage.classList.remove("is-animating");
     }
 
     function updateTimeline() {
@@ -81,8 +149,9 @@
 
     function showMemory(index, direction, immediate) {
       var nextIndex = (Number(index) + slides.length) % slides.length;
+      var movement = direction || (nextIndex > currentIndex ? "next" : "previous");
       if (isTransitioning && !immediate) {
-        queuedIndex = nextIndex;
+        queuedTransition = { index: nextIndex, direction: movement };
         return;
       }
       if (nextIndex === currentIndex && !immediate) {
@@ -92,8 +161,10 @@
 
       var previous = slides[currentIndex];
       var next = slides[nextIndex];
-      var movement = direction || (nextIndex > currentIndex ? "next" : "previous");
+      prepareSlide(nextIndex);
+      prepareSlide(nextIndex + (movement === "next" ? 1 : -1));
       window.clearTimeout(transitionTimer);
+      cancelSlideAnimations();
       slides.forEach(function (slide) {
         slide.classList.remove("is-active", "is-entering-next", "is-entering-previous", "is-leaving-next", "is-leaving-previous");
         slide.setAttribute("aria-hidden", "true");
@@ -105,7 +176,7 @@
 
       if (immediate) {
         isTransitioning = false;
-        queuedIndex = null;
+        queuedTransition = null;
         next.classList.add("is-active");
         updateTimeline();
         updateMedia();
@@ -118,6 +189,42 @@
       next.classList.add("is-entering-" + movement);
       updateTimeline();
 
+      function finishTransition() {
+        cancelSlideAnimations();
+        previous.setAttribute("aria-hidden", "true");
+        previous.classList.remove("is-leaving-" + movement);
+        isTransitioning = false;
+        if (queuedTransition && queuedTransition.index !== currentIndex) {
+          var pendingTransition = queuedTransition;
+          queuedTransition = null;
+          showMemory(pendingTransition.index, pendingTransition.direction);
+        } else {
+          queuedTransition = null;
+        }
+      }
+
+      if (typeof next.animate === "function") {
+        var incomingStart = movement === "next" ? "100%" : "-100%";
+        var outgoingEnd = movement === "next" ? "-100%" : "100%";
+        var animationOptions = {
+          duration: transitionDuration,
+          easing: "cubic-bezier(0.22, 1, 0.36, 1)",
+        };
+
+        stage.classList.add("is-animating");
+        previous.classList.add("is-leaving-" + movement);
+        previous.classList.remove("is-active");
+        next.classList.remove("is-entering-" + movement);
+        next.classList.add("is-active");
+        slideAnimations = [
+          previous.animate([{ transform: "translate3d(0, 0, 0)" }, { transform: "translate3d(" + outgoingEnd + ", 0, 0)" }], animationOptions),
+          next.animate([{ transform: "translate3d(" + incomingStart + ", 0, 0)" }, { transform: "translate3d(0, 0, 0)" }], animationOptions),
+        ];
+        updateMedia();
+        transitionTimer = window.setTimeout(finishTransition, transitionDuration);
+        return;
+      }
+
       window.requestAnimationFrame(function () {
         window.requestAnimationFrame(function () {
           previous.classList.add("is-leaving-" + movement);
@@ -126,18 +233,7 @@
           next.classList.add("is-active");
           updateMedia();
 
-          transitionTimer = window.setTimeout(function () {
-            previous.setAttribute("aria-hidden", "true");
-            previous.classList.remove("is-leaving-" + movement);
-            isTransitioning = false;
-            if (queuedIndex !== null && queuedIndex !== currentIndex) {
-              var pendingIndex = queuedIndex;
-              queuedIndex = null;
-              showMemory(pendingIndex, pendingIndex > currentIndex ? "next" : "previous");
-            } else {
-              queuedIndex = null;
-            }
-          }, transitionDuration);
+          transitionTimer = window.setTimeout(finishTransition, transitionDuration);
         });
       });
     }
@@ -168,7 +264,15 @@
       });
     }
 
+    function collapseTrigger() {
+      window.clearTimeout(triggerCollapseTimer);
+      triggerCollapseTimer = null;
+      trigger.classList.remove("is-expanded");
+    }
+
     function openMemories() {
+      window.clearTimeout(closeTimer);
+      collapseTrigger();
       lastFocus = document.activeElement;
       dialog.hidden = false;
       showMemory(openingIndex, "next", true);
@@ -177,7 +281,7 @@
       });
       trigger.setAttribute("aria-expanded", "true");
       document.body.classList.add("memories-open");
-      stage.focus();
+      closeButton.focus({ preventScroll: true });
       updateMedia();
       restartPlayback();
     }
@@ -185,6 +289,7 @@
     function closeMemories() {
       window.clearInterval(intervalTimer);
       intervalTimer = null;
+      collapseTrigger();
       dialog.classList.remove("is-open");
       trigger.setAttribute("aria-expanded", "false");
       document.body.classList.remove("memories-open");
@@ -192,10 +297,11 @@
         var video = slide.querySelector("video");
         if (video) video.pause();
       });
-      window.setTimeout(
+      closeTimer = window.setTimeout(
         function () {
           dialog.hidden = true;
-          if (lastFocus) lastFocus.focus();
+          if (lastFocus && canHover) lastFocus.focus({ preventScroll: true });
+          else trigger.blur();
         },
         reducedMotion ? 0 : 220
       );
@@ -204,6 +310,8 @@
     trigger.addEventListener("click", function () {
       if (!canHover && !trigger.classList.contains("is-expanded")) {
         trigger.classList.add("is-expanded");
+        window.clearTimeout(triggerCollapseTimer);
+        triggerCollapseTimer = window.setTimeout(collapseTrigger, 1800);
         return;
       }
       openMemories();
@@ -211,25 +319,42 @@
     trigger.addEventListener("pointerleave", function () {
       if (canHover) trigger.classList.remove("is-expanded");
     });
+    closeButton.addEventListener("click", closeMemories);
     dialog.addEventListener("click", function (event) {
       if (event.target === dialog) closeMemories();
+    });
+    document.addEventListener("pointerdown", function (event) {
+      if (!canHover && trigger.classList.contains("is-expanded") && !trigger.contains(event.target)) collapseTrigger();
+    });
+    range.addEventListener("pointerdown", function () {
+      window.clearInterval(intervalTimer);
     });
     range.addEventListener("input", function () {
       var selectedTime = Number(range.value);
       var nextIndex = findClosestMemory(selectedTime);
-      showMemory(nextIndex, nextIndex >= currentIndex ? "next" : "previous");
-      restartPlayback();
+      if (nextIndex !== currentIndex) lastRangeDirection = nextIndex > currentIndex ? "next" : "previous";
+      window.clearInterval(intervalTimer);
+      showMemory(nextIndex, lastRangeDirection);
     });
     range.addEventListener("change", function () {
       var nextIndex = findClosestMemory(Number(range.value));
       range.value = slides[nextIndex].dataset.memoryTime;
-      showMemory(nextIndex, nextIndex >= currentIndex ? "next" : "previous");
+      if (nextIndex !== currentIndex) lastRangeDirection = nextIndex > currentIndex ? "next" : "previous";
+      showMemory(nextIndex, lastRangeDirection);
       updateTimeline();
+      restartPlayback();
     });
     stage.addEventListener(
       "touchstart",
       function (event) {
         touchStartX = event.touches[0].clientX;
+      },
+      { passive: true }
+    );
+    window.addEventListener(
+      "resize",
+      function () {
+        positionCloseButtonFor(slides[currentIndex]);
       },
       { passive: true }
     );
