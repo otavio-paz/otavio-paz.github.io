@@ -4,7 +4,7 @@ title: Papa Tick - Tick Erradication Device
 description: A solar-powered tick eradication system to address the Brazilian Spotted Fever issues.
 img: assets/projects/papa-tick/images/thumbnail.png
 importance: 3
-featured: true
+featured: false
 category: work
 related_publications: true
 skills:
