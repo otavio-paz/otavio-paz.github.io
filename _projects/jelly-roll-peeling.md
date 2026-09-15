@@ -132,7 +132,9 @@ The initial work will use video and simulation. Force, energy, and tracking meas
   <p>I’m using numerical inverse kinematics to move through a basic pick-and-place sequence: approach, lower, grasp, lift, transfer, place, release, and retreat. The battery is picked up through simulated contact with the gripper. This is a scripted sequence, with friction values that still need validation.</p>
   {% include video.liquid path="assets/projects/jelly-roll-peeling/videos/so101-pick-and-place.webm" poster="assets/projects/jelly-roll-peeling/images/so101-pick-and-place.jpg" controls=true autoplay=true loop=true muted=true playsinline=true class="jelly-roll-note-video rounded" alt="SO-101 arm picking up and placing a battery in MuJoCo" caption="Pick-and-place simulation. The battery tips onto its side after release." %}
   <p>The simulation passes the lift and placement checks without physics warnings, but the battery ends up on its side, about 3.4 cm from the target center. So there’s still work to do on the release and placement. Next, I want to try peeling a layer with the battery fixed in place, and possibly add the second arm.</p>
+  <p>I still need to file down the 3D-printed parts. I’ll be doing that tomorrow.</p>
   <p><a href="https://github.com/otavio-paz/battery-robot/commit/8f0b72c436da9397957cc13e4a8b52c3bd2b8a36">Day 5 code update</a> · <a href="https://github.com/otavio-paz/battery-robot/blob/8f0b72c436da9397957cc13e4a8b52c3bd2b8a36/docs/so101-scene.md">Scene details and assumptions</a></p>
+  
 </details>
 
 <details class="mb-3">
