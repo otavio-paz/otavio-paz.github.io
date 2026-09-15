@@ -112,12 +112,27 @@ The initial work will use video and simulation. Force, energy, and tracking meas
 
 <details class="mb-3">
   <summary>Day 4</summary>
-  <p class="mt-2"><em>Notes to come.</em></p>
+  <p class="mt-2">I’ve set up the Python environment and added the first battery model to the <a href="https://github.com/otavio-paz/battery-robot">project repository</a>. The setup checks cover MuJoCo, OpenCV, and PyTorch/TorchVision on CPU and CUDA.</p>
+  <p>The first model is a rigid 18650 cylinder in MuJoCo, using nominal dimensions of 18 × 65 mm and an assumed mass of 45 g. It’s a starting point for the simulation; peeling, adhesion, and layer deformation still need to be added. Next, I’m planning to work on the roll and a simple peeling model. <a href="https://github.com/otavio-paz/battery-robot/blob/main/docs/setup-and-modeling.md">Setup and modeling notes</a>.</p>
+  <div class="row">
+    <div class="col-sm-6">
+      {% include figure.liquid path="assets/projects/jelly-roll-peeling/images/battery-v1.png" alt="First MuJoCo model of a cylindrical 18650 battery on a plane" class="img-fluid rounded" caption="First rigid battery model in MuJoCo." %}
+    </div>
+    <div class="col-sm-6">
+      {% include figure.liquid path="assets/projects/jelly-roll-peeling/images/battery-v1-edges.png" alt="Edge-detection output outlining the simulated battery" class="img-fluid rounded" caption="OpenCV edge-detection output from the setup check." %}
+    </div>
+  </div>
+  <p>The leader-arm print is done, and the servos arrived. I noticed that some of the printed parts fit too tightly, even though I checked the gauge beforehand. I’m planning to file them down instead of printing them again.</p>
+  {% include figure.liquid path="assets/projects/jelly-roll-peeling/images/leader-print-and-servos.jpg" alt="Finished blue 3D-printed leader-arm parts beside the newly arrived servos" class="jelly-roll-note-video rounded" caption="Finished leader-arm parts and the servos that arrived." %}
 </details>
 
 <details class="mb-3">
   <summary>Day 5</summary>
-  <p class="mt-2"><em>Notes to come.</em></p>
+  <p class="mt-2">I’ve added the SO-101 arm to the MuJoCo scene, with a desk close to the size of mine and a target for the battery. The arm model comes from <a href="https://github.com/google-deepmind/mujoco_menagerie/tree/8161bba264d7fa7c99ca301e91e7fb44737676ad/robotstudio_so101">MuJoCo Menagerie</a>.</p>
+  <p>I’m using numerical inverse kinematics to move through a basic pick-and-place sequence: approach, lower, grasp, lift, transfer, place, release, and retreat. The battery is picked up through simulated contact with the gripper. This is a scripted sequence, with friction values that still need validation.</p>
+  {% include video.liquid path="assets/projects/jelly-roll-peeling/videos/so101-pick-and-place.webm" poster="assets/projects/jelly-roll-peeling/images/so101-pick-and-place.jpg" controls=true autoplay=true loop=true muted=true playsinline=true class="jelly-roll-note-video rounded" alt="SO-101 arm picking up and placing a battery in MuJoCo" caption="Pick-and-place simulation. The battery tips onto its side after release." %}
+  <p>The simulation passes the lift and placement checks without physics warnings, but the battery ends up on its side, about 3.4 cm from the target center. So there’s still work to do on the release and placement. Next, I want to try peeling a layer with the battery fixed in place, and possibly add the second arm.</p>
+  <p><a href="https://github.com/otavio-paz/battery-robot/commit/8f0b72c436da9397957cc13e4a8b52c3bd2b8a36">Day 5 code update</a> · <a href="https://github.com/otavio-paz/battery-robot/blob/8f0b72c436da9397957cc13e4a8b52c3bd2b8a36/docs/so101-scene.md">Scene details and assumptions</a></p>
 </details>
 
 <details class="mb-3">
