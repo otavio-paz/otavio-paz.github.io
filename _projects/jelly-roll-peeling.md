@@ -139,7 +139,11 @@ The initial work will use video and simulation. Force, energy, and tracking meas
 
 <details class="mb-3">
   <summary>Day 6</summary>
-  <p class="mt-2"><em>Notes to come.</em></p>
+  <p class="mt-2">I’ve added a simplified peeling experiment to the <a href="https://github.com/otavio-paz/battery-robot">project repository</a>. It is an elastic-perfectly-plastic strip surrogate, so it is useful for learning the timing and control loop, but it is not yet a model of battery material or a validated DQI predictor.</p>
+  {% include figure.liquid path="assets/projects/jelly-roll-peeling/images/peeling-demo-day6.png" alt="MuJoCo peeling simulation with an orange strip, blue puller, and fixed tangent point" class="img-fluid rounded" caption="Mid-peel frame from the synchronized MuJoCo experiment. The orange strip is a visual surrogate, the blue block is the puller, and the red marker is the fixed peel-front proxy." %}
+  <p>The simulation advances physics at 500 Hz, updates the control command at 100 Hz, records force and displacement at 100 Hz, and captures RGB frames at 25 Hz. Each frame is joined to the exact sensor sample from the same simulation state, which gives me a clean starting point for testing vision and force-based control.</p>
+  <p>The 11-second trial produced 1,101 sensor samples and 276 frames. The simulated strip peeled 47.2 mm, with a peak force of 0.8 N. These are synthetic process features for now; the next step is to replace the fixed-tangent abstraction with a more physical peeling and roll model.</p>
+  <p><a href="https://github.com/otavio-paz/battery-robot/commit/c9c6459cd8246eb0aa4433a2a6b0dc7127222d7c">Day 6 code update</a> · <a href="https://github.com/otavio-paz/battery-robot/blob/c9c6459cd8246eb0aa4433a2a6b0dc7127222d7c/docs/peeling-and-synchronization.md">Peeling and synchronization notes</a></p>
 </details>
 
 <details class="mb-3">
