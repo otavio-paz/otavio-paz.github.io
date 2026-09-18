@@ -45,7 +45,7 @@ I’m exploring how vision and force feedback could guide the peeling and unroll
     <li><a href="#day-4">Day 4</a> — First battery simulation, leader print, and servos</li>
     <li><a href="#day-5">Day 5</a> — SO-101 pick-and-place simulation</li>
     <li><a href="#day-6">Day 6</a> — Battery quality, cutting ideas, and soft-body modeling</li>
-    <li><a href="#day-7">Day 7</a> — Notes to come</li>
+    <li><a href="#day-7">Day 7</a> — Peeling trajectories, synchronization, and strip sizing</li>
     <li><a href="#day-8">Day 8</a> — Notes to come</li>
     <li><a href="#day-9">Day 9</a> — Notes to come</li>
     <li><a href="#day-10">Day 10</a> — Notes to come</li>
@@ -184,7 +184,9 @@ The initial work will use video and simulation. Force, energy, and tracking meas
 
 <section class="jelly-roll-day" aria-labelledby="day-7">
   <h2 id="day-7">Day 7</h2>
-  <p class="mt-2"><em>Notes to come.</em></p>
+  <p class="mt-2">I’ve been working on synchronization and the gripper trajectories for the peeling phase, as well as how to model this in MuJoCo.</p>
+  <p>One thing I noticed is that the minimum gap between the SO-101 gripper’s fingers is larger than the strip, so I increased the strip’s size for now. Later, I want to start testing other simulation alternatives that are more closely related to the research being developed in Prof. Yunzhu Li’s lab.</p>
+  <p>I should be done tomorrow with the initial code, but the complexity has increased a bit. I want to make sure I understand the steps I need to take and check whether my rationale makes sense and is relevant to this exploration.</p>
 </section>
 
 <section class="jelly-roll-day" aria-labelledby="day-8">
