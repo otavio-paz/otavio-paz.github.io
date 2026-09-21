@@ -45,9 +45,9 @@ I’m exploring how vision and force feedback could guide the peeling and unroll
     <li><a href="#day-4">Day 4</a> — First battery simulation, leader print, and servos</li>
     <li><a href="#day-5">Day 5</a> — SO-101 pick-and-place simulation</li>
     <li><a href="#day-6">Day 6</a> — Battery quality, cutting ideas, and soft-body modeling</li>
-    <li><a href="#day-7">Day 7</a> — Peeling trajectories, synchronization, and strip sizing</li>
-    <li><a href="#day-8">Day 8</a> — Notes to come</li>
-    <li><a href="#day-9">Day 9</a> — Notes to come</li>
+    <li><a href="#day-7">Day 7</a> — Peeling trajectories and deformable-model implementation</li>
+    <li><a href="#day-8">Day 8</a> — Young’s modulus literature and model assumptions</li>
+    <li><a href="#day-9">Day 9</a> — Major simulation update, verification, and next steps</li>
     <li><a href="#day-10">Day 10</a> — Notes to come</li>
     <li><a href="#day-11">Day 11</a> — Notes to come</li>
     <li><a href="#day-12">Day 12</a> — Notes to come</li>
@@ -181,7 +181,7 @@ The initial work will use video and simulation. Force, energy, and tracking meas
   <p>While reading their README, I also found a small typo: “wiht” instead of “with.”</p>
   {% include figure.liquid path="assets/projects/jelly-roll-peeling/images/phystwin-readme-typo.png" alt="PhysTwin README screenshot with the misspelling wiht highlighted" class="img-fluid rounded" caption="The typo I noticed in the PhysTwin README." %}
   <h3>Peeling simulation and synchronization</h3>
-<p class="mt-2">I’ve added a simplified peeling experiment to the <a href="https://github.com/otavio-paz/battery-robot">project repository</a>. It is an elastic-perfectly-plastic strip surrogate, so it is useful for learning the timing and control loop, but it is not yet a model of battery material or a validated DQI predictor.</p>
+  <p class="mt-2">I’ve added a simplified peeling experiment to the <a href="https://github.com/otavio-paz/battery-robot">project repository</a>. It is an elastic-perfectly-plastic strip surrogate, so it is useful for learning the timing and control loop, but it is not yet a model of battery material or a validated DQI predictor.</p>
   {% include figure.liquid path="assets/projects/jelly-roll-peeling/images/peeling-demo-day6.png" alt="MuJoCo peeling simulation with an orange strip, blue puller, and fixed tangent point" class="img-fluid rounded" caption="Mid-peel frame from the synchronized MuJoCo experiment. The orange strip is a visual surrogate, the blue block is the puller, and the red marker is the fixed peel-front proxy." %}
   <p>The simulation advances physics at 500 Hz, updates the control command at 100 Hz, records force and displacement at 100 Hz, and captures RGB frames at 25 Hz. Each frame is joined to the exact sensor sample from the same simulation state, which gives me a clean starting point for testing vision and force-based control.</p>
   <p>The 11-second trial produced 1,101 sensor samples and 276 frames. The simulated strip peeled 47.2 mm, with a peak force of 0.8 N. These are synthetic process features for now; the next step is to replace the fixed-tangent abstraction with a more physical peeling and roll model.</p>
@@ -193,16 +193,24 @@ The initial work will use video and simulation. Force, energy, and tracking meas
   <p class="mt-2">I’ve been working on synchronization and the gripper trajectories for the peeling phase, as well as how to model this in MuJoCo.</p>
   <p>One thing I noticed is that the minimum gap between the SO-101 gripper’s fingers is larger than the strip, so I increased the strip’s size for now. Later, I want to start testing other simulation alternatives that are more closely related to the research being developed in Prof. Yunzhu Li’s lab.</p>
   <p>I should be done tomorrow with the initial code, but the complexity has increased a bit. I want to make sure I understand the steps I need to take and check whether my rationale makes sense and is relevant to this exploration.</p>
+  <p>I also worked on a more physical battery model that includes adhesion between the jelly roll and the core, along with MuJoCo’s native <code>flexcomp</code> for the deformable outer layer. The current model uses a two-dimensional flexible shell with contact, membrane stretching, and bending. Adhesion is represented separately by breakable point constraints, so it is still a custom, uncalibrated approximation rather than a native fracture model.</p>
+  <p>This proved very difficult to implement in a short amount of time. To test whether my plan was feasible, I used GPT-5.6 Sol to help with the implementation. My main focus was therefore to review the code and determine whether the simulation behaved as intended.</p>
 </section>
 
 <section class="jelly-roll-day" aria-labelledby="day-8">
   <h2 id="day-8">Day 8</h2>
-  <p class="mt-2"><em>Notes to come.</em></p>
+  <p class="mt-2">I used a Young’s modulus of 3 MPa for the flexible shell, but this is a demonstrator assumption rather than a calibrated battery-material value. I found papers reporting higher stiffness values at other scales and under different loading conditions. Tang, Zhang, and Cheng report radial and axial moduli of 260 MPa and 1,200 MPa for a homogenized single-cell model, and equivalent battery-module values of 55 MPa and 90 MPa for two packing arrangements. Santosa and Fadillah use 20 GPa and 47.9 GPa as model inputs for dry and wet jelly-roll specimens under dynamic axial compression. However, I could not determine how those whole-cell, module, and compression values should translate to this thin-shell peeling demo. <a href="https://doi.org/10.1371/journal.pone.0181882">Tang et al. (2017)</a> · <a href="https://doi.org/10.3390/en17194967">Santosa and Fadillah (2024)</a></p>
+  <p>For now, I am keeping 3 MPa as an explicit assumption and treating the simulation as a way to examine behavior and implementation, not as a validated material model.</p>
 </section>
 
 <section class="jelly-roll-day" aria-labelledby="day-9">
   <h2 id="day-9">Day 9</h2>
-  <p class="mt-2"><em>Notes to come.</em></p>
+  <p class="mt-2"><strong>Major update:</strong> the SO-101 now pulls a pre-grasped deformable ribbon from a fixed cylindrical core. The ribbon is a native MuJoCo <code>flexcomp</code> with 114 vertices and 148 triangles. The custom adhesion model releases one bonded row at a time after its reaction force remains above the assumed threshold.</p>
+  <p>In the 14-second simulation, all 32 releasable rows detached, corresponding to 58 mm of unwrapped material. The run recorded 1,401 sensor samples and 351 synchronized frames, with no MuJoCo warnings. Both regression tests also passed: one checks the scene geometry, grasp, contact, and pulling path; the other checks force-triggered release and sensor/camera synchronization.</p>
+  {% include video.liquid path="assets/projects/jelly-roll-peeling/videos/so101-jelly-roll-peeling.webm" controls=true autoplay=true loop=true muted=true playsinline=true class="jelly-roll-note-video rounded" alt="SO-101 robot peeling a deformable jelly-roll surrogate from a cylindrical battery core in MuJoCo" caption="MuJoCo simulation of the SO-101 pulling a deformable, adhesively bonded jelly-roll surrogate from a fixed core." %}
+  <p>When I inspect the simulation visually, the adhesion behavior appears to work. The main issue is that the jelly roll seems to overlap the battery model about halfway through the run. Neither regression test detected this visual problem, and MuJoCo produced no warnings. I will investigate whether this is a limitation of the model, a contact-visualization effect, or an implementation problem.</p>
+  <p>My main goal was to see how easily I could carry out the plan. I believe that if an LLM can solve a research question or implementation too easily, then the question may not be challenging enough. I will now focus on understanding how other researchers have approached battery disassembly and on identifying a stronger research question.</p>
+  <p><a href="https://github.com/otavio-paz/battery-robot/commit/bf29066">Day 9 code update</a> · <a href="https://github.com/otavio-paz/battery-robot/blob/bf29066/docs/soft-body-peeling.md">Model, assumptions, and verification notes</a></p>
 </section>
 
 <section class="jelly-roll-day" aria-labelledby="day-10">
