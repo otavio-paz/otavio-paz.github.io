@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Vision-Guided Jelly-Roll Peeling
-description: Ongoing research into battery unrolling, vision and force feedback, and DQI development.
+description: Initial research into battery unrolling, vision and force feedback, and DQI development.
 img: assets/projects/jelly-roll-peeling/images/peeling.png
 importance: 3
 featured: true
@@ -30,9 +30,11 @@ skills:
   .jelly-roll-contents li { margin-bottom: .3rem; }
 </style>
 
-**In progress · Initial two-week research plan**
+**Public project log complete · Development continuing privately**
 
-I’m exploring how vision and force feedback could guide the peeling and unrolling of a battery’s jelly roll, and how process measurements could support DQI development. This is an ongoing study: the tasks below may take more or less than two weeks, and I may continue if I see opportunities to contribute further.
+I’m exploring how vision and force feedback could guide the peeling and unrolling of a battery’s jelly roll, and how process measurements could support DQI development.
+
+I’m happy to share that I received a lab position related to this project. I’ll continue developing this work more privately with the lab, so this public project log concludes with Day 9.
 
 <nav aria-label="Project contents" class="jelly-roll-contents">
   <h2>Contents</h2>
@@ -48,11 +50,6 @@ I’m exploring how vision and force feedback could guide the peeling and unroll
     <li><a href="#day-7">Day 7</a> — Peeling trajectories and deformable-model implementation</li>
     <li><a href="#day-8">Day 8</a> — Young’s modulus literature and model assumptions</li>
     <li><a href="#day-9">Day 9</a> — Major simulation update, verification, and next steps</li>
-    <li><a href="#day-10">Day 10</a> — Notes to come</li>
-    <li><a href="#day-11">Day 11</a> — Notes to come</li>
-    <li><a href="#day-12">Day 12</a> — Notes to come</li>
-    <li><a href="#day-13">Day 13</a> — Notes to come</li>
-    <li><a href="#day-14">Day 14</a> — Notes to come</li>
   </ul>
 </nav>
 
@@ -211,29 +208,4 @@ The initial work will use video and simulation. Force, energy, and tracking meas
   <p>When I inspect the simulation visually, the adhesion behavior appears to work. The main issue is that the jelly roll seems to overlap the battery model about halfway through the run. Neither regression test detected this visual problem, and MuJoCo produced no warnings. I will investigate whether this is a limitation of the model, a contact-visualization effect, or an implementation problem.</p>
   <p>My main goal was to see how easily I could carry out the plan. I believe that if an LLM can solve a research question or implementation too easily, then the question may not be challenging enough. I will now focus on understanding how other researchers have approached battery disassembly and on identifying a stronger research question.</p>
   <p><a href="https://github.com/otavio-paz/battery-robot/commit/bf29066">Day 9 code update</a> · <a href="https://github.com/otavio-paz/battery-robot/blob/bf29066/docs/soft-body-peeling.md">Model, assumptions, and verification notes</a></p>
-</section>
-
-<section class="jelly-roll-day" aria-labelledby="day-10">
-  <h2 id="day-10">Day 10</h2>
-  <p class="mt-2"><em>Notes to come.</em></p>
-</section>
-
-<section class="jelly-roll-day" aria-labelledby="day-11">
-  <h2 id="day-11">Day 11</h2>
-  <p class="mt-2"><em>Notes to come.</em></p>
-</section>
-
-<section class="jelly-roll-day" aria-labelledby="day-12">
-  <h2 id="day-12">Day 12</h2>
-  <p class="mt-2"><em>Notes to come.</em></p>
-</section>
-
-<section class="jelly-roll-day" aria-labelledby="day-13">
-  <h2 id="day-13">Day 13</h2>
-  <p class="mt-2"><em>Notes to come.</em></p>
-</section>
-
-<section class="jelly-roll-day" aria-labelledby="day-14">
-  <h2 id="day-14">Day 14</h2>
-  <p class="mt-2"><em>Notes to come.</em></p>
 </section>
