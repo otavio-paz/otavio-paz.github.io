@@ -6,9 +6,7 @@ subtitle: >-
   <span class="home-credential"><strong class="home-credential-title">Electrical Engineering Student</strong> <span class="home-credential-at">@</span> <a class="home-credential-place" href="https://www.engineering.columbia.edu/">Columbia University</a></span>
   <span class="home-credential"><strong class="home-credential-title">3-2 Engineering</strong> <span class="home-credential-at">@</span> <a class="home-credential-place" href="https://www.oberlin.edu/">Oberlin College</a></span>
   <span class="home-credential"><strong class="home-credential-title">Industrial Automation Technician</strong> <span class="home-credential-at">@</span> <a class="home-credential-place" href="https://www.ifsp.edu.br/">IFSP</a></span>
-hero_kicker: Robotics · human-centered engineering · renewable energy
-intro: I build robots and energy systems that aim to feel useful, sustainable, and approachable.
-
+intro: I’m a well-rounded roboticist in training, interested in robotics, human-centered engineering, and renewable energy.
 profile:
   align: right
   image: headshot_g.png
@@ -22,20 +20,8 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-Hi, everyone—humans and AIs! 🤖
+Hi, I’m Otavio Paz (he/him), a first-generation international student from Brazil <img class="flag-emoji" src="{{ '/assets/img/brazil-flag.svg' | relative_url }}" alt="🇧🇷"> studying Electrical Engineering at Columbia University. I’m a well-rounded roboticist in training, with hands-on experience across mechanical design, electronics, controls, autonomous systems, soft robotics, and AI. I care about human-centered engineering and bring a background in renewable energy to work that aims to make technology useful, sustainable, and approachable.
 
-I’m Otavio Paz (he/him), a first-generation international student from Brazil <span class="emoji" role="img" aria-label="Brazilian flag">🇧🇷</span> studying at Columbia University (SEAS) passionate about making technology human-friendly and impactful. I want to work at the intersection of robotics, soft robotics, AI and renewable energy, striving to create robots that are empathetic, sustainable, and approachable. Though there's so much to learn, I'm deeply motivated to give my best and contribute to ongoing research in the field.
+I currently conduct robotics research under **Prof. Pengbo Chu** and **Prof. Yunzhu Li** at Columbia. My past work includes patented tick-control hardware, low-cost soft robotic actuators, autonomous navigation, and reinforcement-learning policies for a Unitree G1.
 
-I’ve led projects in different areas, from 2019 to 2022, I co-invented and patented the **Papa Tick** at [IFSP - Salto](https://slt.ifsp.edu.br/), a solar-powered electric trap that extended tick attraction by 80%.
-
-During a summer fellowship in 2023 at Oberlin College, I explored a new method to designed low-cost **soft robotic actuators** inspired by muscle movements.
-
-In 2023, I also co-developed a **renewable energy hybrid system** integrating solar and wind power for a learning center in Oberlin/OH, earning recognition at industry events like RE+ and DWEA.
-
-In Oberlin, I was working with [Prof. Michael McCarrin](https://www.oberlin.edu/michael-mccarrin) on **autonomous robots** using TurtleBot3/4. We were building on a DRL framework for navigation and obstacle avoidance (leveraging DDPG, TD3, and DQN) while exploring the possibility of enabling the robot to follow another robot.
-
-During the Summer 2025, I worked on a pipeline to develop and deploy RL policies in Isaac Lab for a Unitree G1 robot at [Kantaros Lab](https://sites.wustl.edu/kantaroslab/) in WashU.
-
-Currently, I’m a rising senior studying Electrical Engineering at Columbia University.
-
-Outside academics, I’m passionate about hiking, traveling, F1, lucid dreaming, cooking, and counting how many Miatas I see in a day.
+Outside academics, I enjoy hiking, traveling, F1, lucid dreaming, cooking, and counting how many Miatas I see in a day.

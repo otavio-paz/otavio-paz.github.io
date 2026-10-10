@@ -1550,10 +1550,9 @@ body {
 .home-hero {
   align-items: center;
   display: grid;
-  gap: clamp(2rem, 7vw, 5.5rem);
+  gap: clamp(2rem, 5vw, 4rem);
   grid-template-columns: minmax(0, 1.15fr) minmax(16rem, 0.85fr);
-  min-height: min(42rem, calc(100vh - 7rem));
-  padding: clamp(2rem, 6vw, 5rem) 0 4.5rem;
+  padding: clamp(2rem, 4vw, 3.5rem) 0 clamp(3rem, 5vw, 4rem);
 }
 
 .home-hero-copy,
@@ -1852,7 +1851,7 @@ body {
 .home-news,
 .home-latest {
   margin: 0;
-  padding: clamp(3.6rem, 8vw, 6.5rem) 0;
+  padding: clamp(2.75rem, 6vw, 4.5rem) 0;
 }
 
 .home-bio {
@@ -1889,7 +1888,6 @@ body {
     margin-bottom: 1.3rem;
   }
   p:first-child {
-    font-size: 1.25em;
     color: var(--brand-ink);
   }
   p:last-child {
@@ -1911,6 +1909,7 @@ body {
 
 .home-projects {
   clear: both;
+  scroll-margin-top: clamp(4.75rem, 10vh, 6.5rem);
 
   .home-projects-actions {
     align-items: center;
@@ -2251,6 +2250,14 @@ body {
   font-style: normal;
   font-variant-emoji: emoji;
   white-space: nowrap;
+}
+
+.flag-emoji {
+  display: inline-block;
+  height: 1em;
+  margin: 0 0.08em;
+  vertical-align: -0.1em;
+  width: auto;
 }
 
 .memories-backdrop {

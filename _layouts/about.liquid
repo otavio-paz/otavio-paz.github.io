@@ -5,9 +5,8 @@ layout: default
 
 <div class="post home-page">
   <article>
-    <section class="home-hero reveal-on-scroll" aria-labelledby="home-title">
+    <section class="home-hero" aria-labelledby="home-title">
       <div class="home-hero-copy">
-        <p class="home-kicker">{{ page.hero_kicker | default: 'Electrical engineering · robotics · energy' }}</p>
         <h1 id="home-title" class="home-title">
           {% if site.title == 'blank' %}
             {{ site.first_name }}
@@ -22,7 +21,7 @@ layout: default
           <p class="home-intro">{{ page.intro }}</p>
         {% endif %}
         <div class="home-hero-actions">
-          <a class="home-button home-button--primary" href="#home-projects-title">
+          <a class="home-button home-button--primary" href="#home-projects">
             Explore my work
             <span class="home-button-arrow" aria-hidden="true"></span>
           </a>
@@ -32,38 +31,6 @@ layout: default
 
       {% if page.profile and page.profile.image %}
         <div class="home-portrait-wrap">
-          <div class="home-goose-peeks" aria-hidden="true">
-            <span class="home-goose-peek home-goose-peek--blog">
-              <img
-                src="{{ '/assets/img/page-heroes/goose-blog.png' | relative_url | bust_file_cache }}"
-                alt=""
-                width="768"
-                height="872"
-                loading="eager"
-                decoding="async"
-              >
-            </span>
-            <span class="home-goose-peek home-goose-peek--projects">
-              <img
-                src="{{ '/assets/img/page-heroes/goose-projects.png' | relative_url | bust_file_cache }}"
-                alt=""
-                width="768"
-                height="872"
-                loading="eager"
-                decoding="async"
-              >
-            </span>
-            <span class="home-goose-peek home-goose-peek--cv">
-              <img
-                src="{{ '/assets/img/page-heroes/goose-cv.png' | relative_url | bust_file_cache }}"
-                alt=""
-                width="768"
-                height="872"
-                loading="eager"
-                decoding="async"
-              >
-            </span>
-          </div>
           <div class="home-portrait">
             {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
             {% capture sizes %}(min-width: {{ site.max_width }}) 360px, (min-width: 768px) 36vw, 88vw{% endcapture %}
@@ -76,7 +43,7 @@ layout: default
       {% endif %}
     </section>
 
-    <section class="home-bio reveal-on-scroll" aria-labelledby="home-bio-title">
+    <section class="home-bio" aria-labelledby="home-bio-title">
       <div class="home-section-label">
         <span aria-hidden="true">01</span>
         <h2 id="home-bio-title">A little about me</h2>
@@ -85,7 +52,7 @@ layout: default
     </section>
 
     {% if page.projects %}
-      <section class="home-projects reveal-on-scroll" aria-labelledby="home-projects-title">
+      <section id="home-projects" class="home-projects" aria-labelledby="home-projects-title">
         <div class="home-section-heading">
           <div>
             <h2 id="home-projects-title">Featured projects</h2>
@@ -106,7 +73,7 @@ layout: default
     {% endif %}
 
     {% if page.news and site.announcements.enabled %}
-      <section class="home-news reveal-on-scroll" aria-labelledby="home-news-title">
+      <section class="home-news" aria-labelledby="home-news-title">
         <div class="home-section-heading">
           <h2 id="home-news-title">Announcements</h2>
         </div>
@@ -115,14 +82,14 @@ layout: default
     {% endif %}
 
     {% if site.latest_posts.enabled %}
-      <section class="home-latest reveal-on-scroll">
+      <section class="home-latest">
         <h2><a href="{{ '/blog/' | relative_url }}" style="color: inherit">Latest posts</a></h2>
         {% include latest_posts.liquid %}
       </section>
     {% endif %}
 
     {% if page.social %}
-      <section class="home-connect reveal-on-scroll" aria-label="Contact and social links">
+      <section class="home-connect" aria-label="Contact and social links">
         <p>Let’s build something thoughtful.</p>
         <div class="social">
           <div class="contact-icons">{% include social.liquid %}</div>
