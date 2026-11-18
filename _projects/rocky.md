@@ -95,6 +95,14 @@ The motion tests progressed from paired leg movements to moving one leg at a tim
 <figure><img src="{{ '/assets/projects/rocky/images/test-pose.jpg' | relative_url }}" alt="Rocky prototype viewed from above during movement tests" loading="lazy"><figcaption>Hip sequencing on the physical prototype, with the shell still absent.</figcaption></figure>
 </div>
 
+<figure class="rocky-video" style="margin:1.5rem 0 2rem;">
+  <video controls playsinline preload="metadata" aria-label="Rocky walking pattern test 1" poster="{{ '/assets/projects/rocky/images/walking-test-poster.jpg' | relative_url }}" style="display:block;width:100%;max-height:38rem;background:#111;border-radius:.4rem;">
+    <source src="{{ '/assets/projects/rocky/videos/walking-pattern-test-1.mp4' | relative_url }}" type="video/mp4">
+    <a href="{{ '/assets/projects/rocky/videos/walking-pattern-test-1.mp4' | relative_url }}">Download the walking pattern test video</a>.
+  </video>
+  <figcaption style="padding-top:.65rem;font-size:.9rem;">Walking pattern test 1 · Early gait-sequencing test on the physical prototype.</figcaption>
+</figure>
+
 ## Startup checks and failure handling
 
 The boot routine checks that all servos are present and reads their temperature, position, and supply voltage. Status messages and warnings pass through a Python text-to-speech module, making the checks audible on the robot's speaker.
